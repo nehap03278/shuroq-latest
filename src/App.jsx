@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, createContext, useContext } from "react";
 
-// ─── Brand palette ────────────────────────────────────────────────────────────
+// ─── Brand palette m ────────────────────────────────────────────────────────────
 // BG #F4F7FC | Card #FFFFFF | Navy #1B2D4F | Sky #3B82C4
 // LightBlue #E8F0FB | Amber #F5A623 | Teal #0EA5C9
 // Border #D6E4F7 | Muted #6B84A3
