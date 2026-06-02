@@ -1551,7 +1551,7 @@ function FloatingActions(){
   return (
     <div style={{ position:"fixed", right:20, bottom:100, zIndex:300, display:"flex", flexDirection:"column", alignItems:"flex-end", gap:10 }}>
       {expanded && buttons.map((b,i)=>(
-        <div key={b.label} onClick={b.action}
+        <div key={b.label} onClick={()=>{b.action();setExpanded(false);}}
           style={{ display:"flex", alignItems:"center", gap:10, background:"rgba(255,255,255,0.96)", backdropFilter:"blur(16px)", border:"1px solid #D6E4F7", borderRadius:40, padding:"8px 16px 8px 10px", cursor:"pointer", boxShadow:"0 4px 20px rgba(59,130,196,0.16)", animation:"slideInRight .3s ease", animationDelay:`${i*50}ms`, animationFillMode:"both", transition:"transform .2s,box-shadow .2s" }}
           onMouseEnter={e=>{e.currentTarget.style.transform="translateX(-3px)";e.currentTarget.style.boxShadow="0 6px 24px rgba(59,130,196,0.22)";}}
           onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="0 4px 20px rgba(59,130,196,0.16)";}}>
