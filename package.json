@@ -2,6 +2,7 @@
   "name": "shuroq-runner",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://nehap03278.github.io/shuroq-latest",
   "type": "module",
   "scripts": {
     "dev": "vite",
