@@ -443,6 +443,25 @@ function ServiceModal({ svc, onClose }) {
 
 // ── i18n — Translations ───────────────────────────────────────────────────────
 const LANGS = [
+<<<<<<< HEAD
+  { code:"ar", name:"العربية",   flag:"🇸🇦", dir:"rtl" },
+  { code:"bn", name:"বাংলা",     flag:"🇧🇩", dir:"ltr" },
+  { code:"de", name:"Deutsch",   flag:"🇩🇪", dir:"ltr" },
+  { code:"en", name:"English",   flag:"🇬🇧", dir:"ltr" },
+  { code:"es", name:"Español",   flag:"🇪🇸", dir:"ltr" },
+  { code:"fr", name:"Français",  flag:"🇫🇷", dir:"ltr" },
+  { code:"hi", name:"हिन्दी",    flag:"🇮🇳", dir:"ltr" },
+  { code:"it", name:"Italiano",  flag:"🇮🇹", dir:"ltr" },
+  { code:"ja", name:"日本語",     flag:"🇯🇵", dir:"ltr" },
+  { code:"kn", name:"ಕನ್ನಡ",     flag:"🇮🇳", dir:"ltr" },
+  { code:"ml", name:"മലയാളം",   flag:"🇮🇳", dir:"ltr" },
+  { code:"pt", name:"Português", flag:"🇧🇷", dir:"ltr" },
+  { code:"ru", name:"Русский",   flag:"🇷🇺", dir:"ltr" },
+  { code:"ta", name:"தமிழ்",     flag:"🇮🇳", dir:"ltr" },
+  { code:"te", name:"తెలుగు",    flag:"🇮🇳", dir:"ltr" },
+  { code:"ur", name:"اردو",      flag:"🇵🇰", dir:"rtl" },
+  { code:"zh", name:"中文",       flag:"🇨🇳", dir:"ltr" },
+=======
   { code:"en", name:"English",    flag:"🇬🇧", dir:"ltr" },
   { code:"ar", name:"العربية",   flag:"🇸🇦", dir:"rtl" },
   { code:"fr", name:"Français",  flag:"🇫🇷", dir:"ltr" },
@@ -460,12 +479,19 @@ const LANGS = [
   { code:"zh", name:"中文",       flag:"🇨🇳", dir:"ltr" },
   { code:"ja", name:"日本語",     flag:"🇯🇵", dir:"ltr" },
   { code:"ru", name:"Русский",   flag:"🇷🇺", dir:"ltr" },
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
 ];
 
 const T = {
   en: {
     nav:{ home:"Home", about:"About", services:"Services", technologies:"Technologies", portfolio:"Portfolio", contact:"Contact", cta:"Contact Us" },
+<<<<<<< HEAD
+    hero:{ badge:"AI-FIRST ENGINEERING COMPANY", h1a:"Building", h1b:"Digital Solutions That Drive Business Growth", sub:"AI Applications · Mobile Apps · DevOps · Web Solutions · Automation\nWe engineer intelligent software that scales with your ambition.", cta1:"Get Started →", cta2:"Explore Services", stat1:"Projects Delivered", stat2:"AI Accuracy", stat3:"Support", stat4:"Client Rating", 
+    //New: Cycling words translations
+    w0:"AI-Powered", w1:"Scalable", w2:"Modern", w3:"Innovative"},
+=======
     hero:{ badge:"AI-FIRST ENGINEERING COMPANY", h1a:"Engineering", h1b:"Digital Experiences", sub:"AI Applications · Mobile Apps · DevOps · Web Solutions · Automation\nWe engineer intelligent software that scales with your ambition.", cta1:"Get Started →", cta2:"Explore Services", stat1:"Projects Delivered", stat2:"AI Accuracy", stat3:"Support", stat4:"Client Rating" },
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
     about:{ label:"ABOUT US", h2a:"Where Technology", h2b:"Vision", p1:"Shuroq — meaning \"Sunrise\" in Arabic — embodies our belief that every great product begins with a bold new dawn. We are an AI-first engineering company building the digital infrastructure of tomorrow.", p2:"From stealth startups to enterprise clients, we engineer software that scales, performs, and inspires — obsessing over every detail.", caps:"Core Capabilities" },
     services:{ label:"WHAT WE BUILD", h2a:"Our", h2b:"Services", sub:"End-to-end digital solutions — from AI platforms to mobile apps and cloud infrastructure.", learnMore:"Learn more" },
     whyUs:{ label:"WHY SHUROQ", h2a:"Why Choose", h2b:"Us" },
@@ -477,7 +503,13 @@ const T = {
   },
   ar: {
     nav:{ home:"الرئيسية", about:"من نحن", services:"خدماتنا", technologies:"التقنيات", portfolio:"أعمالنا", contact:"تواصل", cta:"تواصل معنا" },
+<<<<<<< HEAD
+    hero:{ badge:"شركة هندسة برمجيات بالذكاء الاصطناعي", h1a:"بناء", h1b:"حلول رقمية تدفع نمو الأعمال" , sub:"تطبيقات الذكاء الاصطناعي · تطبيقات الجوال · DevOps · حلول الويب · الأتمتة\nنبني برمجيات ذكية ترقى مع طموحاتك.", cta1:"ابدأ الآن ←", cta2:"استكشف خدماتنا", stat1:"مشروع مُنجز", stat2:"دقة الذكاء الاصطناعي", stat3:"دعم", stat4:"تقييم العملاء" ,
+      //NEW: Arabic translations
+    w0:"المدعومة بالذكاء الاصطناعي", w1:"قابلة للتوسع",w2:"حديثة",w3:"مبتكرة"},
+=======
     hero:{ badge:"شركة هندسة برمجيات بالذكاء الاصطناعي", h1a:"نهندس", h1b:"تجارب رقمية ذكية", sub:"تطبيقات الذكاء الاصطناعي · تطبيقات الجوال · DevOps · حلول الويب · الأتمتة\nنبني برمجيات ذكية ترقى مع طموحاتك.", cta1:"ابدأ الآن ←", cta2:"استكشف خدماتنا", stat1:"مشروع مُنجز", stat2:"دقة الذكاء الاصطناعي", stat3:"دعم", stat4:"تقييم العملاء" },
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
     about:{ label:"من نحن", h2a:"حيث التكنولوجيا", h2b:"تلتقي بالرؤية", p1:"شروق — تجسيداً لاعتقادنا بأن كل منتج عظيم يبدأ بفجر جديد جريء. نحن شركة هندسة برمجيات تعتمد الذكاء الاصطناعي أولاً.", p2:"من الشركات الناشئة إلى عملاء المؤسسات، نهندس برمجيات تتوسع وتُبهر.", caps:"القدرات الجوهرية" },
     services:{ label:"ما نبنيه", h2a:"", h2b:"خدماتنا", sub:"حلول رقمية شاملة — من منصات الذكاء الاصطناعي إلى تطبيقات الجوال والبنية السحابية.", learnMore:"اعرف المزيد" },
     whyUs:{ label:"لماذا شروق", h2a:"لماذا تختارنا", h2b:"" },
@@ -489,7 +521,13 @@ const T = {
   },
   fr: {
     nav:{ home:"Accueil", about:"À Propos", services:"Services", technologies:"Technologies", portfolio:"Portfolio", contact:"Contact", cta:"Nous Contacter" },
+<<<<<<< HEAD
+    hero:{ badge:"ENTREPRISE D'INGÉNIERIE IA-FIRST", h1a:"Construire", h1b:"des Solutions Numériques qui Stimulent la Croissance", sub:"Applications IA · Apps Mobiles · DevOps · Solutions Web · Automatisation\nNous développons des logiciels intelligents qui grandissent avec votre ambition.", cta1:"Commencer →", cta2:"Explorer nos Services", stat1:"Projets Livrés", stat2:"Précision IA", stat3:"Support", stat4:"Note Clients",
+      //NEW: French translations
+    w0:"Alimentées par l'IA",w1:"Scalables",w2:"Modernes",w3:"Innovantes"},
+=======
     hero:{ badge:"ENTREPRISE D'INGÉNIERIE IA-FIRST", h1a:"Ingénierie", h1b:"d'Expériences Numériques", sub:"Applications IA · Apps Mobiles · DevOps · Solutions Web · Automatisation\nNous développons des logiciels intelligents qui grandissent avec votre ambition.", cta1:"Commencer →", cta2:"Explorer nos Services", stat1:"Projets Livrés", stat2:"Précision IA", stat3:"Support", stat4:"Note Clients" },
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
     about:{ label:"À PROPOS", h2a:"Là où la Technologie", h2b:"Rencontre la Vision", p1:"Shuroq — signifiant « Lever du Soleil » en arabe — incarne notre conviction que chaque grand produit commence par un nouveau départ audacieux.", p2:"Des startups aux entreprises, nous développons des logiciels qui évoluent, performent et inspirent.", caps:"Compétences Clés" },
     services:{ label:"CE QUE NOUS CRÉONS", h2a:"Nos", h2b:"Services", sub:"Solutions numériques de bout en bout — des plateformes IA aux applications mobiles et à l'infrastructure cloud.", learnMore:"En savoir plus" },
     whyUs:{ label:"POURQUOI SHUROQ", h2a:"Pourquoi Nous", h2b:"Choisir" },
@@ -501,7 +539,13 @@ const T = {
   },
   de: {
     nav:{ home:"Startseite", about:"Über Uns", services:"Leistungen", technologies:"Technologien", portfolio:"Portfolio", contact:"Kontakt", cta:"Kontaktieren" },
+<<<<<<< HEAD
+    hero:{ badge:"KI-FIRST ENGINEERING UNTERNEHMEN", h1a:"Bauen", h1b:"Digitale Lösungen, die Geschäftswachstum fördern", sub:"KI-Apps · Mobile Apps · DevOps · Web-Lösungen · Automatisierung\nWir entwickeln intelligente Software, die mit Ihrem Ehrgeiz wächst.", cta1:"Loslegen →", cta2:"Leistungen entdecken", stat1:"Projekte geliefert", stat2:"KI-Genauigkeit", stat3:"Support", stat4:"Kundenbewertung",
+      //NEW: Deutsch Translations
+    w0:"KI-gesteuert", w1:"Skalierbar", w2:"Modern", w3:"Innovativ"},
+=======
     hero:{ badge:"KI-FIRST ENGINEERING UNTERNEHMEN", h1a:"Engineering", h1b:"Digitaler Erlebnisse", sub:"KI-Apps · Mobile Apps · DevOps · Web-Lösungen · Automatisierung\nWir entwickeln intelligente Software, die mit Ihrem Ehrgeiz wächst.", cta1:"Loslegen →", cta2:"Leistungen entdecken", stat1:"Projekte geliefert", stat2:"KI-Genauigkeit", stat3:"Support", stat4:"Kundenbewertung" },
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
     about:{ label:"ÜBER UNS", h2a:"Wo Technologie", h2b:"auf Vision trifft", p1:"Shuroq — auf Arabisch „Sonnenaufgang\" — verkörpert unsere Überzeugung, dass jedes große Produkt mit einem kühnen neuen Beginn beginnt.", p2:"Von Startups bis zu Enterprise-Kunden entwickeln wir Software, die skaliert, performt und begeistert.", caps:"Kernkompetenzen" },
     services:{ label:"WAS WIR BAUEN", h2a:"Unsere", h2b:"Leistungen", sub:"End-to-End-Digitallösungen — von KI-Plattformen bis hin zu mobilen Apps und Cloud-Infrastruktur.", learnMore:"Mehr erfahren" },
     whyUs:{ label:"WARUM SHUROQ", h2a:"Warum Uns", h2b:"wählen" },
@@ -513,7 +557,13 @@ const T = {
   },
   es: {
     nav:{ home:"Inicio", about:"Nosotros", services:"Servicios", technologies:"Tecnologías", portfolio:"Portafolio", contact:"Contacto", cta:"Contáctanos" },
+<<<<<<< HEAD
+    hero:{ badge:"EMPRESA DE INGENIERÍA IA-FIRST", h1a:"Construir", h1b:"Soluciones Digitales que Impulsan el Crecimiento Empresarial", sub:"Apps IA · Apps Móviles · DevOps · Soluciones Web · Automatización\nDesarrollamos software inteligente que crece con tu ambición.", cta1:"Comenzar →", cta2:"Explorar Servicios", stat1:"Proyectos Entregados", stat2:"Precisión IA", stat3:"Soporte", stat4:"Calificación Clientes",
+      //NEW Espanol Translations
+    w0:"Impulsado por IA",w1:"Escalable",w2:"Moderno",w3:"Innovador"},
+=======
     hero:{ badge:"EMPRESA DE INGENIERÍA IA-FIRST", h1a:"Ingeniería de", h1b:"Experiencias Digitales", sub:"Apps IA · Apps Móviles · DevOps · Soluciones Web · Automatización\nDesarrollamos software inteligente que crece con tu ambición.", cta1:"Comenzar →", cta2:"Explorar Servicios", stat1:"Proyectos Entregados", stat2:"Precisión IA", stat3:"Soporte", stat4:"Calificación Clientes" },
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
     about:{ label:"SOBRE NOSOTROS", h2a:"Donde la Tecnología", h2b:"se une a la Visión", p1:"Shuroq — que significa \"Amanecer\" en árabe — encarna nuestra creencia de que todo gran producto comienza con un nuevo amanecer audaz.", p2:"Desde startups hasta clientes empresariales, desarrollamos software que escala, rinde e inspira.", caps:"Capacidades Clave" },
     services:{ label:"QUÉ CONSTRUIMOS", h2a:"Nuestros", h2b:"Servicios", sub:"Soluciones digitales de extremo a extremo — desde plataformas de IA hasta apps móviles e infraestructura en la nube.", learnMore:"Saber más" },
     whyUs:{ label:"POR QUÉ SHUROQ", h2a:"Por Qué", h2b:"Elegirnos" },
@@ -523,6 +573,178 @@ const T = {
     contact:{ label:"CONTÁCTANOS", h2a:"Inicia Tu", h2b:"Proyecto", sub:"¿Listo para construir algo extraordinario? Tu mensaje va directamente a nuestro WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Tiempo de Respuesta", within:"Dentro de 24 horas", dashboard:"Panel en Vivo", name:"NOMBRE", emailL:"EMAIL", service:"SERVICIO", servicePH:"Seleccionar servicio...", message:"MENSAJE", msgPH:"Cuéntanos sobre tu proyecto...", send:"Enviar por WhatsApp", hint:"Abre WhatsApp con tu mensaje pre-llenado", successH:"¡Abriendo WhatsApp!", successP:"Tu mensaje está listo. Responderemos en 24 horas." },
     footer:{ tagline:"Empresa de ingeniería IA-first construyendo software inteligente y escalable para la próxima generación de negocios.", company:"Empresa", services:"Servicios", connect:"Conectar", copyright:"© 2025 Shuroq. Todos los derechos reservados.", tag:"Tecnología Redefinida ✦" },
   },
+<<<<<<< HEAD
+  it:{ 
+    nav:{ home:"Home", about:"Chi Siamo", services:"Servizi", technologies:"Tecnologie", portfolio:"Portfolio", contact:"Contatti", cta:"Contattaci" }, 
+    hero:{ badge:"AZIENDA DI INGEGNERIA AI-FIRST", h1a:"Costruire", h1b:"Soluzioni Digitali che Guidano la Crescita Aziendale", sub:"App IA · App Mobili · DevOps · Soluzioni Web · Automazione\nSviluppiamo software intelligente che cresce con la tua ambizione.", cta1:"Inizia →", cta2:"Scopri i Servizi", stat1:"Progetti Consegnati", stat2:"Precisione IA", stat3:"Supporto", stat4:"Valutazione Clienti",
+      //NEW Italino Translations
+    w0:"Alimentato da IA",w1:"Scalabile",w2:"Moderno",w3:"Innovativo"}, 
+    about:{ label:"CHI SIAMO", h2a:"Dove la Tecnologia", h2b:"incontra la Visione", p1:"Shuroq — che significa \"Alba\" in arabo — incarna la nostra convinzione che ogni grande prodotto inizi con un nuovo audace inizio.", p2:"Dalle startup alle aziende enterprise, sviluppiamo software che scala, performa e ispira.", caps:"Competenze Chiave" }, 
+    services:{ label:"COSA COSTRUIAMO", h2a:"I Nostri", h2b:"Servizi", sub:"Soluzioni digitali end-to-end — dalle piattaforme IA alle app mobili e infrastrutture cloud.", learnMore:"Scopri di più" }, 
+    whyUs:{ label:"PERCHÉ SHUROQ", h2a:"Perché", h2b:"Sceglierci" }, 
+    tech:{ label:"IL NOSTRO STACK", h2a:"Tecnologie che", h2b:"Padroneggiamo" }, 
+    portfolio:{ label:"IL NOSTRO LAVORO", h2a:"Progetti", h2b:"in Evidenza" }, 
+    testimonials:{ label:"TESTIMONIANZE", h2a:"Cosa dicono i", h2b:"nostri Clienti", h2c:"" }, 
+    contact:{ label:"CONTATTACI", h2a:"Avvia il Tuo", h2b:"Progetto", sub:"Pronto a costruire qualcosa di straordinario? Il tuo messaggio va direttamente al nostro WhatsApp.", 
+    email:"Email", whatsapp:"WhatsApp", response:"Tempo di Risposta", within:"Entro 24 ore", 
+    dashboard:"Dashboard Live", name:"NOME", emailL:"EMAIL", service:"SERVIZIO", servicePH:"Seleziona un servizio...", 
+    message:"MESSAGGIO", msgPH:"Raccontaci del tuo progetto...", send:"Invia via WhatsApp", hint:"Apre WhatsApp con il messaggio pre-compilato", 
+    successH:"Apertura WhatsApp!", successP:"Il tuo messaggio è pronto. Risponderemo entro 24 ore." }, 
+    footer:{ tagline:"Azienda di ingegneria AI-first che costruisce software intelligente per la prossima generazione di business.", 
+    company:"Azienda", services:"Servizi", connect:"Connettiti", copyright:"© 2025 Shuroq. Tutti i diritti riservati.", 
+    tag:"La Tech Ridefinita ✦" } 
+  },
+  pt:{ 
+    nav:{ home:"Início", about:"Sobre Nós", services:"Serviços", technologies:"Tecnologias", portfolio:"Portfólio", contact:"Contato", cta:"Fale Conosco" }, 
+    hero:{ badge:"EMPRESA DE ENGENHARIA IA-FIRST", h1a:"Construir", h1b:"Soluções Digitais que Impulsionam o Crescimento dos Negócios", sub:"Apps IA · Apps Mobile · DevOps · Soluções Web · Automação\nDesenvolvermos software inteligente que cresce com sua ambição.", cta1:"Começar →", cta2:"Explorar Serviços", stat1:"Projetos Entregues", stat2:"Precisão IA", stat3:"Suporte", stat4:"Avaliação Clientes",
+      //NEW Portugese Translations
+    w0:"Alimentado por IA",w1:"Escalável",w2:"Moderno",w3:"Inovador"}, 
+    about:{ label:"SOBRE NÓS", h2a:"Onde a Tecnologia", h2b:"encontra a Visão", p1:"Shuroq — significando \"Nascer do Sol\" em árabe — incorpora nossa crença de que todo grande produto começa com um novo começo ousado.", p2:"De startups a clientes enterprise, desenvolvemos software que escala, performa e inspira.", caps:"Competências Principais" }, 
+    services:{ label:"O QUE CONSTRUÍMOS", h2a:"Nossos", h2b:"Serviços", sub:"Soluções digitais end-to-end — de plataformas de IA a apps mobile e infraestrutura em nuvem.", learnMore:"Saiba mais" }, 
+    whyUs:{ label:"POR QUE SHUROQ", h2a:"Por Que Nos", h2b:"Escolher" }, 
+    tech:{ label:"NOSSA STACK", h2a:"Tecnologias que", h2b:"Dominamos" }, 
+    portfolio:{ label:"NOSSO TRABALHO", h2a:"Projetos", h2b:"em Destaque" }, 
+    testimonials:{ label:"DEPOIMENTOS", h2a:"O que nossos", h2b:"Clientes", h2c:"dizem" }, 
+    contact:{ label:"ENTRE EM CONTATO", h2a:"Inicie Seu", h2b:"Projeto", sub:"Pronto para construir algo extraordinário? Sua mensagem vai direto para nosso WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Tempo de Resposta", within:"Em até 24 horas", dashboard:"Painel ao Vivo", name:"NOME", emailL:"EMAIL", service:"SERVIÇO", servicePH:"Selecione um serviço...", message:"MENSAGEM", msgPH:"Fale-nos sobre seu projeto...", send:"Enviar via WhatsApp", hint:"Abre o WhatsApp com mensagem pré-preenchida", successH:"Abrindo WhatsApp!", successP:"Sua mensagem está pronta. Responderemos em 24h." }, 
+    footer:{ tagline:"Empresa de engenharia IA-first construindo software inteligente para a próxima geração de negócios.", company:"Empresa", services:"Serviços", connect:"Conectar", copyright:"© 2025 Shuroq. Todos os direitos reservados.", tag:"Tech Redefinida ✦" } 
+  },
+  hi:{ 
+    nav:{ home:"होम", about:"हमारे बारे में", services:"सेवाएं", technologies:"तकनीक", portfolio:"पोर्टफोलियो", contact:"संपर्क", cta:"संपर्क करें" }, 
+    hero:{ badge:"AI-फर्स्ट इंजीनियरिंग कंपनी", h1a:"निर्माण करना", h1b:"डिजिटल समाधान जो व्यावसायिक वृद्धि को बढ़ावा देते हैं", sub:"AI ऐप्स · मोबाइल ऐप्स · DevOps · वेब सॉल्यूशन · ऑटोमेशन\nहम ऐसे बुद्धिमान सॉफ़्टवेयर बनाते हैं जो आपकी महत्वाकांक्षा के साथ बढ़ता है।", cta1:"शुरू करें →", cta2:"सेवाएं देखें", stat1:"परियोजनाएं पूर्ण", stat2:"AI सटीकता", stat3:"सहायता", stat4:"क्लाइंट रेटिंग",
+      //NEW Hindi Translations
+    w0:"AI-संचालित", w1:"स्केलेबल", w2:"आधुनिक",w3:"नवोन्मेषी"}, 
+    about:{ label:"हमारे बारे में", h2a:"जहाँ प्रौद्योगिकी", h2b:"दृष्टि से मिलती है", p1:"शुरूक — अरबी में 'सूर्योदय' का अर्थ है। हम एक AI-फर्स्ट इंजीनियरिंग कंपनी हैं जो कल की डिजिटल बुनियाद बना रही है।", p2:"स्टार्टअप से लेकर एंटरप्राइज क्लाइंट तक, हम ऐसा सॉफ़्टवेयर बनाते हैं जो स्केल करता है।", caps:"मुख्य क्षमताएं" }, 
+    services:{ label:"हम क्या बनाते हैं", h2a:"हमारी", h2b:"सेवाएं", sub:"AI प्लेटफ़ॉर्म से लेकर मोबाइल ऐप्स और क्लाउड इंफ्रास्ट्रक्चर तक।", learnMore:"और जानें" }, 
+    whyUs:{ label:"क्यों शुरूक", h2a:"हमें क्यों", h2b:"चुनें" }, 
+    tech:{ label:"हमारा स्टैक", h2a:"तकनीकें जो हम", h2b:"में माहिर हैं" }, 
+    portfolio:{ label:"हमारा काम", h2a:"चुनिंदा", h2b:"परियोजनाएं" }, 
+    testimonials:{ label:"प्रशंसापत्र", h2a:"हमारे", h2b:"क्लाइंट", h2c:"क्या कहते हैं" }, 
+    contact:{ label:"संपर्क करें", h2a:"अपना", h2b:"प्रोजेक्ट शुरू करें", sub:"कुछ असाधारण बनाने के लिए तैयार हैं? आपका संदेश सीधे WhatsApp पर जाएगा।", email:"ईमेल", whatsapp:"WhatsApp", response:"प्रतिक्रिया समय", within:"24 घंटे के भीतर", dashboard:"लाइव डैशबोर्ड", name:"नाम", emailL:"ईमेल", service:"सेवा", servicePH:"सेवा चुनें...", message:"संदेश", msgPH:"अपने प्रोजेक्ट के बारे में बताएं...", send:"WhatsApp पर भेजें", hint:"आपका संदेश WhatsApp पर खुलेगा", successH:"WhatsApp खुल रहा है!", successP:"आपका संदेश तैयार है। हम 24 घंटे में जवाब देंगे।" }, 
+    footer:{ tagline:"AI-फर्स्ट इंजीनियरिंग कंपनी जो अगली पीढ़ी के व्यवसायों के लिए बुद्धिमान सॉफ़्टवेयर बना रही है।", company:"कंपनी", services:"सेवाएं", connect:"जुड़ें", copyright:"© 2025 शुरूक. सर्वाधिकार सुरक्षित.", tag:"टेक रिडिफाइंड ✦" } 
+  },
+  ur:{ 
+    nav:{ home:"ہوم", about:"ہمارے بارے میں", services:"خدمات", technologies:"ٹیکنالوجیز", portfolio:"پورٹ فولیو", contact:"رابطہ", cta:"رابطہ کریں" }, 
+    hero:{ badge:"AI-فرسٹ انجینئرنگ کمپنی", h1a:"تیاری", h1b:"ڈیجیٹل حل جو کاروباری ترقی کو بڑھاتے ہیں", sub:"AI ایپس · موبائل ایپس · DevOps · ویب سلوشنز · آٹومیشن\nہم ذہین سافٹ ویئر بناتے ہیں جو آپ کے عزائم کے ساتھ بڑھتا ہے۔", cta1:"شروع کریں ←", cta2:"خدمات دیکھیں", stat1:"مکمل پروجیکٹس", stat2:"AI درستگی", stat3:"سپورٹ", stat4:"کلائنٹ ریٹنگ", 
+      //NEW Translations
+    w0:"AI سے چلنے والا", w1:"قابل توسیع", w2:"جدید", w3:"اختراعی"}, 
+    about:{ label:"ہمارے بارے میں", h2a:"جہاں ٹیکنالوجی", h2b:"وژن سے ملتی ہے", p1:"شروق — عربی میں 'سورج طلوع' کا مطلب ہے۔ ہم ایک AI-فرسٹ انجینئرنگ کمپنی ہیں۔", p2:"اسٹارٹ اپس سے لے کر انٹرپرائز کلائنٹس تک، ہم ایسا سافٹ ویئر بناتے ہیں جو اسکیل کرتا ہے۔", caps:"بنیادی صلاحیتیں" }, 
+    services:{ label:"ہم کیا بناتے ہیں", h2a:"ہماری", h2b:"خدمات", sub:"AI پلیٹ فارمز سے موبائل ایپس اور کلاؤڈ انفراسٹرکچر تک۔", learnMore:"مزید جانیں" }, 
+    whyUs:{ label:"کیوں شروق", h2a:"ہمیں کیوں", h2b:"چنیں" }, 
+    tech:{ label:"ہمارا اسٹیک", h2a:"ٹیکنالوجیز جن میں ہم", h2b:"ماہر ہیں" }, 
+    portfolio:{ label:"ہمارا کام", h2a:"منتخب", h2b:"پروجیکٹس" }, 
+    testimonials:{ label:"تاثرات", h2a:"ہمارے", h2b:"کلائنٹس", h2c:"کیا کہتے ہیں" }, 
+    contact:{ label:"رابطہ کریں", h2a:"اپنا", h2b:"پروجیکٹ شروع کریں", sub:"کچھ غیر معمولی بنانے کے لیے تیار ہیں؟ آپ کا پیغام براہ راست WhatsApp پر جائے گا۔", email:"ای میل", whatsapp:"واٹس ایپ", response:"جواب دینے کا وقت", within:"24 گھنٹوں کے اندر", dashboard:"لائیو ڈیش بورڈ", name:"نام", emailL:"ای میل", service:"خدمت", servicePH:"خدمت منتخب کریں...", message:"پیغام", msgPH:"اپنے پروجیکٹ کے بارے میں بتائیں...", send:"WhatsApp پر بھیجیں", hint:"آپ کا پیغام WhatsApp پر کھلے گا", successH:"!واٹس ایپ کھل رہا ہے", successP:"آپ کا پیغام تیار ہے۔ ہم 24 گھنٹوں میں جواب دیں گے۔" }, 
+    footer:{ tagline:"AI-فرسٹ انجینئرنگ کمپنی جو اگلی نسل کے کاروبار کے لیے ذہین سافٹ ویئر بنا رہی ہے۔", company:"کمپنی", services:"خدمات", connect:"جڑیں", copyright:"© 2025 شروق. جملہ حقوق محفوظ ہیں۔", tag:"ٹیک ری ڈیفائنڈ ✦" } 
+  },
+  te:{ 
+    nav:{ home:"హోమ్", about:"మా గురించి", services:"సేవలు", technologies:"సాంకేతికతలు", portfolio:"పోర్ట్‌ఫోలియో", contact:"సంప్రదించండి", cta:"సంప్రదించండి" }, 
+    hero:{ badge:"AI-ఫస్ట్ ఇంజినీరింగ్ కంపెనీ", h1a:"నిర్మాణం", h1b:"ব్యాపార వృద్ధిని ప్రోత్సహించే డిజిటల్ సమాధానాలు", sub:"AI యాప్‌లు · మొబైల్ యాప్‌లు · DevOps · వెబ్ పరిష్కారాలు · ఆటోమేషన్", cta1:"ప్రారంభించండి →", cta2:"సేవలు అన్వేషించండి", stat1:"డెలివరీ చేసిన ప్రాజెక్టులు", stat2:"AI ఖచ్చితత్వం", stat3:"మద్దతు", stat4:"క్లయింట్ రేటింగ్",
+      //New Translations
+      w0:"AI-చోదిత", w1:"స్కేలేబుల్", w2:"ఆధునిక", w3:"ఆవిష్కారక"}, 
+    about:{ label:"మా గురించి", h2a:"సాంకేతికత", h2b:"దృష్టితో కలుసుకుంటుంది", p1:"శురూక్ — అరబిక్‌లో 'సూర్యోదయం' అని అర్థం. మేము AI-ఫస్ట్ ఇంజినీరింగ్ కంపెనీ.", p2:"స్టార్టప్‌ల నుండి ఎంటర్‌ప్రైజ్ క్లయింట్‌ల వరకు, స్కేల్ అవుతుంది.", caps:"ముఖ్య సామర్థ్యాలు" }, 
+    services:{ label:"మేము ఏమి నిర్మిస్తాము", h2a:"మా", h2b:"సేవలు", sub:"AI ప్లాట్‌ఫారమ్‌ల నుండి మొబైల్ యాప్‌లు మరియు క్లౌడ్ అవస్థాపన వరకు.", learnMore:"మరింత తెలుసుకోండి" }, 
+    whyUs:{ label:"ఎందుకు శురూక్", h2a:"మమ్మల్ని", h2b:"ఎందుకు ఎంచుకోవాలి" }, 
+    tech:{ label:"మా స్టాక్", h2a:"మేము నిష్ణాతులైన", h2b:"సాంకేతికతలు" }, 
+    portfolio:{ label:"మా పని", h2a:"ప్రముఖ", h2b:"ప్రాజెక్టులు" }, 
+    testimonials:{ label:"సాక్ష్యాలు", h2a:"మా క్లయింట్‌లు", h2b:"ఏమి చెప్తున్నారు", h2c:"" }, 
+    contact:{ label:"సంప్రదించండి", h2a:"మీ ప్రాజెక్ట్", h2b:"ప్రారంభించండి", sub:"అసాధారణమైనది నిర్మించడానికి సిద్ధంగా ఉన్నారా?", email:"ఇమెయిల్", whatsapp:"WhatsApp", response:"స్పందన సమయం", within:"24 గంటల లోపు", dashboard:"లైవ్ డాష్‌బోర్డ్", name:"పేరు", emailL:"ఇమెయిల్", service:"సేవ", servicePH:"సేవ ఎంచుకోండి...", message:"సందేశం", msgPH:"మీ ప్రాజెక్ట్ గురించి చెప్పండి...", send:"WhatsApp ద్వారా పంపండి", hint:"మీ సందేశంతో WhatsApp తెరుచుకుంటుంది", successH:"WhatsApp తెరుచుకుంటోంది!", successP:"మీ సందేశం సిద్ధంగా ఉంది. మేము 24 గంటల్లో స్పందిస్తాము." }, 
+    footer:{ tagline:"AI-ఫస్ట్ ఇంజినీరింగ్ కంపెనీ తదుపరి తరం వ్యాపారాల కోసం సాఫ్ట్‌వేర్ నిర్మిస్తోంది.", company:"కంపెనీ", services:"సేవలు", connect:"కనెక్ట్ అవ్వండి", copyright:"© 2025 శురూక్. అన్ని హక్కులు రిజర్వు చేయబడ్డాయి.", tag:"టెక్ రీడిఫైన్డ్ ✦" } 
+  },
+  ta:{ 
+    nav:{ home:"முகப்பு", about:"எங்களை பற்றி", services:"சேவைகள்", technologies:"தொழில்நுட்பங்கள்", portfolio:"போர்ட்ஃபோலியோ", contact:"தொடர்பு", cta:"தொடர்பு கொள்ளுங்கள்" }, 
+    hero:{ badge:"AI-ஃபர்ஸ்ட் இன்ஜினியரிங் நிறுவனம்", h1a:"கட்டுதல்", h1b:"வணிக வளர்ச்சியை உயர்த்தும் டிஜிட்டல் தீர்வுகள்", sub:"AI ஆப்கள் · மொபைல் ஆப்கள் · DevOps · வெப் தீர்வுகள் · ஆட்டோமேஷன்", cta1:"தொடங்குங்கள் →", cta2:"சேவைகளை ஆராயுங்கள்", stat1:"திட்டங்கள் முடிக்கப்பட்டன", stat2:"AI துல்லியம்", stat3:"ஆதரவு", stat4:"வாடிக்கையாளர் மதிப்பீடு",
+     //New Translation
+    w0:"AI-சக்தி வாய்ந்த", w1:"அளவிடக்கூடிய", w2:"நவீனம்", w3:"உদ்ভাவனம்"}, 
+    about:{ label:"எங்களை பற்றி", h2a:"தொழில்நுட்பம்", h2b:"தொலைநோக்குடன் சந்திக்கும் இடம்", p1:"ஷுரூக் — அரபியில் 'சூரிய உதயம்' என்று பொருள். நாங்கள் AI-ஃபர்ஸ்ட் இன்ஜினியரிங் நிறுவனம்.", p2:"ஸ்டார்ட்-அப்கள் முதல் நிறுவன வாடிக்கையாளர்கள் வரை, சிறந்த மென்பொருளை வடிவமைக்கிறோம்.", caps:"முக்கிய திறன்கள்" }, 
+    services:{ label:"நாங்கள் எதை உருவாக்குகிறோம்", h2a:"எங்கள்", h2b:"சேவைகள்", sub:"AI தளங்கள் முதல் மொபைல் ஆப்கள் மற்றும் கிளவுட் உள்கட்டமைப்பு வரை.", learnMore:"மேலும் அறிய" }, 
+    whyUs:{ label:"ஏன் ஷுரூக்", h2a:"எங்களை ஏன்", h2b:"தேர்வு செய்யவேண்டும்" }, 
+    tech:{ label:"எங்கள் ஸ்டாக்", h2a:"நாங்கள் தேர்ச்சி பெற்ற", h2b:"தொழில்நுட்பங்கள்" }, 
+    portfolio:{ label:"எங்கள் வேலை", h2a:"சிறப்பு", h2b:"திட்டங்கள்" }, 
+    testimonials:{ label:"சான்றுகள்", h2a:"வாடிக்கையாளர்கள்", h2b:"என்ன சொல்கிறார்கள்", h2c:"" }, 
+    contact:{ label:"தொடர்பு கொள்ளுங்கள்", h2a:"உங்கள் திட்டத்தை", h2b:"தொடங்குங்கள்", sub:"அசாதாரணமான ஒன்றை உருவாக்க தயாரா?", email:"மின்னஞ்சல்", whatsapp:"WhatsApp", response:"பதில் நேரம்", within:"24 மணி நேரத்திற்குள்", dashboard:"நேரடி டாஷ்போர்டு", name:"பெயர்", emailL:"மின்னஞ்சல்", service:"சேவை", servicePH:"சேவையை தேர்ந்தெடுக்கவும்...", message:"செய்தி", msgPH:"உங்கள் திட்டத்தை பற்றி சொல்லுங்கள்...", send:"WhatsApp வழியாக அனுப்பவும்", hint:"உங்கள் செய்தியுடன் WhatsApp திறக்கும்", successH:"WhatsApp திறக்கிறது!", successP:"உங்கள் செய்தி தயாராக உள்ளது. 24 மணி நேரத்தில் பதிலளிப்போம்." }, footer:{ tagline:"AI-ஃபர்ஸ்ட் இன்ஜினியரிங் நிறுவனம் அடுத்த தலைமுறை வணிகங்களுக்கு மென்பொருளை உருவாக்குகிறது.", company:"நிறுவனம்", services:"சேவைகள்", connect:"இணைக்கவும்", copyright:"© 2025 ஷுரூக். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.", tag:"டெக் ரீடிஃபைண்ட் ✦" } 
+  },
+  kn:{ 
+    nav:{ home:"ಮುಖ್ಯಪುಟ", about:"ನಮ್ಮ ಬಗ್ಗೆ", services:"ಸೇವೆಗಳು", technologies:"ತಂತ್ರಜ್ಞಾನಗಳು", portfolio:"ಪೋರ್ಟ್‌ಫೋಲಿಯೊ", contact:"ಸಂಪರ್ಕ", cta:"ಸಂಪರ್ಕಿಸಿ" }, 
+    hero:{ badge:"AI-ಫರ್ಸ್ಟ್ ಎಂಜಿನಿಯರಿಂಗ್ ಕಂಪನಿ", h1a:"ನಿರ್ಮಾಣ", h1b:"ವ್ಯಾಪಾರ ಬೆಳವಣಿಗೆಯನ್ನು ಪ್ರೋತ್ಸಾಹಿಸುವ ಡಿಜಿಟಲ್ ಪರಿಹಾರಗಳು", sub:"AI ಅಪ್ಲಿಕೇಶನ್‌ಗಳು · ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು · DevOps · ವೆಬ್ ಪರಿಹಾರಗಳು", cta1:"ಪ್ರಾರಂಭಿಸಿ →", cta2:"ಸೇವೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ", stat1:"ನಿರ್ವಹಿಸಿದ ಯೋಜನೆಗಳು", stat2:"AI ನಿಖರತೆ", stat3:"ಬೆಂಬಲ", stat4:"ಕ್ಲೈಂಟ್ ರೇಟಿಂಗ್",
+      //New Translation
+    w0:"AI ಚಾಲಿತ", w1:"ಸ್ಕೇಲೆಬಲ್", w2:"ಆಧುನಿಕ", w3:"ಸೃಜನಶೀಲ"}, 
+    about:{ label:"ನಮ್ಮ ಬಗ್ಗೆ", h2a:"ತಂತ್ರಜ್ಞಾನ", h2b:"ದೃಷ್ಟಿಕೋನದ ಮಿಲನ", p1:"ಶುರೂಕ್ — ಅರಬಿಕ್‌ನಲ್ಲಿ 'ಸೂರ್ಯೋದಯ'. ನಾವು AI-ಫರ್ಸ್ಟ್ ಎಂಜಿನಿಯರಿಂಗ್ ಕಂಪನಿ.", p2:"ಸ್ಟಾರ್ಟ್‌ಅಪ್‌ಗಳಿಂದ ಎಂಟರ್‌ಪ್ರೈಸ್ ಕ್ಲೈಂಟ್‌ಗಳವರೆಗೆ.", caps:"ಮುಖ್ಯ ಸಾಮರ್ಥ್ಯಗಳು" }, 
+    services:{ label:"ನಾವು ಏನನ್ನು ನಿರ್ಮಿಸುತ್ತೇವೆ", h2a:"ನಮ್ಮ", h2b:"ಸೇವೆಗಳು", sub:"AI ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳಿಂದ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ವರೆಗೆ.", learnMore:"ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ" }, 
+    whyUs:{ label:"ಏಕೆ ಶುರೂಕ್", h2a:"ನಮ್ಮನ್ನು ಏಕೆ", h2b:"ಆರಿಸಿಕೊಳ್ಳಬೇಕು" }, 
+    tech:{ label:"ನಮ್ಮ ಸ್ಟಾಕ್", h2a:"ನಾವು ಪರಿಣತರಾಗಿರುವ", h2b:"ತಂತ್ರಜ್ಞಾನಗಳು" }, 
+    portfolio:{ label:"ನಮ್ಮ ಕೆಲಸ", h2a:"ವೈಶಿಷ್ಟ್ಯದ", h2b:"ಯೋಜನೆಗಳು" }, 
+    testimonials:{ label:"ಪ್ರಶಂಸಾಪತ್ರಗಳು", h2a:"ನಮ್ಮ ಕ್ಲೈಂಟ್‌ಗಳು", h2b:"ಏನು ಹೇಳುತ್ತಾರೆ", h2c:"" }, 
+    contact:{ label:"ಸಂಪರ್ಕಿಸಿ", h2a:"ನಿಮ್ಮ ಯೋಜನೆ", h2b:"ಪ್ರಾರಂಭಿಸಿ", sub:"ಅಸಾಧಾರಣವಾದದ್ದನ್ನು ನಿರ್ಮಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?", email:"ಇಮೇಲ್", whatsapp:"WhatsApp", response:"ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯ", within:"24 ಗಂಟೆಗಳ ಒಳಗೆ", dashboard:"ಲೈವ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್", name:"ಹೆಸರು", emailL:"ಇಮೇಲ್", service:"ಸೇವೆ", servicePH:"ಸೇವೆ ಆಯ್ಕೆಮಾಡಿ...", message:"ಸಂದೇಶ", msgPH:"ನಿಮ್ಮ ಯೋಜನೆಯ ಬಗ್ಗೆ ಹೇಳಿ...", send:"WhatsApp ಮೂಲಕ ಕಳಿಸಿ", hint:"ನಿಮ್ಮ ಸಂದೇಶದೊಂದಿಗೆ WhatsApp ತೆರೆಯುತ್ತದೆ", successH:"WhatsApp ತೆರೆಯುತ್ತಿದೆ!", successP:"ನಿಮ್ಮ ಸಂದೇಶ ಸಿದ್ಧವಾಗಿದೆ. ನಾವು 24 ಗಂಟೆಗಳಲ್ಲಿ ಉತ್ತರಿಸುತ್ತೇವೆ." }, 
+    footer:{ tagline:"AI-ಫರ್ಸ್ಟ್ ಎಂಜಿನಿಯರಿಂಗ್ ಕಂಪನಿ ಮುಂದಿನ ತಲೆಮಾರಿನ ವ್ಯಾಪಾರಗಳಿಗೆ ಸಾಫ್ಟ್‌ವೇರ್ ನಿರ್ಮಿಸುತ್ತಿದೆ.", company:"ಕಂಪನಿ", services:"ಸೇವೆಗಳು", connect:"ಸಂಪರ್ಕಿಸಿ", copyright:"© 2025 ಶುರೂಕ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.", tag:"ಟೆಕ್ ರೀಡಿಫೈನ್ಡ್ ✦" } 
+  },
+  ml:{ 
+    nav:{ home:"ഹോം", about:"ഞങ്ങളെക്കുറിച്ച്", services:"സേവനങ്ങൾ", technologies:"സാങ്കേതികത", portfolio:"പോർട്ട്‌ഫോളിയോ", contact:"ബന്ധപ്പെടുക", cta:"ബന്ധപ്പെടുക" }, 
+    hero:{ badge:"AI-ഫസ്റ്റ് എഞ്ചിനീയറിംഗ് കമ്പനി", h1a:"നിർമ്മാണം", h1b:"ബിസിനസ് വളർച്ചയെ ത്വരിതപ്പെടുത്തുന്ന ഡിജിറ്റൽ സമാധാനങ്ങൾ", sub:"AI ആപ്പുകൾ · മൊബൈൽ ആപ്പുകൾ · DevOps · വെബ് പരിഹാരങ്ങൾ", cta1:"ആരംഭിക്കൂ →", cta2:"സേവനങ്ങൾ കാണൂ", stat1:"പ്രോജക്ടുകൾ പൂർത്തിയാക്കി", stat2:"AI കൃത്യത", stat3:"പിന്തുണ", stat4:"ക്ലൈന്റ് റേറ്റിംഗ്",
+      //NEW Translation 
+    w0:"AI-നിർദ്ദേശ", w1:"സ്കെയിലബിൾ", w2:"ആധുനിക", w3:"ആധുനിക"}, 
+   about:{ label:"ഞങ്ങളെക്കുറിച്ച്", h2a:"സാങ്കേതികത", h2b:"കാഴ്ചപ്പാടുമായി കൂടിക്കലരുന്നിടം", p1:"ഷുരൂക് — അറബിയിൽ 'സൂര്യോദയം'. ഞങ്ങൾ ഒരു AI-ഫസ്റ്റ് എഞ്ചിനീയറിംഗ് കമ്പനിയാണ്.", p2:"സ്റ്റാർട്ടപ്പുകൾ മുതൽ എന്റർപ്രൈസ് ക്ലൈന്റുകൾ വരെ.", caps:"പ്രധാന കഴിവുകൾ" }, services:{ label:"ഞങ്ങൾ എന്ത് നിർമ്മിക്കുന്നു", h2a:"ഞങ്ങളുടെ", h2b:"സേവനങ്ങൾ", sub:"AI പ്ലാറ്റ്‌ഫോമുകൾ മുതൽ മൊബൈൽ ആപ്പുകൾ വരെ.", learnMore:"കൂടുതൽ അറിയൂ" }, 
+   whyUs:{ label:"എന്തുകൊണ്ട് ഷുരൂക്", h2a:"ഞങ്ങളെ എന്തുകൊണ്ട്", h2b:"തിരഞ്ഞെടുക്കണം" }, 
+   tech:{ label:"ഞങ്ങളുടെ സ്റ്റാക്ക്", h2a:"ഞങ്ങൾ വൈദഗ്ദ്ധ്യം നേടിയ", h2b:"സാങ്കേതികതകൾ" }, 
+   portfolio:{ label:"ഞങ്ങളുടെ ജോലി", h2a:"ഫീച്ചർ ചെയ്ത", h2b:"പ്രോജക്ടുകൾ" }, 
+   testimonials:{ label:"സാക്ഷ്യങ്ങൾ", h2a:"ഞങ്ങളുടെ ക്ലൈന്റുകൾ", h2b:"എന്ത് പറയുന്നു", h2c:"" }, 
+   contact:{ label:"ബന്ധപ്പെടുക", h2a:"നിങ്ങളുടെ പ്രോജക്ട്", h2b:"ആരംഭിക്കൂ", sub:"അസാധാരണമായ എന്തെങ്കിലും നിർമ്മിക്കാൻ തയ്യാറാണോ?", email:"ഇമെയിൽ", whatsapp:"WhatsApp", response:"പ്രതികരണ സമയം", within:"24 മണിക്കൂറിനുള്ളിൽ", dashboard:"ലൈവ് ഡാഷ്‌ബോർഡ്", name:"പേര്", emailL:"ഇമെയിൽ", service:"സേവനം", servicePH:"ഒരു സേവനം തിരഞ്ഞെടുക്കൂ...", message:"സന്ദേശം", msgPH:"നിങ്ങളുടെ പ്രോജക്ടിനെക്കുറിച്ച് പറയൂ...", send:"WhatsApp വഴി അയയ്‌ക്കൂ", hint:"നിങ്ങളുടെ സന്ദേശത്തോടൊപ്പം WhatsApp തുറക്കും", successH:"WhatsApp തുറക്കുന്നു!", successP:"നിങ്ങളുടെ സന്ദേശം തയ്യാറാണ്. 24 മണിക്കൂറിൽ മറുപടി നൽകും." }, 
+   footer:{ tagline:"AI-ഫസ്റ്റ് എഞ്ചിനീയറിംഗ് കമ്പനി അടുത്ത തലമുറ ബിസിനസ്സുകൾക്ക് സോഫ്‌റ്റ്‌വെയർ നിർമ്മിക്കുന്നു.", company:"കമ്പനി", services:"സേവനങ്ങൾ", connect:"ബന്ധപ്പെടൂ", copyright:"© 2025 ഷുരൂക്. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.", tag:"ടെക് റീഡിഫൈൻഡ് ✦" } 
+  },
+  bn:{ 
+    nav:{ home:"হোম", about:"আমাদের সম্পর্কে", services:"সেবাসমূহ", technologies:"প্রযুক্তি", portfolio:"পোর্টফোলিও", contact:"যোগাযোগ", cta:"যোগাযোগ করুন" }, 
+    hero:{ badge:"AI-ফার্স্ট ইঞ্জিনিয়ারিং কোম্পানি", h1a:"নির্মাণ", h1b:"ব্যবসায়িক বৃদ্ধি চালিত করে এমন ডিজিটাল সমাধান", sub:"AI অ্যাপ · মোবাইল অ্যাপ · DevOps · ওয়েব সমাধান · অটোমেশন", cta1:"শুরু করুন →", cta2:"সেবা অন্বেষণ করুন", stat1:"প্রকল্প সম্পন্ন", stat2:"AI নির্ভুলতা", stat3:"সহায়তা", stat4:"ক্লায়েন্ট রেটিং",
+      //New Translations
+    w0:"AI-চালিত", w1:"স্কেলেবল", w2:"আধুনিক", w3:"উদ্ভাবনী"}, 
+    about:{ label:"আমাদের সম্পর্কে", h2a:"যেখানে প্রযুক্তি", h2b:"দৃষ্টিভঙ্গির সাথে মিলিত হয়", p1:"শুরূক — আরবিতে 'সূর্যোদয়' অর্থ। আমরা একটি AI-ফার্স্ট ইঞ্জিনিয়ারিং কোম্পানি।", p2:"স্টার্টআপ থেকে এন্টারপ্রাইজ ক্লায়েন্ট পর্যন্ত, আমরা সফটওয়্যার তৈরি করি।", caps:"মূল সক্ষমতা" }, 
+    services:{ label:"আমরা কী তৈরি করি", h2a:"আমাদের", h2b:"সেবাসমূহ", sub:"AI প্ল্যাটফর্ম থেকে মোবাইল অ্যাপ ও ক্লাউড অবকাঠামো পর্যন্ত।", learnMore:"আরও জানুন" }, 
+    whyUs:{ label:"কেন শুরূক", h2a:"আমাদের কেন", h2b:"বেছে নেবেন" }, 
+    tech:{ label:"আমাদের স্ট্যাক", h2a:"আমরা যে প্রযুক্তিতে", h2b:"দক্ষ" }, 
+    portfolio:{ label:"আমাদের কাজ", h2a:"বিশেষ", h2b:"প্রকল্পসমূহ" }, 
+    testimonials:{ label:"প্রশংসাপত্র", h2a:"আমাদের ক্লায়েন্টরা", h2b:"কী বলছেন", h2c:"" }, 
+    contact:{ label:"যোগাযোগ করুন", h2a:"আপনার প্রকল্প", h2b:"শুরু করুন", sub:"অসাধারণ কিছু তৈরি করতে প্রস্তুত?", email:"ইমেইল", whatsapp:"WhatsApp", response:"প্রতিক্রিয়া সময়", within:"২৪ ঘন্টার মধ্যে", dashboard:"লাইভ ড্যাশবোর্ড", name:"নাম", emailL:"ইমেইল", service:"সেবা", servicePH:"একটি সেবা নির্বাচন করুন...", message:"বার্তা", msgPH:"আপনার প্রকল্প সম্পর্কে বলুন...", send:"WhatsApp এ পাঠান", hint:"আপনার বার্তাসহ WhatsApp খুলবে", successH:"WhatsApp খুলছে!", successP:"আপনার বার্তা প্রস্তুত। ২৪ ঘন্টার মধ্যে উত্তর দেব।" }, 
+    footer:{ tagline:"AI-ফার্স্ট ইঞ্জিনিয়ারিং কোম্পানি পরবর্তী প্রজন্মের ব্যবসার জন্য সফটওয্যার তৈরি করছে।", company:"কোম্পানি", services:"সেবাসমূহ", connect:"সংযুক্ত হন", copyright:"© ২০২৫ শুরূক. সর্বস্বত্ব সংরক্ষিত।", tag:"টেক রিডিফাইন্ড ✦" } 
+  },
+  zh:{ 
+    nav:{ home:"首页", about:"关于我们", services:"服务", technologies:"技术", portfolio:"作品集", contact:"联系", cta:"联系我们" }, 
+    hero:{ badge:"AI优先工程公司", h1a:"构建", h1b:"驱动业务增长的数字解决方案", sub:"AI应用 · 移动应用 · DevOps · Web解决方案 · 自动化\n我们构建随您雄心壮志成长的智能软件。", cta1:"开始 →", cta2:"探索服务", stat1:"交付项目", stat2:"AI准确率", stat3:"支持", stat4:"客户评分",
+      //New Translation
+      w0:"AI驱动",w1:"可扩展",w2:"现代化",w3:"创新"}, 
+      about:{ label:"关于我们", h2a:"科技与", h2b:"愿景相遇之处", p1:"Shuroq——阿拉伯语意为\"日出\"——体现了我们的信念：每一个伟大的产品都始于勇敢的新开始。我们是一家AI优先工程公司。", p2:"从初创企业到企业客户，我们构建能够扩展、高效运行并激发灵感的软件。", caps:"核心能力" }, 
+      services:{ label:"我们构建什么", h2a:"我们的", h2b:"服务", sub:"端到端数字解决方案——从AI平台到移动应用和云基础设施。", learnMore:"了解更多" }, 
+      whyUs:{ label:"为何选择Shuroq", h2a:"为何", h2b:"选择我们" }, 
+      tech:{ label:"我们的技术栈", h2a:"我们精通的", h2b:"技术" }, 
+      portfolio:{ label:"我们的工作", h2a:"精选", h2b:"项目" }, 
+      testimonials:{ label:"客户评价", h2a:"客户们", h2b:"怎么说", h2c:"" }, contact:{ label:"联系我们", h2a:"启动您的", h2b:"项目", sub:"准备好构建非凡之作了吗？您的消息将直接发送到我们的WhatsApp。", email:"邮箱", whatsapp:"WhatsApp", response:"响应时间", within:"24小时内", dashboard:"实时仪表板", name:"姓名", emailL:"邮箱", service:"服务", servicePH:"选择服务...", message:"消息", msgPH:"请告诉我们您的项目...", send:"通过WhatsApp发送", hint:"将以预填消息打开WhatsApp", successH:"正在打开WhatsApp！", successP:"您的消息已就绪。我们将在24小时内回复。" }, 
+      footer:{ tagline:"AI优先工程公司，为下一代企业构建智能、可扩展的精美软件。", company:"公司", services:"服务", connect:"联系我们", copyright:"© 2025 Shuroq. 保留所有权利。", tag:"科技重新定义 ✦" } 
+    },
+  ja:{ 
+    nav:{ home:"ホーム", about:"会社概要", services:"サービス", technologies:"テクノロジー", portfolio:"ポートフォリオ", contact:"お問い合わせ", cta:"お問い合わせ" }, 
+    hero:{ badge:"AIファーストエンジニアリング企業", h1a:"構築する", h1b:"ビジネス成長を促進するデジタルソリューション", sub:"AIアプリ · モバイルアプリ · DevOps · Webソリューション · 自動化\n私たちはあなたの野望とともに成長するインテリジェントなソフトウェアを構築します。", cta1:"始める →", cta2:"サービスを見る", stat1:"納品プロジェクト", stat2:"AI精度", stat3:"サポート", stat4:"クライアント評価",
+      //New Translation
+      w0:"AI駆動", w1:"スケーラブルな", w2:"モダンな", w3:"革新的な"}, 
+    about:{ label:"会社概要", h2a:"テクノロジーが", h2b:"ビジョンと出会う場所", p1:"Shuroq（シュルーク）——アラビア語で「日の出」を意味します。私たちはAIファーストのエンジニアリング企業です。", p2:"スタートアップから大企業まで、スケールし、高パフォーマンスで、インスピレーションを与えるソフトウェアを構築します。", caps:"コアコンピテンシー" }, 
+    services:{ label:"私たちが構築するもの", h2a:"私たちの", h2b:"サービス", sub:"AIプラットフォームからモバイルアプリ、クラウドインフラまでのエンドツーエンドのデジタルソリューション。", learnMore:"詳細を見る" }, 
+    whyUs:{ label:"なぜShuroqか", h2a:"私たちを選ぶ", h2b:"理由" }, 
+    tech:{ label:"私たちのスタック", h2a:"私たちが精通する", h2b:"テクノロジー" }, 
+    portfolio:{ label:"私たちの実績", h2a:"注目の", h2b:"プロジェクト" }, 
+    testimonials:{ label:"お客様の声", h2a:"クライアントの", h2b:"声", h2c:"" }, 
+    contact:{ label:"お問い合わせ", h2a:"プロジェクトを", h2b:"始めましょう", sub:"素晴らしいものを作る準備はできていますか？メッセージは直接WhatsAppに届きます。", email:"メール", whatsapp:"WhatsApp", response:"応答時間", within:"24時間以内", dashboard:"ライブダッシュボード", name:"お名前", emailL:"メール", service:"サービス", servicePH:"サービスを選択...", message:"メッセージ", msgPH:"プロジェクトについて教えてください...", send:"WhatsAppで送る", hint:"メッセージが入力済みのWhatsAppが開きます", successH:"WhatsAppを開いています！", successP:"メッセージの準備ができました。24時間以内に返信します。" }, 
+    footer:{ tagline:"AIファーストのエンジニアリング企業として、次世代ビジネスのためのインテリジェントなソフトウェアを構築しています。", company:"会社", services:"サービス", connect:"つながる", copyright:"© 2025 Shuroq. 全著作権所有。", tag:"テックを再定義 ✦" } 
+  },
+  ru:{ 
+    nav:{ home:"Главная", about:"О нас", services:"Услуги", technologies:"Технологии", portfolio:"Портфолио", contact:"Контакты", cta:"Связаться" }, 
+    hero:{ badge:"ИНЖИНИРИНГОВАЯ КОМПАНИЯ AI-FIRST", h1a:"Создание", h1b:"Цифровые решения, которые ускоряют рост вашего бизнеса", sub:"ИИ-приложения · Мобильные приложения · DevOps · Веб-решения · Автоматизация\nМы создаём интеллектуальное ПО, которое растёт вместе с вашими амбициями.", cta1:"Начать →", cta2:"Смотреть услуги", stat1:"Проектов выполнено", stat2:"Точность ИИ", stat3:"Поддержка", stat4:"Рейтинг клиентов",
+      //New Translation
+     w0:"ИИ-приводимый", w1:"Масштабируемый", w2:"Современный",w3:"Инновационный"},
+    about:{ label:"О НАС", h2a:"Где технологии", h2b:"встречаются с видением", p1:"Shuroq — в переводе с арабского «Восход солнца» — воплощает нашу убеждённость в том, что каждый великий продукт начинается с нового смелого рассвета.", p2:"От стартапов до корпоративных клиентов — мы разрабатываем ПО, которое масштабируется.", caps:"Ключевые компетенции" }, 
+    services:{ label:"ЧТО МЫ СОЗДАЁМ", h2a:"Наши", h2b:"Услуги", sub:"Комплексные цифровые решения — от ИИ-платформ до мобильных приложений и облачной инфраструктуры.", learnMore:"Узнать больше" }, 
+    whyUs:{ label:"ПОЧЕМУ SHUROQ", h2a:"Почему выбирают", h2b:"нас" }, 
+    tech:{ label:"НАШ СТЕК", h2a:"Технологии которыми", h2b:"мы владеем" }, 
+    portfolio:{ label:"НАШИ РАБОТЫ", h2a:"Избранные", h2b:"Проекты" }, 
+    testimonials:{ label:"ОТЗЫВЫ", h2a:"Что говорят", h2b:"наши клиенты", h2c:"" }, 
+    contact:{ label:"СВЯЗАТЬСЯ С НАМИ", h2a:"Начните свой", h2b:"Проект", sub:"Готовы создать что-то выдающееся? Ваше сообщение придёт прямо в WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Время ответа", within:"В течение 24 часов", dashboard:"Панель в реальном времени", name:"ИМЯ", emailL:"EMAIL", service:"УСЛУГА", servicePH:"Выбрать услугу...", message:"СООБЩЕНИЕ", msgPH:"Расскажите о вашем проекте...", send:"Отправить через WhatsApp", hint:"Откроет WhatsApp с заполненным сообщением", successH:"Открывается WhatsApp!", successP:"Ваше сообщение готово. Мы ответим в течение 24 часов." }, 
+    footer:{ tagline:"Инжиниринговая компания AI-first, создающая интеллектуальное масштабируемое ПО для бизнеса следующего поколения.", company:"Компания", services:"Услуги", connect:"Связаться", copyright:"© 2025 Shuroq. Все права защищены.", tag:"Технологии переосмыслены ✦" } },
+=======
   it:{ nav:{ home:"Home", about:"Chi Siamo", services:"Servizi", technologies:"Tecnologie", portfolio:"Portfolio", contact:"Contatti", cta:"Contattaci" }, hero:{ badge:"AZIENDA DI INGEGNERIA AI-FIRST", h1a:"Ingegneria di", h1b:"Esperienze Digitali", sub:"App IA · App Mobili · DevOps · Soluzioni Web · Automazione\nSviluppiamo software intelligente che cresce con la tua ambizione.", cta1:"Inizia →", cta2:"Scopri i Servizi", stat1:"Progetti Consegnati", stat2:"Precisione IA", stat3:"Supporto", stat4:"Valutazione Clienti" }, about:{ label:"CHI SIAMO", h2a:"Dove la Tecnologia", h2b:"incontra la Visione", p1:"Shuroq — che significa \"Alba\" in arabo — incarna la nostra convinzione che ogni grande prodotto inizi con un nuovo audace inizio.", p2:"Dalle startup alle aziende enterprise, sviluppiamo software che scala, performa e ispira.", caps:"Competenze Chiave" }, services:{ label:"COSA COSTRUIAMO", h2a:"I Nostri", h2b:"Servizi", sub:"Soluzioni digitali end-to-end — dalle piattaforme IA alle app mobili e infrastrutture cloud.", learnMore:"Scopri di più" }, whyUs:{ label:"PERCHÉ SHUROQ", h2a:"Perché", h2b:"Sceglierci" }, tech:{ label:"IL NOSTRO STACK", h2a:"Tecnologie che", h2b:"Padroneggiamo" }, portfolio:{ label:"IL NOSTRO LAVORO", h2a:"Progetti", h2b:"in Evidenza" }, testimonials:{ label:"TESTIMONIANZE", h2a:"Cosa dicono i", h2b:"nostri Clienti", h2c:"" }, contact:{ label:"CONTATTACI", h2a:"Avvia il Tuo", h2b:"Progetto", sub:"Pronto a costruire qualcosa di straordinario? Il tuo messaggio va direttamente al nostro WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Tempo di Risposta", within:"Entro 24 ore", dashboard:"Dashboard Live", name:"NOME", emailL:"EMAIL", service:"SERVIZIO", servicePH:"Seleziona un servizio...", message:"MESSAGGIO", msgPH:"Raccontaci del tuo progetto...", send:"Invia via WhatsApp", hint:"Apre WhatsApp con il messaggio pre-compilato", successH:"Apertura WhatsApp!", successP:"Il tuo messaggio è pronto. Risponderemo entro 24 ore." }, footer:{ tagline:"Azienda di ingegneria AI-first che costruisce software intelligente per la prossima generazione di business.", company:"Azienda", services:"Servizi", connect:"Connettiti", copyright:"© 2025 Shuroq. Tutti i diritti riservati.", tag:"La Tech Ridefinita ✦" } },
   pt:{ nav:{ home:"Início", about:"Sobre Nós", services:"Serviços", technologies:"Tecnologias", portfolio:"Portfólio", contact:"Contato", cta:"Fale Conosco" }, hero:{ badge:"EMPRESA DE ENGENHARIA IA-FIRST", h1a:"Engenharia de", h1b:"Experiências Digitais", sub:"Apps IA · Apps Mobile · DevOps · Soluções Web · Automação\nDesenvolvermos software inteligente que cresce com sua ambição.", cta1:"Começar →", cta2:"Explorar Serviços", stat1:"Projetos Entregues", stat2:"Precisão IA", stat3:"Suporte", stat4:"Avaliação Clientes" }, about:{ label:"SOBRE NÓS", h2a:"Onde a Tecnologia", h2b:"encontra a Visão", p1:"Shuroq — significando \"Nascer do Sol\" em árabe — incorpora nossa crença de que todo grande produto começa com um novo começo ousado.", p2:"De startups a clientes enterprise, desenvolvemos software que escala, performa e inspira.", caps:"Competências Principais" }, services:{ label:"O QUE CONSTRUÍMOS", h2a:"Nossos", h2b:"Serviços", sub:"Soluções digitais end-to-end — de plataformas de IA a apps mobile e infraestrutura em nuvem.", learnMore:"Saiba mais" }, whyUs:{ label:"POR QUE SHUROQ", h2a:"Por Que Nos", h2b:"Escolher" }, tech:{ label:"NOSSA STACK", h2a:"Tecnologias que", h2b:"Dominamos" }, portfolio:{ label:"NOSSO TRABALHO", h2a:"Projetos", h2b:"em Destaque" }, testimonials:{ label:"DEPOIMENTOS", h2a:"O que nossos", h2b:"Clientes", h2c:"dizem" }, contact:{ label:"ENTRE EM CONTATO", h2a:"Inicie Seu", h2b:"Projeto", sub:"Pronto para construir algo extraordinário? Sua mensagem vai direto para nosso WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Tempo de Resposta", within:"Em até 24 horas", dashboard:"Painel ao Vivo", name:"NOME", emailL:"EMAIL", service:"SERVIÇO", servicePH:"Selecione um serviço...", message:"MENSAGEM", msgPH:"Fale-nos sobre seu projeto...", send:"Enviar via WhatsApp", hint:"Abre o WhatsApp com mensagem pré-preenchida", successH:"Abrindo WhatsApp!", successP:"Sua mensagem está pronta. Responderemos em 24h." }, footer:{ tagline:"Empresa de engenharia IA-first construindo software inteligente para a próxima geração de negócios.", company:"Empresa", services:"Serviços", connect:"Conectar", copyright:"© 2025 Shuroq. Todos os direitos reservados.", tag:"Tech Redefinida ✦" } },
   hi:{ nav:{ home:"होम", about:"हमारे बारे में", services:"सेवाएं", technologies:"तकनीक", portfolio:"पोर्टफोलियो", contact:"संपर्क", cta:"संपर्क करें" }, hero:{ badge:"AI-फर्स्ट इंजीनियरिंग कंपनी", h1a:"इंजीनियरिंग", h1b:"डिजिटल अनुभव", sub:"AI ऐप्स · मोबाइल ऐप्स · DevOps · वेब सॉल्यूशन · ऑटोमेशन\nहम ऐसे बुद्धिमान सॉफ़्टवेयर बनाते हैं जो आपकी महत्वाकांक्षा के साथ बढ़ता है।", cta1:"शुरू करें →", cta2:"सेवाएं देखें", stat1:"परियोजनाएं पूर्ण", stat2:"AI सटीकता", stat3:"सहायता", stat4:"क्लाइंट रेटिंग" }, about:{ label:"हमारे बारे में", h2a:"जहाँ प्रौद्योगिकी", h2b:"दृष्टि से मिलती है", p1:"शुरूक — अरबी में 'सूर्योदय' का अर्थ है। हम एक AI-फर्स्ट इंजीनियरिंग कंपनी हैं जो कल की डिजिटल बुनियाद बना रही है।", p2:"स्टार्टअप से लेकर एंटरप्राइज क्लाइंट तक, हम ऐसा सॉफ़्टवेयर बनाते हैं जो स्केल करता है।", caps:"मुख्य क्षमताएं" }, services:{ label:"हम क्या बनाते हैं", h2a:"हमारी", h2b:"सेवाएं", sub:"AI प्लेटफ़ॉर्म से लेकर मोबाइल ऐप्स और क्लाउड इंफ्रास्ट्रक्चर तक।", learnMore:"और जानें" }, whyUs:{ label:"क्यों शुरूक", h2a:"हमें क्यों", h2b:"चुनें" }, tech:{ label:"हमारा स्टैक", h2a:"तकनीकें जो हम", h2b:"में माहिर हैं" }, portfolio:{ label:"हमारा काम", h2a:"चुनिंदा", h2b:"परियोजनाएं" }, testimonials:{ label:"प्रशंसापत्र", h2a:"हमारे", h2b:"क्लाइंट", h2c:"क्या कहते हैं" }, contact:{ label:"संपर्क करें", h2a:"अपना", h2b:"प्रोजेक्ट शुरू करें", sub:"कुछ असाधारण बनाने के लिए तैयार हैं? आपका संदेश सीधे WhatsApp पर जाएगा।", email:"ईमेल", whatsapp:"WhatsApp", response:"प्रतिक्रिया समय", within:"24 घंटे के भीतर", dashboard:"लाइव डैशबोर्ड", name:"नाम", emailL:"ईमेल", service:"सेवा", servicePH:"सेवा चुनें...", message:"संदेश", msgPH:"अपने प्रोजेक्ट के बारे में बताएं...", send:"WhatsApp पर भेजें", hint:"आपका संदेश WhatsApp पर खुलेगा", successH:"WhatsApp खुल रहा है!", successP:"आपका संदेश तैयार है। हम 24 घंटे में जवाब देंगे।" }, footer:{ tagline:"AI-फर्स्ट इंजीनियरिंग कंपनी जो अगली पीढ़ी के व्यवसायों के लिए बुद्धिमान सॉफ़्टवेयर बना रही है।", company:"कंपनी", services:"सेवाएं", connect:"जुड़ें", copyright:"© 2025 शुरूक. सर्वाधिकार सुरक्षित.", tag:"टेक रिडिफाइंड ✦" } },
@@ -535,6 +757,7 @@ const T = {
   zh:{ nav:{ home:"首页", about:"关于我们", services:"服务", technologies:"技术", portfolio:"作品集", contact:"联系", cta:"联系我们" }, hero:{ badge:"AI优先工程公司", h1a:"工程设计", h1b:"数字体验", sub:"AI应用 · 移动应用 · DevOps · Web解决方案 · 自动化\n我们构建随您雄心壮志成长的智能软件。", cta1:"开始 →", cta2:"探索服务", stat1:"交付项目", stat2:"AI准确率", stat3:"支持", stat4:"客户评分" }, about:{ label:"关于我们", h2a:"科技与", h2b:"愿景相遇之处", p1:"Shuroq——阿拉伯语意为\"日出\"——体现了我们的信念：每一个伟大的产品都始于勇敢的新开始。我们是一家AI优先工程公司。", p2:"从初创企业到企业客户，我们构建能够扩展、高效运行并激发灵感的软件。", caps:"核心能力" }, services:{ label:"我们构建什么", h2a:"我们的", h2b:"服务", sub:"端到端数字解决方案——从AI平台到移动应用和云基础设施。", learnMore:"了解更多" }, whyUs:{ label:"为何选择Shuroq", h2a:"为何", h2b:"选择我们" }, tech:{ label:"我们的技术栈", h2a:"我们精通的", h2b:"技术" }, portfolio:{ label:"我们的工作", h2a:"精选", h2b:"项目" }, testimonials:{ label:"客户评价", h2a:"客户们", h2b:"怎么说", h2c:"" }, contact:{ label:"联系我们", h2a:"启动您的", h2b:"项目", sub:"准备好构建非凡之作了吗？您的消息将直接发送到我们的WhatsApp。", email:"邮箱", whatsapp:"WhatsApp", response:"响应时间", within:"24小时内", dashboard:"实时仪表板", name:"姓名", emailL:"邮箱", service:"服务", servicePH:"选择服务...", message:"消息", msgPH:"请告诉我们您的项目...", send:"通过WhatsApp发送", hint:"将以预填消息打开WhatsApp", successH:"正在打开WhatsApp！", successP:"您的消息已就绪。我们将在24小时内回复。" }, footer:{ tagline:"AI优先工程公司，为下一代企业构建智能、可扩展的精美软件。", company:"公司", services:"服务", connect:"联系我们", copyright:"© 2025 Shuroq. 保留所有权利。", tag:"科技重新定义 ✦" } },
   ja:{ nav:{ home:"ホーム", about:"会社概要", services:"サービス", technologies:"テクノロジー", portfolio:"ポートフォリオ", contact:"お問い合わせ", cta:"お問い合わせ" }, hero:{ badge:"AIファーストエンジニアリング企業", h1a:"エンジニアリング", h1b:"デジタル体験", sub:"AIアプリ · モバイルアプリ · DevOps · Webソリューション · 自動化\n私たちはあなたの野望とともに成長するインテリジェントなソフトウェアを構築します。", cta1:"始める →", cta2:"サービスを見る", stat1:"納品プロジェクト", stat2:"AI精度", stat3:"サポート", stat4:"クライアント評価" }, about:{ label:"会社概要", h2a:"テクノロジーが", h2b:"ビジョンと出会う場所", p1:"Shuroq（シュルーク）——アラビア語で「日の出」を意味します。私たちはAIファーストのエンジニアリング企業です。", p2:"スタートアップから大企業まで、スケールし、高パフォーマンスで、インスピレーションを与えるソフトウェアを構築します。", caps:"コアコンピテンシー" }, services:{ label:"私たちが構築するもの", h2a:"私たちの", h2b:"サービス", sub:"AIプラットフォームからモバイルアプリ、クラウドインフラまでのエンドツーエンドのデジタルソリューション。", learnMore:"詳細を見る" }, whyUs:{ label:"なぜShuroqか", h2a:"私たちを選ぶ", h2b:"理由" }, tech:{ label:"私たちのスタック", h2a:"私たちが精通する", h2b:"テクノロジー" }, portfolio:{ label:"私たちの実績", h2a:"注目の", h2b:"プロジェクト" }, testimonials:{ label:"お客様の声", h2a:"クライアントの", h2b:"声", h2c:"" }, contact:{ label:"お問い合わせ", h2a:"プロジェクトを", h2b:"始めましょう", sub:"素晴らしいものを作る準備はできていますか？メッセージは直接WhatsAppに届きます。", email:"メール", whatsapp:"WhatsApp", response:"応答時間", within:"24時間以内", dashboard:"ライブダッシュボード", name:"お名前", emailL:"メール", service:"サービス", servicePH:"サービスを選択...", message:"メッセージ", msgPH:"プロジェクトについて教えてください...", send:"WhatsAppで送る", hint:"メッセージが入力済みのWhatsAppが開きます", successH:"WhatsAppを開いています！", successP:"メッセージの準備ができました。24時間以内に返信します。" }, footer:{ tagline:"AIファーストのエンジニアリング企業として、次世代ビジネスのためのインテリジェントなソフトウェアを構築しています。", company:"会社", services:"サービス", connect:"つながる", copyright:"© 2025 Shuroq. 全著作権所有。", tag:"テックを再定義 ✦" } },
   ru:{ nav:{ home:"Главная", about:"О нас", services:"Услуги", technologies:"Технологии", portfolio:"Портфолио", contact:"Контакты", cta:"Связаться" }, hero:{ badge:"ИНЖИНИРИНГОВАЯ КОМПАНИЯ AI-FIRST", h1a:"Инжиниринг", h1b:"Цифровых Опытов", sub:"ИИ-приложения · Мобильные приложения · DevOps · Веб-решения · Автоматизация\nМы создаём интеллектуальное ПО, которое растёт вместе с вашими амбициями.", cta1:"Начать →", cta2:"Смотреть услуги", stat1:"Проектов выполнено", stat2:"Точность ИИ", stat3:"Поддержка", stat4:"Рейтинг клиентов" }, about:{ label:"О НАС", h2a:"Где технологии", h2b:"встречаются с видением", p1:"Shuroq — в переводе с арабского «Восход солнца» — воплощает нашу убеждённость в том, что каждый великий продукт начинается с нового смелого рассвета.", p2:"От стартапов до корпоративных клиентов — мы разрабатываем ПО, которое масштабируется.", caps:"Ключевые компетенции" }, services:{ label:"ЧТО МЫ СОЗДАЁМ", h2a:"Наши", h2b:"Услуги", sub:"Комплексные цифровые решения — от ИИ-платформ до мобильных приложений и облачной инфраструктуры.", learnMore:"Узнать больше" }, whyUs:{ label:"ПОЧЕМУ SHUROQ", h2a:"Почему выбирают", h2b:"нас" }, tech:{ label:"НАШ СТЕК", h2a:"Технологии которыми", h2b:"мы владеем" }, portfolio:{ label:"НАШИ РАБОТЫ", h2a:"Избранные", h2b:"Проекты" }, testimonials:{ label:"ОТЗЫВЫ", h2a:"Что говорят", h2b:"наши клиенты", h2c:"" }, contact:{ label:"СВЯЗАТЬСЯ С НАМИ", h2a:"Начните свой", h2b:"Проект", sub:"Готовы создать что-то выдающееся? Ваше сообщение придёт прямо в WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Время ответа", within:"В течение 24 часов", dashboard:"Панель в реальном времени", name:"ИМЯ", emailL:"EMAIL", service:"УСЛУГА", servicePH:"Выбрать услугу...", message:"СООБЩЕНИЕ", msgPH:"Расскажите о вашем проекте...", send:"Отправить через WhatsApp", hint:"Откроет WhatsApp с заполненным сообщением", successH:"Открывается WhatsApp!", successP:"Ваше сообщение готово. Мы ответим в течение 24 часов." }, footer:{ tagline:"Инжиниринговая компания AI-first, создающая интеллектуальное масштабируемое ПО для бизнеса следующего поколения.", company:"Компания", services:"Услуги", connect:"Связаться", copyright:"© 2025 Shuroq. Все права защищены.", tag:"Технологии переосмыслены ✦" } },
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
 };
 
 // fallback to English for any missing keys
@@ -789,10 +1012,20 @@ function Navbar({ active }) {
 // ── Hero ──────────────────────────────────────────────────────────────────────
 function Hero() {
   const [lang] = useLang();
+<<<<<<< HEAD
+  const words = [t(lang, "hero", "w0"),
+    t(lang, "hero", "w1"),
+    t(lang, "hero", "w2"),
+    t(lang, "hero", "w3")];
+  const [wi, setWi] = useState(0);
+  const [fade, setFade] = useState(true);
+  useEffect(() => { const id = setInterval(() => { setFade(false); setTimeout(() => { setWi(i => (i+1)%words.length); setFade(true); }, 350); }, 2800); return () => clearInterval(id); }, [words.length]);
+=======
   const words = ["AI-Powered","Intelligent","Future-Ready","Scalable"];
   const [wi, setWi] = useState(0);
   const [fade, setFade] = useState(true);
   useEffect(() => { const id = setInterval(() => { setFade(false); setTimeout(() => { setWi(i => (i+1)%words.length); setFade(true); }, 350); }, 2800); return () => clearInterval(id); }, []);
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
 
   return (
     <section id="home" style={{ position:"relative", minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", background:"linear-gradient(155deg,#F4F7FC 0%,#EAF2FD 55%,#F0F6FF 100%)" }}>
@@ -809,7 +1042,11 @@ function Hero() {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
+      <div style={{ position:"relative", zIndex:1, textAlign:"center", padding:"120px 5vw 60px", maxWidth:1200, margin:"0 auto" }}>
+=======
       <div style={{ position:"relative", zIndex:1, textAlign:"center", padding:"120px 5vw 60px", maxWidth:900 }}>
+>>>>>>> 4b6fd776724a5c91a8c2beebb4057a55bd769da9
         <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:"rgba(59,130,196,0.08)", border:"1px solid rgba(59,130,196,0.22)", borderRadius:40, padding:"7px 20px", marginBottom:24 }}>
           <span style={{ width:7, height:7, borderRadius:"50%", background:"#0EA5C9", display:"inline-block", animation:"pulse 2s infinite" }}/>
           <span style={{ fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:11.5, color:"#3B82C4", letterSpacing:2.2 }}>{t(lang,"hero","badge")}</span>
