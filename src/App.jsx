@@ -21,23 +21,76 @@ async function submitLead({ name, email, service, message }) {
 }
 
 
-const NAV_LINKS = ["Home","About","Services","Technologies","Portfolio","Contact"];
+const NAV_LINKS = ["Home","About","Services","Technologies","Portfolio"];
+
+function SvgIcon({ name, size=24, color="currentColor", sw=1.8 }) {
+  const s = { fill:"none", stroke:color, strokeWidth:sw, strokeLinecap:"round", strokeLinejoin:"round" };
+  const icons = {
+    ai:         <><rect x="9" y="9" width="6" height="6" {...s}/><path d="M9 9V5M15 9V5M9 15v4M15 15v4M5 9h4M5 15h4M15 9h4M15 15h4" {...s}/><rect x="7" y="3" width="4" height="2" rx="1" {...s}/><rect x="13" y="3" width="4" height="2" rx="1" {...s}/><rect x="7" y="19" width="4" height="2" rx="1" {...s}/><rect x="13" y="19" width="4" height="2" rx="1" {...s}/><rect x="3" y="7" width="2" height="4" rx="1" {...s}/><rect x="3" y="13" width="2" height="4" rx="1" {...s}/><rect x="19" y="7" width="2" height="4" rx="1" {...s}/><rect x="19" y="13" width="2" height="4" rx="1" {...s}/></>,
+    mobile:     <><rect x="5" y="2" width="14" height="20" rx="2" {...s}/><line x1="12" y1="18" x2="12.01" y2="18" {...s}/></>,
+    apple:      <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.029 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" fill={color}/>,
+    cloud:      <><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" {...s}/></>,
+    globe:      <><circle cx="12" cy="12" r="10" {...s}/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" {...s}/></>,
+    shop:       <><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" {...s}/><line x1="3" y1="6" x2="21" y2="6" {...s}/><path d="M16 10a4 4 0 0 1-8 0" {...s}/></>,
+    chat:       <><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" {...s}/></>,
+    gear:       <><circle cx="12" cy="12" r="3" {...s}/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" {...s}/></>,
+    flask:      <><path d="M9 3h6M9 3v6l-5 9a1 1 0 0 0 .9 1.5h10.2A1 1 0 0 0 21 18l-5-9V3" {...s}/><line x1="6.5" y1="14" x2="17.5" y2="14" {...s}/></>,
+    building:   <><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-4h6v4M9 9h.01M15 9h.01M12 9h.01M9 13h.01M15 13h.01M12 13h.01" {...s}/></>,
+    lightning:  <><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" {...s}/></>,
+    layers:     <><polygon points="12 2 2 7 12 12 22 7 12 2" {...s}/><polyline points="2 17 12 22 22 17" {...s}/><polyline points="2 12 12 17 22 12" {...s}/></>,
+    lightbulb:  <><line x1="9" y1="18" x2="15" y2="18" {...s}/><line x1="10" y1="22" x2="14" y2="22" {...s}/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" {...s}/></>,
+    dollar:     <><line x1="12" y1="1" x2="12" y2="23" {...s}/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" {...s}/></>,
+    lock:       <><rect x="3" y="11" width="18" height="11" rx="2" {...s}/><path d="M7 11V7a5 5 0 0 1 10 0v4" {...s}/></>,
+    email:      <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" {...s}/><polyline points="22,6 12,13 2,6" {...s}/></>,
+    whatsapp:   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill={color}/>,
+    phone:      <><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.1 11.7 19.79 19.79 0 0 1 1.04 3a2 2 0 0 1 2.08-1.86h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" {...s}/></>,
+    clock:      <><circle cx="12" cy="12" r="10" {...s}/><polyline points="12 6 12 12 16 14" {...s}/></>,
+    pin:        <><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" {...s}/><circle cx="12" cy="10" r="3" {...s}/></>,
+    briefcase:  <><rect x="2" y="7" width="20" height="14" rx="2" {...s}/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" {...s}/></>,
+    users:      <><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" {...s}/><circle cx="9" cy="7" r="4" {...s}/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" {...s}/></>,
+    rocket:     <><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" {...s}/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" {...s}/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" {...s}/></>,
+    headset:    <><path d="M3 18v-6a9 9 0 0 1 18 0v6" {...s}/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" {...s}/></>,
+    shield:     <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" {...s}/></>,
+    link:       <><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" {...s}/></>,
+    brain:      <><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z" {...s}/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z" {...s}/></>,
+    camera:     <><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" {...s}/><circle cx="12" cy="13" r="4" {...s}/></>,
+    check:      <><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" {...s}/><polyline points="22 4 12 14.01 9 11.01" {...s}/></>,
+    close:      <><line x1="18" y1="6" x2="6" y2="18" {...s}/><line x1="6" y1="6" x2="18" y2="18" {...s}/></>,
+    zap:        <><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" {...s}/></>,
+    bot:        <><rect x="3" y="11" width="18" height="10" rx="2" {...s}/><circle cx="12" cy="5" r="2" {...s}/><path d="M12 7v4M8 15h.01M16 15h.01M12 15h.01" {...s}/></>,
+    analytics:  <><line x1="18" y1="20" x2="18" y2="4" {...s}/><line x1="12" y1="20" x2="12" y2="10" {...s}/><line x1="6" y1="20" x2="6" y2="16" {...s}/></>,
+    eye:        <><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" {...s}/><circle cx="12" cy="12" r="3" {...s}/></>,
+    target:     <><circle cx="12" cy="12" r="10" {...s}/><circle cx="12" cy="12" r="6" {...s}/><circle cx="12" cy="12" r="2" {...s}/></>,
+    code:       <><polyline points="16 18 22 12 16 6" {...s}/><polyline points="8 6 2 12 8 18" {...s}/></>,
+    server:     <><rect x="2" y="2" width="20" height="8" rx="2" {...s}/><rect x="2" y="14" width="20" height="8" rx="2" {...s}/><line x1="6" y1="6" x2="6.01" y2="6" {...s}/><line x1="6" y1="18" x2="6.01" y2="18" {...s}/></>,
+  };
+  if (name.startsWith("http"))
+    return <img src={name} width={size} height={size} style={{objectFit:"contain",display:"block"}} alt=""/>;
+  const ic = icons[name];
+  if (!ic) return null;
+  const isFilled = name === "whatsapp" || name === "apple";
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={isFilled ? color : "none"} stroke={isFilled ? "none" : color} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
+      {ic}
+    </svg>
+  );
+}
 
 const SLIDES = [
-  { title:"AI Application Development", sub:"LLM-powered automation, intelligent dashboards & recommendation engines.", icon:"🤖", grad:"linear-gradient(135deg,#EAF3FF 0%,#F4F9FF 100%)", accent:"#3B82C4" },
-  { title:"Android App Development", sub:"Native & cross-platform apps engineered for performance and delight.", icon:"📱", grad:"linear-gradient(135deg,#EDFDF5 0%,#F4FDF9 100%)", accent:"#10B981" },
-  { title:"iOS App Development", sub:"Premium iOS experiences crafted to Apple's exacting standards.", icon:"🍎", grad:"linear-gradient(135deg,#FFF1F1 0%,#FFF7F7 100%)", accent:"#EF4444" },
-  { title:"DevOps Services", sub:"CI/CD pipelines, Kubernetes orchestration & cloud infrastructure ops.", icon:"☁️", grad:"linear-gradient(135deg,#F5F2FF 0%,#FAF8FF 100%)", accent:"#7C3AED" },
-  { title:"Web Application Development", sub:"Scalable full-stack platforms with modern React & cloud-native architecture.", icon:"🌐", grad:"linear-gradient(135deg,#FFFAED 0%,#FFFDF5 100%)", accent:"#F5A623" },
-  { title:"E-Commerce Development", sub:"High-converting storefronts with smart discovery & seamless checkout.", icon:"🛍️", grad:"linear-gradient(135deg,#FFF0FB 0%,#FFF7FD 100%)", accent:"#EC4899" },
-  { title:"Chatbot Development", sub:"Conversational AI that engages, qualifies and converts at scale.", icon:"💬", grad:"linear-gradient(135deg,#EDFCFA 0%,#F4FDFB 100%)", accent:"#0EA5C9" },
-  { title:"Automation Solutions", sub:"Workflow engines & RPA eliminating repetitive work at enterprise scale.", icon:"⚙️", grad:"linear-gradient(135deg,#F0FFF4 0%,#F7FFF9 100%)", accent:"#10B981" },
+  { title:"AI Application Development", sub:"LLM-powered automation, intelligent dashboards & recommendation engines.", icon:"ai", grad:"linear-gradient(135deg,#EAF3FF 0%,#F4F9FF 100%)", accent:"#3B82C4" },
+  { title:"Android App Development", sub:"Native & cross-platform apps engineered for performance and delight.", icon:"mobile", grad:"linear-gradient(135deg,#EDFDF5 0%,#F4FDF9 100%)", accent:"#10B981" },
+  { title:"iOS App Development", sub:"Premium iOS experiences crafted to Apple's exacting standards.", icon:"https://cdn.simpleicons.org/apple/EF4444", grad:"linear-gradient(135deg,#FFF1F1 0%,#FFF7F7 100%)", accent:"#EF4444" },
+  { title:"DevOps Services", sub:"CI/CD pipelines, Kubernetes orchestration & cloud infrastructure ops.", icon:"cloud", grad:"linear-gradient(135deg,#F5F2FF 0%,#FAF8FF 100%)", accent:"#7C3AED" },
+  { title:"Web Application Development", sub:"Scalable full-stack platforms with modern React & cloud-native architecture.", icon:"globe", grad:"linear-gradient(135deg,#FFFAED 0%,#FFFDF5 100%)", accent:"#F5A623" },
+  { title:"E-Commerce Development", sub:"High-converting storefronts with smart discovery & seamless checkout.", icon:"shop", grad:"linear-gradient(135deg,#FFF0FB 0%,#FFF7FD 100%)", accent:"#EC4899" },
+  { title:"Chatbot Development", sub:"Conversational AI that engages, qualifies and converts at scale.", icon:"chat", grad:"linear-gradient(135deg,#EDFCFA 0%,#F4FDFB 100%)", accent:"#0EA5C9" },
+  { title:"Automation Solutions", sub:"Workflow engines & RPA eliminating repetitive work at enterprise scale.", icon:"gear", grad:"linear-gradient(135deg,#F0FFF4 0%,#F7FFF9 100%)", accent:"#10B981" },
 ];
 
 // ── Updated services list (AI Marketplace removed per requirements) ─────────
 const SERVICES = [
   {
-    icon:"🤖", title:"AI Application Development", accent:"#3B82C4",
+    icon:"ai", title:"AI Application Development", accent:"#3B82C4",
     desc:"Custom LLM-powered apps, computer vision, and predictive systems built for real business impact.",
     detail:{
       overview:"We design and build AI-native applications that embed intelligence into every layer of the product — from intelligent data pipelines and ML model serving to autonomous agents and AI dashboards.",
@@ -49,7 +102,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"📱", title:"Android App Development", accent:"#10B981",
+    icon:"mobile", title:"Android App Development", accent:"#10B981",
     desc:"Native and cross-platform Android apps engineered for performance and seamless UX.",
     detail:{
       overview:"We build high-performance Android applications using both native Kotlin and cross-platform Flutter — delivering enterprise-grade features, beautiful UIs, and rock-solid stability.",
@@ -61,7 +114,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"🍎", title:"iOS App Development", accent:"#EF4444",
+    icon:"https://cdn.simpleicons.org/apple/EF4444", title:"iOS App Development", accent:"#EF4444",
     desc:"Premium iOS applications crafted to Apple's exacting design and engineering standards.",
     detail:{
       overview:"Our iOS team builds Swift-native and Flutter cross-platform applications that feel right at home on Apple devices — following Human Interface Guidelines and App Store best practices.",
@@ -73,7 +126,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"🌐", title:"Web Application Development", accent:"#3B82C4",
+    icon:"globe", title:"Web Application Development", accent:"#3B82C4",
     desc:"Scalable full-stack platforms with modern React, Node.js, and cloud-native architecture.",
     detail:{
       overview:"From SaaS platforms to enterprise portals, we engineer web applications that handle millions of users — built with component-driven frontends, microservices backends, and cloud-native deployment.",
@@ -85,7 +138,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"⚡", title:"Static Website Development", accent:"#F5A623",
+    icon:"lightning", title:"Static Website Development", accent:"#F5A623",
     desc:"Lightning-fast, SEO-optimised sites with conversion-focused design and zero bloat.",
     detail:{
       overview:"We build performance-first static websites using modern SSG frameworks — delivering perfect Lighthouse scores, outstanding Core Web Vitals, and conversion-optimised design.",
@@ -97,7 +150,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"💬", title:"Chatbot Development", accent:"#0EA5C9",
+    icon:"chat", title:"Chatbot Development", accent:"#0EA5C9",
     desc:"Conversational AI that engages, qualifies, and converts users at scale.",
     detail:{
       overview:"We build intelligent chatbots and virtual assistants powered by LLMs — from simple FAQ bots to fully contextual AI agents that integrate with your CRM, calendar, and support systems.",
@@ -109,7 +162,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"🛍️", title:"E-Commerce Development", accent:"#EC4899",
+    icon:"shop", title:"E-Commerce Development", accent:"#EC4899",
     desc:"High-converting storefronts with smart product discovery and seamless checkout flows.",
     detail:{
       overview:"We engineer e-commerce platforms — from custom-built solutions to Shopify/WooCommerce customisations — with AI-powered recommendation engines, smart search, and frictionless checkout.",
@@ -121,7 +174,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"⚙️", title:"Automation Solutions", accent:"#10B981",
+    icon:"gear", title:"Automation Solutions", accent:"#10B981",
     desc:"Workflow engines and RPA that eliminate repetitive work at enterprise scale.",
     detail:{
       overview:"We build intelligent automation systems using RPA, APIs, and AI — connecting your tools, automating repetitive processes, and giving your team time to focus on high-value work.",
@@ -133,7 +186,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"🧪", title:"Software Testing & Integration", accent:"#7C3AED",
+    icon:"flask", title:"Software Testing & Integration", accent:"#7C3AED",
     desc:"Unit, integration, E2E, and performance testing for bulletproof software.",
     detail:{
       overview:"We provide comprehensive QA services — from manual exploratory testing to full automated test suites — ensuring your software performs flawlessly under real-world conditions.",
@@ -145,7 +198,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"🏢", title:"Enterprise Application Development", accent:"#1B2D4F",
+    icon:"server", title:"Enterprise Application Development", accent:"#1B2D4F",
     desc:"Mission-critical enterprise platforms built for security, scale, and compliance.",
     detail:{
       overview:"We architect and build complex enterprise applications — ERP systems, internal platforms, and multi-stakeholder portals — with strict security, role-based access, and audit logging built in.",
@@ -157,7 +210,7 @@ const SERVICES = [
     }
   },
   {
-    icon:"☁️", title:"DevOps Services", accent:"#6366F1",
+    icon:"cloud", title:"DevOps Services", accent:"#6366F1",
     desc:"CI/CD pipelines, Docker, Kubernetes, cloud automation and monitoring solutions.",
     detail:{
       overview:"We set up and optimise your entire DevOps lifecycle — from infrastructure as code and container orchestration to observability stacks and cost-optimised cloud architecture.",
@@ -192,12 +245,12 @@ const TECHS = [
 ];
 
 const PORTFOLIO = [
-  {cat:"AI Platform",title:"InsightOS",desc:"Enterprise analytics with natural-language querying and live data pipelines.",accent:"#3B82C4",icon:"📊"},
-  {cat:"Mobile App",title:"PulseTrack",desc:"Cross-platform health & fitness app with AI coaching and biometric sync.",accent:"#0EA5C9",icon:"📱"},
-  {cat:"E-Commerce",title:"LuxeShop",desc:"Premium fashion storefront with AR try-on and smart personalisation engine.",accent:"#EC4899",icon:"🛍️"},
-  {cat:"SaaS Platform",title:"FlowDesk",desc:"No-code workflow automation SaaS deployed by 500+ teams worldwide.",accent:"#10B981",icon:"⚙️"},
-  {cat:"DevOps",title:"CloudPilot",desc:"Kubernetes cost-optimisation and observability platform for cloud-native teams.",accent:"#7C3AED",icon:"☁️"},
-  {cat:"Web App",title:"PortalX",desc:"Enterprise HR portal handling 10,000 daily active users across 5 countries.",accent:"#F5A623",icon:"🌐"},
+  {cat:"AI Platform",title:"InsightOS",desc:"Enterprise analytics with natural-language querying and live data pipelines.",accent:"#3B82C4",icon:"analytics"},
+  {cat:"Mobile App",title:"PulseTrack",desc:"Cross-platform health & fitness app with AI coaching and biometric sync.",accent:"#0EA5C9",icon:"mobile"},
+  {cat:"E-Commerce",title:"LuxeShop",desc:"Premium fashion storefront with AR try-on and smart personalisation engine.",accent:"#EC4899",icon:"shop"},
+  {cat:"SaaS Platform",title:"FlowDesk",desc:"No-code workflow automation SaaS deployed by 500+ teams worldwide.",accent:"#10B981",icon:"gear"},
+  {cat:"DevOps",title:"CloudPilot",desc:"Kubernetes cost-optimisation and observability platform for cloud-native teams.",accent:"#7C3AED",icon:"cloud"},
+  {cat:"Web App",title:"PortalX",desc:"Enterprise HR portal handling 10,000 daily active users across 5 countries.",accent:"#F5A623",icon:"globe"},
 ];
 
 const TESTIMONIALS = [
@@ -207,12 +260,12 @@ const TESTIMONIALS = [
 ];
 
 const WHY_POINTS = [
-  {icon:"🤖",title:"AI-Driven Development",pct:95,desc:"Intelligence baked into every layer"},
-  {icon:"⚡",title:"Fast Delivery",pct:90,desc:"From concept to production in weeks"},
-  {icon:"🏗️",title:"Scalable Architecture",pct:98,desc:"Built to grow without friction"},
-  {icon:"💡",title:"Innovation Focus",pct:93,desc:"Ahead of the technology curve"},
-  {icon:"💰",title:"Startup-Friendly Pricing",pct:88,desc:"Enterprise quality, accessible rates"},
-  {icon:"🔒",title:"Enterprise Security",pct:97,desc:"SOC-grade standards as a baseline"},
+  {icon:"ai",title:"AI-Driven Development",pct:95,desc:"Intelligence baked into every layer"},
+  {icon:"lightning",title:"Fast Delivery",pct:90,desc:"From concept to production in weeks"},
+  {icon:"layers",title:"Scalable Architecture",pct:98,desc:"Built to grow without friction"},
+  {icon:"lightbulb",title:"Innovation Focus",pct:93,desc:"Ahead of the technology curve"},
+  {icon:"dollar",title:"Startup-Friendly Pricing",pct:88,desc:"Enterprise quality, accessible rates"},
+  {icon:"lock",title:"Enterprise Security",pct:97,desc:"SOC-grade standards as a baseline"},
 ];
 
 const SUPPORT_OPTIONS = [
@@ -329,7 +382,7 @@ function ServiceModal({ svc, onClose }) {
         {/* Header */}
         <div style={{background:`linear-gradient(135deg,${svc.accent}18,#EAF2FD)`,borderRadius:"22px 22px 0 0",padding:"28px 32px 24px"}}>
           <button onClick={onClose} style={{position:"absolute",top:18,right:18,background:"rgba(255,255,255,0.8)",border:"1px solid #D6E4F7",borderRadius:"50%",width:36,height:36,cursor:"pointer",fontSize:16,display:"flex",alignItems:"center",justifyContent:"center",backdropFilter:"blur(6px)",color:"#1B2D4F",transition:"all .2s"}} onMouseEnter={e=>e.currentTarget.style.background="#fff"} onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,0.8)"}>✕</button>
-          <div style={{fontSize:42,marginBottom:12}}>{svc.icon}</div>
+          <div style={{marginBottom:12,display:"flex"}}><SvgIcon name={svc.icon} size={42} color={svc.accent} sw={1.5}/></div>
           <h2 style={{fontFamily:"'Playfair Display',serif",fontWeight:900,fontSize:"1.6rem",color:"#1B2D4F",marginBottom:8}}>{svc.title}</h2>
           <p style={{fontFamily:"'Nunito',sans-serif",color:"#6B84A3",fontSize:14.5,fontWeight:600,lineHeight:1.75}}>{d.overview}</p>
         </div>
@@ -681,7 +734,7 @@ function Navbar({ active }) {
   const [open, setOpen] = useState(false);
   useEffect(() => { const fn = () => setScrolled(window.scrollY > 50); window.addEventListener("scroll", fn); return () => window.removeEventListener("scroll", fn); }, []);
   const go = id => { setOpen(false); document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior:"smooth" }); };
-  const navKeys = ["home","about","services","technologies","portfolio","contact"];
+  const navKeys = ["home","about","services","technologies","portfolio"];
   const navLabels = navKeys.map(k => t(lang,"nav",k));
 
   return (
@@ -691,7 +744,7 @@ function Navbar({ active }) {
         <div onClick={()=>go("Home")} style={{ cursor:"pointer", display:"flex", alignItems:"center", lineHeight:0, flexShrink:0 }}>
           <img src={LOGO} alt="Shuroq — Tech Redefined"
             style={{
-              height:"clamp(72px,9.75vw,102px)",
+              height:"clamp(80px,10.5vw,88px)",
               width:"auto",
               objectFit:"contain",
               display:"block",
@@ -704,19 +757,19 @@ function Navbar({ active }) {
         </div>
         <div className="nd" style={{ display:"flex", alignItems:"center", gap:24 }}>
           {navKeys.map((k, i) => (
-            <button key={k} onClick={() => go(NAV_LINKS[i])} style={{ background:"none", border:"none", cursor:"pointer", color:active===NAV_LINKS[i].toLowerCase()?"#3B82C4":"#1B2D4F", fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:14, padding:"4px 0", position:"relative", transition:"color .25s" }}>
+            <button key={k} onClick={() => go(NAV_LINKS[i])} style={{ background:"none", border:"none", cursor:"pointer", color:active===NAV_LINKS[i].toLowerCase()?"#3B82C4":"#1B2D4F", fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:16, padding:"4px 0", position:"relative", transition:"color .25s" }}>
               {navLabels[i]}
               <span style={{ position:"absolute", bottom:-2, left:0, right:0, height:2, background:"linear-gradient(90deg,#F5A623,#3B82C4)", borderRadius:2, transform:active===NAV_LINKS[i].toLowerCase()?"scaleX(1)":"scaleX(0)", transformOrigin:"left", transition:"transform .3s ease" }}/>
             </button>
           ))}
-          {/* Language Switcher */}
-          <LangSwitcher/>
           {/* Single CTA */}
-          <button onClick={() => go("Contact")} style={{ background:"linear-gradient(135deg,#3B82C4,#0EA5C9)", border:"none", borderRadius:10, color:"#fff", fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:13.5, padding:"11px 26px", cursor:"pointer", boxShadow:"0 4px 16px rgba(59,130,196,0.32)", transition:"transform .2s,box-shadow .2s" }}
+          <button onClick={() => go("Contact")} style={{ background:"linear-gradient(135deg,#3B82C4,#0EA5C9)", border:"none", borderRadius:10, color:"#fff", fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:15, padding:"9px 24px", cursor:"pointer", boxShadow:"0 4px 16px rgba(59,130,196,0.32)", transition:"transform .2s,box-shadow .2s" }}
             onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-2px)";e.currentTarget.style.boxShadow="0 7px 22px rgba(59,130,196,0.42)";}}
             onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="0 4px 16px rgba(59,130,196,0.32)";}}>
             {t(lang,"nav","cta")}
           </button>
+          {/* Language Switcher */}
+          <LangSwitcher/>
         </div>
         <div className="nh" style={{ display:"none", alignItems:"center", gap:10 }}>
           <LangSwitcher compact/>
@@ -749,9 +802,9 @@ function Hero() {
       <div style={{ position:"absolute", bottom:"8%", left:"-6%", width:450, height:450, borderRadius:"50%", background:"radial-gradient(circle,rgba(245,166,35,0.06) 0%,transparent 70%)", pointerEvents:"none" }}/>
       {/* Floating AI feature pills */}
       <div className="heroFloat" style={{ position:"absolute", top:"20%", right:"3%", display:"flex", flexDirection:"column", gap:12, pointerEvents:"none" }}>
-        {[{e:"🤖",l:"AI Engine"},{e:"☁️",l:"Cloud Native"},{e:"🔗",l:"API-First"},{e:"🛡️",l:"Secure by Design"}].map((v,i) => (
+        {[{e:"ai",l:"AI Engine"},{e:"cloud",l:"Cloud Native"},{e:"code",l:"API-First"},{e:"shield",l:"Secure by Design"}].map((v,i) => (
           <div key={v.l} style={{ background:"rgba(255,255,255,0.85)", backdropFilter:"blur(12px)", border:"1px solid #D6E4F7", borderRadius:12, padding:"10px 16px", display:"flex", alignItems:"center", gap:8, boxShadow:"0 4px 16px rgba(59,130,196,0.1)", animation:`floatIcon ${3+i*.6}s ease-in-out infinite`, animationDelay:`${i*.9}s` }}>
-            <span style={{ fontSize:18 }}>{v.e}</span>
+            <SvgIcon name={v.e} size={18} color="#3B82C4"/>
             <span style={{ fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:12, color:"#1B2D4F" }}>{v.l}</span>
           </div>
         ))}
@@ -841,8 +894,8 @@ function Slideshow() {
               </button>
             </div>
             <div style={{ display:"flex", alignItems:"center", justifyContent:"center", flex:"0 0 200px" }}>
-              <div style={{ width:150, height:150, borderRadius:"50%", background:`radial-gradient(circle,${s.accent}22 0%,${s.accent}08 100%)`, border:`2px solid ${s.accent}33`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:66, animation:"floatIcon 4s ease-in-out infinite", boxShadow:`0 12px 40px ${s.accent}22` }}>
-                {s.icon}
+              <div style={{ width:150, height:150, borderRadius:"50%", background:`radial-gradient(circle,${s.accent}22 0%,${s.accent}08 100%)`, border:`2px solid ${s.accent}33`, display:"flex", alignItems:"center", justifyContent:"center", animation:"floatIcon 4s ease-in-out infinite", boxShadow:`0 12px 40px ${s.accent}22` }}>
+                <SvgIcon name={s.icon} size={66} color={s.accent} sw={1.2}/>
               </div>
             </div>
           </div>
@@ -871,10 +924,10 @@ function About() {
   const [lang] = useLang();
   const [ref, visible] = useIntersection();
   const capabilities = [
-    {icon:"🤖",label:"AI Engineering",color:"#3B82C4"},{icon:"☁️",label:"Cloud Infra",color:"#0EA5C9"},
-    {icon:"📱",label:"Mobile Apps",color:"#10B981"},{icon:"⚙️",label:"DevOps",color:"#7C3AED"},
-    {icon:"💬",label:"Chatbots",color:"#F5A623"},{icon:"🔗",label:"API Design",color:"#EC4899"},
-    {icon:"🧠",label:"ML Models",color:"#3B82C4"},{icon:"🛡️",label:"Security",color:"#EF4444"},
+    {icon:"ai",label:"AI Engineering",color:"#3B82C4"},{icon:"cloud",label:"Cloud Infra",color:"#0EA5C9"},
+    {icon:"mobile",label:"Mobile Apps",color:"#10B981"},{icon:"gear",label:"DevOps",color:"#7C3AED"},
+    {icon:"chat",label:"Chatbots",color:"#F5A623"},{icon:"code",label:"API Design",color:"#EC4899"},
+    {icon:"brain",label:"ML Models",color:"#3B82C4"},{icon:"shield",label:"Security",color:"#EF4444"},
   ];
   return (
     <section id="about" style={{ background:"#fff", padding:"100px 5vw" }}>
@@ -898,11 +951,11 @@ function About() {
             </div>
           </div>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:14, opacity:visible?1:0, transform:visible?"none":"translateX(28px)", transition:"all .8s ease .15s" }}>
-            {[{icon:"🌅",title:"Vision",desc:"Global benchmark for AI-native software engineering."},{icon:"🎯",title:"Mission",desc:"Empower businesses with intelligent, scalable software."},{icon:"🧠",title:"AI-First",desc:"Intelligence at the core of every solution."},{icon:"🚀",title:"Speed",desc:"From concept to production in weeks."}].map(c => (
+            {[{icon:"eye",title:"Vision",desc:"Global benchmark for AI-native software engineering."},{icon:"target",title:"Mission",desc:"Empower businesses with intelligent, scalable software."},{icon:"brain",title:"AI-First",desc:"Intelligence at the core of every solution."},{icon:"rocket",title:"Speed",desc:"From concept to production in weeks."}].map(c => (
               <div key={c.title} style={{ background:"#F8FAFD", border:"1.5px solid #E8F0FB", borderRadius:14, padding:"22px 18px", transition:"all .3s", cursor:"default" }}
                 onMouseEnter={e=>{e.currentTarget.style.background="#EAF2FD";e.currentTarget.style.borderColor="#3B82C4";e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 10px 28px rgba(59,130,196,0.13)";}}
                 onMouseLeave={e=>{e.currentTarget.style.background="#F8FAFD";e.currentTarget.style.borderColor="#E8F0FB";e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="none";}}>
-                <div style={{ fontSize:28, marginBottom:10 }}>{c.icon}</div>
+                <div style={{ marginBottom:10, display:"flex" }}><SvgIcon name={c.icon} size={28} color="#3B82C4" sw={1.6}/></div>
                 <div style={{ fontFamily:"'Nunito',sans-serif", fontWeight:800, color:"#1B2D4F", fontSize:15, marginBottom:6 }}>{c.title}</div>
                 <div style={{ fontFamily:"'Nunito',sans-serif", color:"#6B84A3", fontSize:13, lineHeight:1.65, fontWeight:600 }}>{c.desc}</div>
               </div>
@@ -917,7 +970,7 @@ function About() {
               return (
                 <div key={v.label} onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}
                   style={{ background:"#fff", border:`1.5px solid ${hov?v.color+"66":"#E8F0FB"}`, borderRadius:14, padding:"18px 12px", textAlign:"center", transition:"all .3s", boxShadow:hov?`0 8px 24px ${v.color}22`:"0 2px 8px rgba(59,130,196,0.05)", transform:hov?"translateY(-4px)":"none", animation:`floatIcon ${3+i*.4}s ease-in-out infinite`, animationDelay:`${i*.5}s` }}>
-                  <div style={{ fontSize:28, marginBottom:8 }}>{v.icon}</div>
+                  <div style={{ marginBottom:8, display:"flex", justifyContent:"center" }}><SvgIcon name={v.icon} size={28} color={v.color} sw={1.6}/></div>
                   <div style={{ fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:12, color:"#1B2D4F", lineHeight:1.3 }}>{v.label}</div>
                   <div style={{ width:24, height:3, background:v.color, borderRadius:2, margin:"8px auto 0" }}/>
                 </div>
@@ -969,7 +1022,7 @@ function ServiceCard({svc,idx,delay,visible,onLearnMore,lang}){
   return (
     <div onMouseEnter={()=>setH(true)} onMouseLeave={()=>setH(false)}
       style={{ background:"#fff", border:`1.5px solid ${h?svc.accent||"#3B82C4":"#E8F0FB"}`, borderRadius:16, padding:"26px 22px", opacity:visible?1:0, transform:visible?(h?"translateY(-5px)":"none"):"translateY(20px)", transition:`opacity .6s ease ${delay}ms,transform .3s ease,border-color .25s,box-shadow .3s`, boxShadow:h?`0 10px 30px rgba(59,130,196,0.13)`:"0 2px 8px rgba(59,130,196,0.05)", cursor:"default" }}>
-      <div style={{ fontSize:32, marginBottom:12 }}>{svc.icon}</div>
+      <div style={{ marginBottom:12, display:"flex" }}><SvgIcon name={svc.icon} size={32} color={svc.accent||"#3B82C4"} sw={1.5}/></div>
       <h3 style={{ fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:16, color:"#1B2D4F", marginBottom:8, lineHeight:1.3 }}>{tx(lang,"services",`s${idx}t`)}</h3>
       <p style={{ fontFamily:"'Nunito',sans-serif", color:"#6B84A3", fontSize:13.5, lineHeight:1.72, fontWeight:600, marginBottom:16 }}>{tx(lang,"services",`s${idx}d`)}</p>
       <button onClick={onLearnMore}
@@ -997,7 +1050,7 @@ function WhyUs(){
           {WHY_POINTS.map((_p,i)=>(
             <div key={i} style={{ opacity:visible?1:0, transform:visible?"none":"translateY(16px)", transition:`all .6s ease ${i*80}ms`, background:"#F8FAFD", border:"1.5px solid #E8F0FB", borderRadius:14, padding:"22px 24px" }}>
               <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:12 }}>
-                <span style={{ fontSize:22 }}>{_p.icon}</span>
+                <SvgIcon name={_p.icon} size={22} color="#3B82C4" sw={1.8}/>
                 <span style={{ fontFamily:"'Nunito',sans-serif", fontWeight:800, color:"#1B2D4F", fontSize:15 }}>{tx(lang,"whyUs",`p${i}t`)}</span>
                 <span style={{ marginLeft:"auto", fontFamily:"'Nunito',sans-serif", color:"#3B82C4", fontWeight:900, fontSize:14 }}>{_p.pct}%</span>
               </div>
@@ -1024,17 +1077,15 @@ function Technologies(){
           {t(lang,"tech","h2a")} <span style={{ background:"linear-gradient(135deg,#F5A623,#3B82C4)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>{t(lang,"tech","h2b")}</span>
         </h2>
       </div>
-      <div style={{ display:"flex", overflow:"hidden" }}>
-        {[0,1].map(r=>(
-          <div key={r} style={{ display:"flex", gap:13, animation:"marquee 32s linear infinite", animationDelay:r===1?"-16s":"0s", flexShrink:0, minWidth:"100%" }}>
-            {TECHS.map(t=>(
-              <div key={t.name} style={{ background:"#fff", border:"1.5px solid #D6E4F7", borderRadius:10, padding:"11px 26px", whiteSpace:"nowrap", fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:14, color:"#1B2D4F", flexShrink:0, boxShadow:"0 2px 8px rgba(59,130,196,0.06)", display:"flex", alignItems:"center", gap:8 }}>
-                <img src={t.logo} alt={t.name} style={{ width:20, height:20, objectFit:"contain", flexShrink:0 }} loading="lazy"/>
-                {t.name}
-              </div>
-            ))}
-          </div>
-        ))}
+      <div style={{ overflow:"hidden" }}>
+        <div style={{ display:"flex", gap:13, width:"max-content", animation:"marqueeLeft 35s linear infinite" }}>
+          {[...TECHS,...TECHS].map((t,i)=>(
+            <div key={i} style={{ background:"#fff", border:"1.5px solid #D6E4F7", borderRadius:10, padding:"11px 26px", whiteSpace:"nowrap", fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:14, color:"#1B2D4F", flexShrink:0, boxShadow:"0 2px 8px rgba(59,130,196,0.06)", display:"flex", alignItems:"center", gap:8 }}>
+              <img src={t.logo} alt={t.name} style={{ width:20, height:20, objectFit:"contain", flexShrink:0 }} loading="lazy"/>
+              {t.name}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -1066,7 +1117,7 @@ function ProjectCard({proj,idx,lang,delay,visible}){
     <div onMouseEnter={()=>setH(true)} onMouseLeave={()=>setH(false)}
       style={{ borderRadius:16, overflow:"hidden", opacity:visible?1:0, transform:visible?(h?"translateY(-6px)":"none"):"translateY(24px)", transition:`opacity .7s ease ${delay}ms,transform .3s ease,box-shadow .3s`, boxShadow:h?"0 14px 40px rgba(59,130,196,0.14)":"0 2px 12px rgba(59,130,196,0.06)", border:`1.5px solid ${h?proj.accent+"55":"#E8F0FB"}` }}>
       <div style={{ height:180, background:`linear-gradient(135deg,${proj.accent}18 0%,#EAF2FD 100%)`, display:"flex", alignItems:"center", justifyContent:"center", position:"relative" }}>
-        <div style={{ width:72, height:72, borderRadius:"50%", background:`${proj.accent}22`, border:`2px solid ${proj.accent}44`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:30, transition:"transform .3s", transform:h?"scale(1.12)":"scale(1)" }}>{proj.icon}</div>
+        <div style={{ width:72, height:72, borderRadius:"50%", background:`${proj.accent}22`, border:`2px solid ${proj.accent}44`, display:"flex", alignItems:"center", justifyContent:"center", transition:"transform .3s", transform:h?"scale(1.12)":"scale(1)" }}><SvgIcon name={proj.icon} size={32} color={proj.accent} sw={1.5}/></div>
         <div style={{ position:"absolute", top:12, left:12, background:"#fff", border:`1px solid ${proj.accent}44`, borderRadius:7, padding:"4px 10px", fontFamily:"'Nunito',sans-serif", fontSize:11, fontWeight:800, color:proj.accent, letterSpacing:.8 }}>{tx(lang,"pfol",`p${idx}c`).toUpperCase()}</div>
       </div>
       <div style={{ background:"#fff", padding:"18px 20px 22px" }}>
@@ -1138,12 +1189,17 @@ function Contact(){
         </div>
         <div className="cg" style={{ display:"grid", gridTemplateColumns:"1fr 1.7fr", gap:44, alignItems:"start" }}>
           <div>
-            {[{icon:"📧",label:t(lang,"contact","email"),val:"contact@shuroq.com"},{icon:"📱",label:t(lang,"contact","whatsapp"),val:"+91 8983140094"},{icon:"🕐",label:t(lang,"contact","response"),val:t(lang,"contact","within")}].map(item=>(
+            {[
+              {icon:"email",   label:t(lang,"contact","email"),    val:"contact@shuroq.com"},
+              {icon:"phone",   label:"WHATSAPP / PHONE",             val:"+91 8983140094"},
+              {icon:"clock",   label:t(lang,"contact","response"), val:t(lang,"contact","within")},
+              {icon:"pin",     label:"OUR OFFICE",                 val:"Level 1, Phase 2, N-Heights, Awfis,\nPlot No 38, Siddiq Nagar,\nGachibowli, Hyderabad,\nTelangana 500081"},
+            ].map(item=>(
               <div key={item.label} style={{ display:"flex", gap:14, alignItems:"flex-start", marginBottom:22 }}>
-                <div style={{ width:42, height:42, background:"#E8F0FB", border:"1px solid #D6E4F7", borderRadius:10, display:"flex", alignItems:"center", justifyContent:"center", fontSize:18, flexShrink:0 }}>{item.icon}</div>
+                <div style={{ width:42, height:42, background:"#E8F0FB", border:"1px solid #D6E4F7", borderRadius:10, display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}><SvgIcon name={item.icon} size={18} color="#3B82C4" sw={1.8}/></div>
                 <div>
                   <div style={{ fontFamily:"'Nunito',sans-serif", fontWeight:800, color:"#6B84A3", fontSize:11, letterSpacing:1.5 }}>{item.label.toUpperCase()}</div>
-                  <div style={{ fontFamily:"'Nunito',sans-serif", color:"#1B2D4F", fontSize:14, fontWeight:700, marginTop:2 }}>{item.val}</div>
+                  <div style={{ fontFamily:"'Nunito',sans-serif", color:"#1B2D4F", fontSize:14, fontWeight:700, marginTop:2, whiteSpace:"pre-line" }}>{item.val}</div>
                 </div>
               </div>
             ))}
@@ -1163,7 +1219,7 @@ function Contact(){
           <div style={{ background:"#F8FAFD", border:"1.5px solid #E8F0FB", borderRadius:18, padding:"34px 30px" }}>
             {sent ? (
               <div style={{ textAlign:"center", padding:"28px 0" }}>
-                <div style={{ fontSize:52, marginBottom:14 }}>✅</div>
+                <div style={{ marginBottom:14, display:"flex", justifyContent:"center" }}><SvgIcon name="check" size={52} color="#10B981" sw={1.5}/></div>
                 <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:22, color:"#3B82C4", marginBottom:8 }}>{t(lang,"contact","successH")}</h3>
                 <p style={{ fontFamily:"'Nunito',sans-serif", color:"#6B84A3", fontSize:14, fontWeight:600 }}>{t(lang,"contact","successP")}</p>
               </div>
@@ -1177,7 +1233,8 @@ function Contact(){
                 <div style={{ marginBottom:22 }}><label style={{ fontFamily:"'Nunito',sans-serif", fontSize:11, color:"#6B84A3", letterSpacing:1.2, fontWeight:800 }}>{t(lang,"contact","message")}</label><textarea value={form.message} onChange={e=>setForm({...form,message:e.target.value})} onFocus={()=>setFocused({...focused,message:true})} onBlur={()=>setFocused({...focused,message:false})} rows={4} placeholder={t(lang,"contact","msgPH")} style={{...inp("message"),marginTop:6,resize:"vertical"}}/></div>
                 <button onClick={submit} style={{ width:"100%", background:"linear-gradient(135deg,#3B82C4,#0EA5C9)", border:"none", borderRadius:10, color:"#fff", fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:15, padding:"15px", cursor:"pointer", boxShadow:"0 6px 20px rgba(59,130,196,0.28)", transition:"transform .2s", display:"flex", alignItems:"center", justifyContent:"center", gap:8 }}
                   onMouseEnter={e=>e.currentTarget.style.transform="translateY(-1px)"} onMouseLeave={e=>e.currentTarget.style.transform="none"}>
-                  <span>{t(lang,"contact","send")}</span><span>💬</span>
+                  <span>{t(lang,"contact","send")}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 </button>
                 <p style={{ fontFamily:"'Nunito',sans-serif", color:"#6B84A3", fontSize:12, fontWeight:600, textAlign:"center", marginTop:10 }}>{t(lang,"contact","hint")}</p>
               </div>
@@ -1213,16 +1270,16 @@ function Footer(){
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
               <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" title="Instagram" style={{width:38,height:38,borderRadius:"50%",background:"rgba(255,255,255,0.1)",border:"1px solid rgba(255,255,255,0.15)",display:"flex",alignItems:"center",justifyContent:"center",textDecoration:"none",fontSize:16,transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg,#f09433,#dc2743)";e.currentTarget.style.borderColor="#dc2743";}} onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.1)";e.currentTarget.style.borderColor="rgba(255,255,255,0.15)";}}>
-                📸
+                <SvgIcon name="camera" size={16} color="#fff" sw={1.8}/>
               </a>
-              <a href={`https://wa.me/${WA_NUM}`} target="_blank" rel="noopener noreferrer" title="WhatsApp" style={{width:38,height:38,borderRadius:"50%",background:"rgba(255,255,255,0.1)",border:"1px solid rgba(255,255,255,0.15)",display:"flex",alignItems:"center",justifyContent:"center",textDecoration:"none",fontSize:16,transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.background="#25D366";e.currentTarget.style.borderColor="#25D366";}} onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.1)";e.currentTarget.style.borderColor="rgba(255,255,255,0.15)";}}>
-                💬
+              <a href={`https://wa.me/${WA_NUM}`} target="_blank" rel="noopener noreferrer" title="WhatsApp" style={{width:38,height:38,borderRadius:"50%",background:"rgba(255,255,255,0.1)",border:"1px solid rgba(255,255,255,0.15)",display:"flex",alignItems:"center",justifyContent:"center",textDecoration:"none",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.background="#25D366";e.currentTarget.style.borderColor="#25D366";}} onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.1)";e.currentTarget.style.borderColor="rgba(255,255,255,0.15)";}}>
+                <SvgIcon name="whatsapp" size={16} color="#fff" sw={1.8}/>
               </a>
-              <a href="mailto:contact@shuroq.com" title="Email" style={{width:38,height:38,borderRadius:"50%",background:"rgba(255,255,255,0.1)",border:"1px solid rgba(255,255,255,0.15)",display:"flex",alignItems:"center",justifyContent:"center",textDecoration:"none",fontSize:16,transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.background="#3B82C4";e.currentTarget.style.borderColor="#3B82C4";}} onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.1)";e.currentTarget.style.borderColor="rgba(255,255,255,0.15)";}}>
-                📧
+              <a href="mailto:contact@shuroq.com" title="Email" style={{width:38,height:38,borderRadius:"50%",background:"rgba(255,255,255,0.1)",border:"1px solid rgba(255,255,255,0.15)",display:"flex",alignItems:"center",justifyContent:"center",textDecoration:"none",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.background="#3B82C4";e.currentTarget.style.borderColor="#3B82C4";}} onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.1)";e.currentTarget.style.borderColor="rgba(255,255,255,0.15)";}}>
+                <SvgIcon name="email" size={16} color="#fff" sw={1.8}/>
               </a>
-              <a href="tel:+918983140094" title="Call" style={{width:38,height:38,borderRadius:"50%",background:"rgba(255,255,255,0.1)",border:"1px solid rgba(255,255,255,0.15)",display:"flex",alignItems:"center",justifyContent:"center",textDecoration:"none",fontSize:16,transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.background="#0EA5C9";e.currentTarget.style.borderColor="#0EA5C9";}} onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.1)";e.currentTarget.style.borderColor="rgba(255,255,255,0.15)";}}>
-                📞
+              <a href="tel:+918983140094" title="Call" style={{width:38,height:38,borderRadius:"50%",background:"rgba(255,255,255,0.1)",border:"1px solid rgba(255,255,255,0.15)",display:"flex",alignItems:"center",justifyContent:"center",textDecoration:"none",transition:"all .2s"}} onMouseEnter={e=>{e.currentTarget.style.background="#0EA5C9";e.currentTarget.style.borderColor="#0EA5C9";}} onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.1)";e.currentTarget.style.borderColor="rgba(255,255,255,0.15)";}}>
+                <SvgIcon name="phone" size={16} color="#fff" sw={1.8}/>
               </a>
             </div>
           </div>
@@ -1254,11 +1311,11 @@ function Footer(){
 function FloatingActions(){
   const [expanded,setExpanded]=useState(false);
   const buttons = [
-    {icon:"💬",label:"WhatsApp",color:"#25D366",action:()=>window.open(`https://wa.me/${WA_NUM}`,"_blank")},
-    {icon:"📞",label:"Call",color:"#3B82C4",action:()=>window.open("tel:+918983140094")},
-    {icon:"📸",label:"Instagram",color:"#E1306C",action:()=>window.open(INSTAGRAM_URL,"_blank")},
-    {icon:"💼",label:"LinkedIn",color:"#0077B5",action:()=>window.open(LINKEDIN_URL,"_blank")},
-    {icon:"🎧",label:"Support",color:"#7C3AED",action:()=>document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})},
+    {icon:"whatsapp",label:"WhatsApp",color:"#25D366",action:()=>window.open(`https://wa.me/${WA_NUM}`,"_blank")},
+    {icon:"phone",label:"Call",color:"#3B82C4",action:()=>window.open("tel:+918983140094")},
+    {icon:"camera",label:"Instagram",color:"#E1306C",action:()=>window.open(INSTAGRAM_URL,"_blank")},
+    {icon:"briefcase",label:"LinkedIn",color:"#0077B5",action:()=>window.open(LINKEDIN_URL,"_blank")},
+    {icon:"headset",label:"Support",color:"#7C3AED",action:()=>document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})},
   ];
   return (
     <div style={{ position:"fixed", right:20, bottom:100, zIndex:300, display:"flex", flexDirection:"column", alignItems:"flex-end", gap:10 }}>
@@ -1267,7 +1324,7 @@ function FloatingActions(){
           style={{ display:"flex", alignItems:"center", gap:10, background:"rgba(255,255,255,0.96)", backdropFilter:"blur(16px)", border:"1px solid #D6E4F7", borderRadius:40, padding:"8px 16px 8px 10px", cursor:"pointer", boxShadow:"0 4px 20px rgba(59,130,196,0.16)", animation:"slideInRight .3s ease", animationDelay:`${i*50}ms`, animationFillMode:"both", transition:"transform .2s,box-shadow .2s" }}
           onMouseEnter={e=>{e.currentTarget.style.transform="translateX(-3px)";e.currentTarget.style.boxShadow="0 6px 24px rgba(59,130,196,0.22)";}}
           onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="0 4px 20px rgba(59,130,196,0.16)";}}>
-          <div style={{ width:32,height:32,borderRadius:"50%",background:b.color,display:"flex",alignItems:"center",justifyContent:"center",fontSize:15 }}>{b.icon}</div>
+          <div style={{ width:32,height:32,borderRadius:"50%",background:b.color,display:"flex",alignItems:"center",justifyContent:"center" }}><SvgIcon name={b.icon} size={16} color="#fff" sw={1.8}/></div>
           <span style={{ fontFamily:"'Nunito',sans-serif",fontWeight:800,fontSize:13,color:"#1B2D4F",whiteSpace:"nowrap" }}>{b.label}</span>
         </div>
       ))}
@@ -1275,7 +1332,7 @@ function FloatingActions(){
         style={{ width:50,height:50,borderRadius:"50%",background:"linear-gradient(135deg,#3B82C4,#0EA5C9)",border:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20,boxShadow:"0 4px 20px rgba(59,130,196,0.4)",transition:"transform .3s,box-shadow .3s",transform:expanded?"rotate(45deg)":"none" }}
         onMouseEnter={e=>e.currentTarget.style.boxShadow="0 8px 28px rgba(59,130,196,0.55)"}
         onMouseLeave={e=>e.currentTarget.style.boxShadow="0 4px 20px rgba(59,130,196,0.4)"}>
-        {expanded?"✕":"⚡"}
+        <SvgIcon name={expanded?"close":"zap"} size={20} color="#fff" sw={2}/>
       </button>
     </div>
   );
@@ -1311,14 +1368,14 @@ function SupportAssistant(){
       <button onClick={()=>{ setOpen(!open); setMinimized(false); }}
         style={{ position:"fixed", right:20, bottom:36, zIndex:300, width:50, height:50, borderRadius:"50%", background:"linear-gradient(135deg,#F5A623,#E8873A)", border:"none", cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", fontSize:22, boxShadow:"0 4px 20px rgba(245,166,35,0.45)", transition:"transform .3s,box-shadow .3s" }}
         onMouseEnter={e=>e.currentTarget.style.transform="scale(1.1)"} onMouseLeave={e=>e.currentTarget.style.transform="none"}>
-        {open?"✕":"🤖"}
+        <SvgIcon name={open?"close":"bot"} size={22} color="#fff" sw={1.8}/>
       </button>
 
       {open&&!minimized&&(
         <div style={{ position:"fixed", right:20, bottom:100, zIndex:299, width:340, background:"#fff", borderRadius:20, boxShadow:"0 12px 48px rgba(59,130,196,0.18)", border:"1px solid #D6E4F7", overflow:"hidden", animation:"slideUp .3s ease" }}>
           <div style={{ background:"linear-gradient(135deg,#3B82C4,#0EA5C9)", padding:"16px 18px", display:"flex", alignItems:"center", justifyContent:"space-between" }}>
             <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-              <div style={{ width:36,height:36,borderRadius:"50%",background:"rgba(255,255,255,0.2)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18 }}>🤖</div>
+              <div style={{ width:36,height:36,borderRadius:"50%",background:"rgba(255,255,255,0.2)",display:"flex",alignItems:"center",justifyContent:"center" }}><SvgIcon name="bot" size={18} color="#fff" sw={1.8}/></div>
               <div>
                 <div style={{ fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:14,color:"#fff" }}>Shuroq Assistant</div>
                 <div style={{ fontFamily:"'Nunito',sans-serif",fontSize:11,color:"rgba(255,255,255,0.75)" }}>Smart Support · Not Live Chat</div>
@@ -1373,7 +1430,7 @@ function SupportAssistant(){
 
             {step === "done" && (
               <div style={{ textAlign:"center",padding:"20px 0" }}>
-                <div style={{ fontSize:44,marginBottom:12 }}>✅</div>
+                <div style={{ marginBottom:12, display:"flex", justifyContent:"center" }}><SvgIcon name="check" size={44} color="#10B981" sw={1.5}/></div>
                 <h4 style={{ fontFamily:"'Playfair Display',serif",fontSize:18,color:"#3B82C4",marginBottom:8 }}>{t(lang,"contact","successH")}</h4>
                 <p style={{ fontFamily:"'Nunito',sans-serif",color:"#6B84A3",fontSize:13,fontWeight:600,marginBottom:14 }}>WhatsApp opened. We'll respond within 24 hours.</p>
                 <button onClick={reset} style={{ background:"#E8F0FB",border:"none",borderRadius:8,padding:"9px 18px",fontFamily:"'Nunito',sans-serif",fontWeight:800,fontSize:13,color:"#3B82C4",cursor:"pointer" }}>← New Enquiry</button>
@@ -1419,7 +1476,7 @@ export default function App(){
         ::-webkit-scrollbar{width:5px;}
         ::-webkit-scrollbar-track{background:#F4F7FC;}
         ::-webkit-scrollbar-thumb{background:linear-gradient(#F5A623,#3B82C4);border-radius:3px;}
-        @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+        @keyframes marqueeLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
         @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
         @keyframes floatIcon{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
         @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
