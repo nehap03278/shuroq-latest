@@ -369,7 +369,7 @@ function AIBackground() {
 }
 
 // ── Service Modal ─────────────────────────────────────────────────────────────
-function ServiceModal({ svc, onClose }) {
+function ServiceModal({ svc, onClose, lang }) {
   const d = svc.detail;
   useEffect(() => {
     document.body.style.overflow = "hidden";
