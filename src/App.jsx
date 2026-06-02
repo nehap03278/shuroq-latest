@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef, useCallback, createContext, useContext } from "react";
+import { Bot } from "lucide-react";
+import awsLogo from "./assets/aws-logo.svg";
+import openaiLogo from "./assets/openai-logo.svg";
 
 // ─── Brand palette ────────────────────────────────────────────────────────────
 // BG #F4F7FC | Card #FFFFFF | Navy #1B2D4F | Sky #3B82C4
@@ -37,7 +40,7 @@ const SLIDES = [
 // ── Updated services list (AI Marketplace removed per requirements) ─────────
 const SERVICES = [
   {
-    icon:"🤖", title:"AI Application Development", accent:"#3B82C4",
+    icon:<Bot color="#0f56e6" size={32} strokeWidth={2} />, title:"AI Application Development", accent:"#3B82C4",
     desc:"Custom LLM-powered apps, computer vision, and predictive systems built for real business impact.",
     detail:{
       overview:"We design and build AI-native applications that embed intelligence into every layer of the product — from intelligent data pipelines and ML model serving to autonomous agents and AI dashboards.",
@@ -176,12 +179,12 @@ const TECHS = [
   {name:"Flutter",logo:"https://cdn.simpleicons.org/flutter/02569B"},
   {name:"Swift",logo:"https://cdn.simpleicons.org/swift/F05138"},
   {name:"Android",logo:"https://cdn.simpleicons.org/android/3DDC84"},
-  {name:"AWS",logo:"https://cdn.simpleicons.org/amazonaws/FF9900"},
+  {name:"AWS",logo:awsLogo},
   {name:"Docker",logo:"https://cdn.simpleicons.org/docker/2496ED"},
   {name:"Kubernetes",logo:"https://cdn.simpleicons.org/kubernetes/326CE5"},
   {name:"Terraform",logo:"https://cdn.simpleicons.org/terraform/7B42BC"},
   {name:"Python",logo:"https://cdn.simpleicons.org/python/3776AB"},
-  {name:"OpenAI",logo:"https://cdn.simpleicons.org/openai/10A37F"},
+  {name:"OpenAI",logo:openaiLogo},
   {name:"Firebase",logo:"https://cdn.simpleicons.org/firebase/FFCA28"},
   {name:"MongoDB",logo:"https://cdn.simpleicons.org/mongodb/47A248"},
   {name:"PostgreSQL",logo:"https://cdn.simpleicons.org/postgresql/336791"},
@@ -871,7 +874,7 @@ function About() {
   const [lang] = useLang();
   const [ref, visible] = useIntersection();
   const capabilities = [
-    {icon:"🤖",label:"AI Engineering",color:"#3B82C4"},{icon:"☁️",label:"Cloud Infra",color:"#0EA5C9"},
+    {icon:<Bot color="#0f56e6" size={30} strokeWidth={2} />,label:"AI Engineering",color:"#3B82C4"},{icon:"☁️",label:"Cloud Infra",color:"#0EA5C9"},
     {icon:"📱",label:"Mobile Apps",color:"#10B981"},{icon:"⚙️",label:"DevOps",color:"#7C3AED"},
     {icon:"💬",label:"Chatbots",color:"#F5A623"},{icon:"🔗",label:"API Design",color:"#EC4899"},
     {icon:"🧠",label:"ML Models",color:"#3B82C4"},{icon:"🛡️",label:"Security",color:"#EF4444"},
@@ -1017,20 +1020,22 @@ function WhyUs(){
 function Technologies(){
   const [lang] = useLang();
   return (
-    <section id="technologies" style={{ background:"#F4F7FC", padding:"80px 0", overflow:"hidden" }}>
+    <section id="technologies" className="tech-section">
       <div style={{ textAlign:"center", marginBottom:44, padding:"0 5vw" }}>
         <SectionLabel text={t(lang,"tech","label")}/>
         <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.8rem,3.5vw,2.6rem)", fontWeight:900, color:"#1B2D4F" }}>
           {t(lang,"tech","h2a")} <span style={{ background:"linear-gradient(135deg,#F5A623,#3B82C4)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>{t(lang,"tech","h2b")}</span>
         </h2>
       </div>
-      <div style={{ display:"flex", overflow:"hidden" }}>
+      <div className="tech-marquee" aria-label="Technology stack">
         {[0,1].map(r=>(
-          <div key={r} style={{ display:"flex", gap:13, animation:"marquee 32s linear infinite", animationDelay:r===1?"-16s":"0s", flexShrink:0, minWidth:"100%" }}>
+          <div key={r} className="tech-track" aria-hidden={r===1}>
             {TECHS.map(t=>(
-              <div key={t.name} style={{ background:"#fff", border:"1.5px solid #D6E4F7", borderRadius:10, padding:"11px 26px", whiteSpace:"nowrap", fontFamily:"'Nunito',sans-serif", fontWeight:800, fontSize:14, color:"#1B2D4F", flexShrink:0, boxShadow:"0 2px 8px rgba(59,130,196,0.06)", display:"flex", alignItems:"center", gap:8 }}>
-                <img src={t.logo} alt={t.name} style={{ width:20, height:20, objectFit:"contain", flexShrink:0 }} loading="lazy"/>
-                {t.name}
+              <div key={t.name} className="tech-card">
+                <span className="tech-icon-wrap">
+                  <img src={t.logo} alt="" className="tech-icon" loading="lazy"/>
+                </span>
+                <span className="tech-name">{t.name}</span>
               </div>
             ))}
           </div>
@@ -1426,12 +1431,25 @@ export default function App(){
         @keyframes slideInRight{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
         @keyframes fadeInOverlay{from{opacity:0}to{opacity:1}}
         @keyframes slideUpModal{from{opacity:0;transform:translateY(30px) scale(0.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+        .tech-section{background:#F4F7FC;padding:80px 0;overflow:hidden;}
+        .tech-marquee{display:flex;width:100%;overflow:hidden;}
+        .tech-track{display:flex;gap:18px;flex:0 0 max-content;padding-right:18px;animation:marquee 36s linear infinite;}
+        .tech-card{width:188px;height:58px;background:#fff;border:1.5px solid #D6E4F7;border-radius:10px;box-shadow:0 2px 8px rgba(59,130,196,0.06);display:flex;align-items:center;justify-content:center;gap:10px;padding:0 18px;overflow:hidden;}
+        .tech-icon-wrap{width:28px;height:28px;flex:0 0 28px;display:flex;align-items:center;justify-content:center;}
+        .tech-icon{width:26px;height:26px;display:block;object-fit:contain;}
+        .tech-name{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;line-height:1;color:#1B2D4F;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;min-width:0;}
         @media(max-width:768px){
           .nd{display:none!important}
           .nh{display:flex!important}
           .ag,.wg,.cg,.fg{grid-template-columns:1fr!important}
           .sg{grid-template-columns:1fr 1fr!important}
           .heroFloat{display:none!important}
+          .tech-section{padding:64px 0;}
+          .tech-track{gap:14px;padding-right:14px;animation-duration:30s;}
+          .tech-card{width:174px;height:56px;padding:0 16px;}
+          .tech-icon-wrap{width:26px;height:26px;flex-basis:26px;}
+          .tech-icon{width:24px;height:24px;}
+          .tech-name{font-size:13.5px;}
         }
         [dir="rtl"] .nd,[dir="rtl"] .nh,[dir="rtl"] nav > div{flex-direction:row-reverse}
         [dir="rtl"] body{font-family:'Nunito',sans-serif}
