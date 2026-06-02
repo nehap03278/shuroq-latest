@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback, createContext, useContext } from "react";
-import { Bot } from "lucide-react";
 import awsLogo from "./assets/aws-logo.svg";
 import openaiLogo from "./assets/openai-logo.svg";
 
