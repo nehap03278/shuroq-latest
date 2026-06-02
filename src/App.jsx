@@ -798,6 +798,64 @@ function Hero() {
 }
 
 // ── Slideshow ─────────────────────────────────────────────────────────────────
+function TrustSection() {
+  const [ref, visible] = useIntersection();
+  const pillars = [
+    {icon:"◎", title:"Reliable Delivery", accent:"#3B82C4", desc:"Clear milestones, predictable timelines, and consistent communication throughout every stage of development."},
+    {icon:"◇", title:"Quality Engineering", accent:"#0EA5C9", desc:"Built with modern technologies, rigorous testing, and scalable architecture designed for future growth."},
+    {icon:"↗", title:"Long-Term Partnership", accent:"#F5A623", desc:"We remain invested beyond launch with ongoing support, optimization, and strategic guidance."},
+  ];
+  const highlights = [
+    "Transparent Project Management",
+    "Security-First Development",
+    "Agile & Iterative Delivery",
+    "Scalable Cloud Architecture",
+    "Post-Launch Support",
+  ];
+
+  return (
+    <section style={{ background:"#fff", padding:"96px 5vw 92px", position:"relative", overflow:"hidden" }}>
+      <AIBackground/>
+      <div ref={ref} style={{ maxWidth:1160, margin:"0 auto", position:"relative", zIndex:1 }}>
+        <div style={{ textAlign:"center", maxWidth:820, margin:"0 auto 44px", opacity:visible?1:0, transform:visible?"none":"translateY(18px)", transition:"all .7s ease" }}>
+          <SectionLabel text="WHY TEAMS TRUST US"/>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.8vw,3rem)", fontWeight:900, color:"#1B2D4F", lineHeight:1.18, marginBottom:18 }}>
+            Trusted to Build What <span style={{ background:"linear-gradient(135deg,#F5A623,#3B82C4)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>Businesses Depend On</span>
+          </h2>
+          <p style={{ fontFamily:"'Nunito',sans-serif", color:"#6B84A3", fontSize:"clamp(14.5px,1.5vw,16.5px)", lineHeight:1.8, fontWeight:700, margin:"0 auto", maxWidth:760 }}>
+            From AI-powered applications to scalable web and mobile platforms, we deliver solutions engineered for performance, security, and long-term growth.
+          </p>
+        </div>
+
+        <div className="trustPillars" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:18, marginBottom:28 }}>
+          {pillars.map((p,i)=>(
+            <div key={p.title}
+              style={{ background:"linear-gradient(180deg,#FFFFFF 0%,#F8FAFD 100%)", border:"1.5px solid #E8F0FB", borderRadius:16, padding:"26px 24px", minHeight:238, boxShadow:"0 8px 28px rgba(59,130,196,0.07)", opacity:visible?1:0, transform:visible?"none":"translateY(22px)", transition:`opacity .65s ease ${i*90}ms,transform .65s ease ${i*90}ms,border-color .25s,box-shadow .25s` }}
+              onMouseEnter={e=>{e.currentTarget.style.borderColor=p.accent;e.currentTarget.style.boxShadow=`0 14px 38px ${p.accent}24`;e.currentTarget.style.transform="translateY(-5px)";}}
+              onMouseLeave={e=>{e.currentTarget.style.borderColor="#E8F0FB";e.currentTarget.style.boxShadow="0 8px 28px rgba(59,130,196,0.07)";e.currentTarget.style.transform="none";}}>
+              <div style={{ width:48, height:48, borderRadius:14, background:`linear-gradient(135deg,${p.accent}18,#EAF2FD)`, border:`1px solid ${p.accent}35`, display:"flex", alignItems:"center", justifyContent:"center", color:p.accent, fontFamily:"'Nunito',sans-serif", fontSize:24, fontWeight:900, marginBottom:18, boxShadow:`0 8px 22px ${p.accent}16` }}>
+                {p.icon}
+              </div>
+              <h3 style={{ fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:17, color:"#1B2D4F", marginBottom:10, lineHeight:2.3 }}>{p.title}</h3>
+              <p style={{ fontFamily:"'Nunito',sans-serif", color:"#6B84A3", fontSize:13.8, lineHeight:1.75, fontWeight:650 }}>{p.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ background:"linear-gradient(135deg,#1B2D4F,#24456F)", border:"1px solid rgba(255,255,255,0.12)", borderRadius:18, padding:"18px", boxShadow:"0 14px 44px rgba(27,45,79,0.18)", opacity:visible?1:0, transform:visible?"none":"translateY(18px)", transition:"all .7s ease .22s" }}>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:9.5, justifyContent:"center" }}>
+            {highlights.map((h,i)=>(
+              <span key={h} style={{ display:"inline-flex", alignItems:"center", gap:8, background:"rgba(255,255,255,0.08)", border:"1px solid rgba(255,255,255,0.14)", borderRadius:999, padding:"9px 14px", color:"#fff", fontFamily:"'Nunito',sans-serif", fontSize:12.5, fontWeight:850, letterSpacing:.2 }}>
+                <span style={{ color:i%2?"#0EA5C9":"#F5A623", fontWeight:900 }}>✓</span>{h}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Slideshow() {
   const [cur, setCur] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -1429,7 +1487,7 @@ export default function App(){
         @media(max-width:768px){
           .nd{display:none!important}
           .nh{display:flex!important}
-          .ag,.wg,.cg,.fg{grid-template-columns:1fr!important}
+          .ag,.wg,.cg,.fg,.trustPillars{grid-template-columns:1fr!important}
           .sg{grid-template-columns:1fr 1fr!important}
           .heroFloat{display:none!important}
         }
@@ -1438,6 +1496,7 @@ export default function App(){
       `}</style>
       <Navbar active={active}/>
       <Hero/>
+      <TrustSection/>
       <Slideshow/>
       <About/>
       <Services/>
