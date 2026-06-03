@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback, createContext, useContext } f
 import { Bot } from "lucide-react";
 import awsLogo from "./assets/aws-logo.svg";
 import openaiLogo from "./assets/openai-logo.svg";
+import heroBg from "./assets/hero-bg.png";
 
 // ─── Brand palette ────────────────────────────────────────────────────────────
 // BG #F4F7FC | Card #FFFFFF | Navy #1B2D4F | Sky #3B82C4
@@ -916,7 +917,25 @@ function Hero() {
   useEffect(() => { const id = setInterval(() => { setFade(false); setTimeout(() => { setWi(i => (i+1)%words.length); setFade(true); }, 350); }, 2800); return () => clearInterval(id); }, [words.length]);
 
   return (
-    <section id="home" style={{ position:"relative", minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", background:"linear-gradient(155deg,#F4F7FC 0%,#EAF2FD 55%,#F0F6FF 100%)" }}>
+    <section id="home" style={{ position:"relative", minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", background:"#F4F7FC" }}>
+      {/* Futuristic background image */}
+  <img
+    src={heroBg}
+    alt=""
+    aria-hidden="true"
+    style={{
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center center",
+      pointerEvents: "none",
+      zIndex: 0,
+    }}
+  />
+      <div style={{ position:"absolute", inset:0, background:"radial-gradient(circle at center,rgba(244,247,252,0.86) 0%,rgba(244,247,252,0.72) 34%,rgba(244,247,252,0.46) 68%,rgba(244,247,252,0.26) 100%)", zIndex:0, pointerEvents:"none" }}/>
+      <div style={{ position:"absolute", left:0, right:0, bottom:0, height:180, background:"linear-gradient(180deg,rgba(244,247,252,0),#F4F7FC 88%)", zIndex:0, pointerEvents:"none" }}/>
       <ParticleField/>
       <AIBackground/>
       <div style={{ position:"absolute", top:"-8%", right:"-4%", width:600, height:600, borderRadius:"50%", background:"radial-gradient(circle,rgba(59,130,196,0.07) 0%,transparent 70%)", pointerEvents:"none" }}/>
@@ -930,17 +949,17 @@ function Hero() {
           </div>
         ))}
       </div>
-      <div style={{ position:"relative", zIndex:1, textAlign:"center", padding:"120px 5vw 60px", maxWidth:1200, margin:"0 auto" }}>
-        <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:"rgba(59,130,196,0.08)", border:"1px solid rgba(59,130,196,0.22)", borderRadius:40, padding:"7px 20px", marginBottom:24 }}>
+      <div style={{ position:"relative", zIndex:1, textAlign:"center", padding:"150px 5vw 80px", maxWidth:1160, width:"100%", margin:"0 auto" }}>
+        <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:"rgba(255,255,255,0.72)", backdropFilter:"blur(14px)", border:"1px solid rgba(59,130,196,0.24)", borderRadius:40, padding:"7px 20px", marginBottom:24, boxShadow:"0 8px 30px rgba(59,130,196,0.08)" }}>
           <span style={{ width:7, height:7, borderRadius:"50%", background:"#0EA5C9", display:"inline-block", animation:"pulse 2s infinite" }}/>
           <span style={{ fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:11.5, color:"#3B82C4", letterSpacing:2.2 }}>{t(lang,"hero","badge")}</span>
         </div>
-        <h1 style={{ fontFamily:"'Playfair Display',Georgia,serif", fontSize:"clamp(2.2rem,5.5vw,4.4rem)", fontWeight:900, color:"#1B2D4F", lineHeight:1.12, marginBottom:10 }}>
+        <h1 style={{ fontFamily:"'Playfair Display',Georgia,serif", fontSize:"clamp(2.25rem,5.2vw,4.75rem)", fontWeight:900, color:"#1B2D4F", lineHeight:1.08, margin:"0 auto 10px", maxWidth:820, textShadow:"0 2px 18px rgba(255,255,255,0.75)" }}>
           {t(lang,"hero","h1a")}{" "}
           <span style={{ background:"linear-gradient(135deg,#F5A623 0%,#3B82C4 100%)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", opacity:fade?1:0, transition:"opacity .35s ease", display:"inline-block" }}>{words[wi]}</span>
           <br/>{t(lang,"hero","h1b")}
         </h1>
-        <p style={{ fontFamily:"'Nunito',sans-serif", fontSize:"clamp(.95rem,1.7vw,1.12rem)", fontWeight:600, color:"#6B84A3", lineHeight:1.85, maxWidth:580, margin:"20px auto 38px" }}>
+        <p style={{ fontFamily:"'Nunito',sans-serif", fontSize:"clamp(.98rem,1.6vw,1.15rem)", fontWeight:700, color:"#526F91", lineHeight:1.85, maxWidth:640, margin:"20px auto 38px", textShadow:"0 1px 16px rgba(255,255,255,0.9)" }}>
           {t(lang,"hero","sub").split('\n')[0]}<br/>
           {t(lang,"hero","sub").split('\n')[1]}
         </p>
@@ -960,7 +979,7 @@ function Hero() {
         </div>
         <div style={{ display:"flex", gap:14, justifyContent:"center", marginTop:50, flexWrap:"wrap" }}>
           {[["50+",t(lang,"hero","stat1")],["98%",t(lang,"hero","stat2")],["24/7",t(lang,"hero","stat3")],["4.9★",t(lang,"hero","stat4")]].map(([v,l]) => (
-            <div key={l} style={{ background:"#fff", border:"1px solid #D6E4F7", borderRadius:14, padding:"14px 20px", boxShadow:"0 2px 14px rgba(59,130,196,0.08)" }}>
+            <div key={l} style={{ background:"rgba(255,255,255,0.72)", backdropFilter:"blur(16px)", border:"1px solid rgba(214,228,247,0.9)", borderRadius:14, padding:"14px 20px", boxShadow:"0 8px 26px rgba(59,130,196,0.11)" }}>
               <div style={{ fontFamily:"'Playfair Display',serif", fontSize:22, fontWeight:900, color:"#3B82C4" }}>{v}</div>
               <div style={{ fontFamily:"'Nunito',sans-serif", fontSize:11, fontWeight:700, color:"#6B84A3", letterSpacing:1.1, marginTop:3 }}>{l.toUpperCase()}</div>
             </div>
