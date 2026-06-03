@@ -1,11 +1,9 @@
 import { useState, useEffect, useRef, useCallback, createContext, useContext } from "react";
 import awsLogo from "./assets/aws-logo.svg";
 import openaiLogo from "./assets/openai-logo.svg";
-<<<<<<< HEAD
+
 import heroBg from "./assets/hero-bg.png";
-=======
 import LOGO from "./assets/logo.png";
->>>>>>> d93dafe4817e93affcfef08b978d1ed8a9524065
 
 // ─── Brand palette ────────────────────────────────────────────────────────────
 // BG #F4F7FC | Card #FFFFFF | Navy #1B2D4F | Sky #3B82C4
