@@ -489,7 +489,7 @@ const T = {
     tech:{ label:"OUR STACK", h2a:"Technologies We", h2b:"Master" },
     portfolio:{ label:"OUR WORK", h2a:"Featured", h2b:"Projects" },
     testimonials:{ label:"TESTIMONIALS", h2a:"What Our", h2b:"Clients", h2c:"Say" },
-    contact:{ label:"GET IN TOUCH", h2a:"Start Your", h2b:"Project", sub:"Ready to build something extraordinary? Your message goes directly to our WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Response Time", within:"Within 24 hours", dashboard:"Live Dashboard", name:"NAME", emailL:"EMAIL", service:"SERVICE", servicePH:"Select a service...", message:"MESSAGE", msgPH:"Tell us about your project...", send:"Send via WhatsApp", hint:"Opens WhatsApp with your message pre-filled", successH:"Opening WhatsApp!", successP:"Your message is ready on WhatsApp. We'll reply within 24 hours." },
+    contact:{ label:"GET IN TOUCH", h2a:"Start Your", h2b:"Project", sub:"Ready to build something extraordinary? Your message goes directly to our WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Response Time", within:"Within 24 hours", dashboard:"Live Dashboard", name:"NAME", emailL:"EMAIL", service:"SERVICE", servicePH:"Select a service...", message:"MESSAGE", msgPH:"Tell us about your project...", send:"Send via WhatsApp", hint:"Send via WhatsApp or email us at contact@shuroq.com", successH:"Opening WhatsApp!", successP:"Your message is ready on WhatsApp. We'll reply within 24 hours." },
     footer:{ tagline:"AI-first engineering company building intelligent, scalable, and beautiful software for the next generation of businesses.", company:"Company", services:"Services", connect:"Connect With Us", copyright:"© 2025 Shuroq. All rights reserved.", tag:"Tech Redefined ✦" },
   },
   ar: {
@@ -503,7 +503,7 @@ const T = {
     tech:{ label:"مكدسنا التقني", h2a:"التقنيات التي", h2b:"نتقنها" },
     portfolio:{ label:"أعمالنا", h2a:"مشاريع", h2b:"مميزة" },
     testimonials:{ label:"آراء العملاء", h2a:"ما يقوله", h2b:"عملاؤنا", h2c:"" },
-    contact:{ label:"تواصل معنا", h2a:"ابدأ", h2b:"مشروعك", sub:"هل أنت مستعد لبناء شيء استثنائي؟ رسالتك ستصل مباشرة إلى واتساب.", email:"البريد الإلكتروني", whatsapp:"واتساب", response:"وقت الاستجابة", within:"خلال 24 ساعة", dashboard:"لوحة مباشرة", name:"الاسم", emailL:"البريد الإلكتروني", service:"الخدمة", servicePH:"اختر خدمة...", message:"الرسالة", msgPH:"أخبرنا عن مشروعك...", send:"أرسل عبر واتساب", hint:"يفتح واتساب مع رسالتك", successH:"!فتح واتساب", successP:"رسالتك جاهزة. سنرد خلال 24 ساعة." },
+    contact:{ label:"تواصل معنا", h2a:"ابدأ", h2b:"مشروعك", sub:"هل أنت مستعد لبناء شيء استثنائي؟ رسالتك ستصل مباشرة إلى واتساب.", email:"البريد الإلكتروني", whatsapp:"واتساب", response:"وقت الاستجابة", within:"خلال 24 ساعة", dashboard:"لوحة مباشرة", name:"الاسم", emailL:"البريد الإلكتروني", service:"الخدمة", servicePH:"اختر خدمة...", message:"الرسالة", msgPH:"أخبرنا عن مشروعك...", send:"أرسل عبر واتساب", hint:"أرسل عبر واتساب أو راسلنا على contact@shuroq.com", successH:"!فتح واتساب", successP:"رسالتك جاهزة. سنرد خلال 24 ساعة." },
     footer:{ tagline:"شركة هندسة برمجيات تعتمد الذكاء الاصطناعي لبناء برمجيات ذكية وقابلة للتوسع للجيل القادم من الأعمال.", company:"الشركة", services:"الخدمات", connect:"تواصل معنا", copyright:"© 2025 شروق. جميع الحقوق محفوظة.", tag:"إعادة تعريف التقنية ✦" },
   },
   fr: {
@@ -517,7 +517,7 @@ const T = {
     tech:{ label:"NOTRE STACK", h2a:"Technologies que Nous", h2b:"Maîtrisons" },
     portfolio:{ label:"NOS TRAVAUX", h2a:"Projets", h2b:"Phares" },
     testimonials:{ label:"TÉMOIGNAGES", h2a:"Ce que disent", h2b:"nos Clients", h2c:"" },
-    contact:{ label:"NOUS CONTACTER", h2a:"Démarrez Votre", h2b:"Projet", sub:"Prêt à construire quelque chose d'extraordinaire ? Votre message va directement sur WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Temps de Réponse", within:"Sous 24 heures", dashboard:"Tableau de Bord", name:"NOM", emailL:"EMAIL", service:"SERVICE", servicePH:"Sélectionner un service...", message:"MESSAGE", msgPH:"Parlez-nous de votre projet...", send:"Envoyer via WhatsApp", hint:"Ouvre WhatsApp avec votre message pré-rempli", successH:"Ouverture de WhatsApp !", successP:"Votre message est prêt. Nous répondrons sous 24h." },
+    contact:{ label:"NOUS CONTACTER", h2a:"Démarrez Votre", h2b:"Projet", sub:"Prêt à construire quelque chose d'extraordinaire ? Votre message va directement sur WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Temps de Réponse", within:"Sous 24 heures", dashboard:"Tableau de Bord", name:"NOM", emailL:"EMAIL", service:"SERVICE", servicePH:"Sélectionner un service...", message:"MESSAGE", msgPH:"Parlez-nous de votre projet...", send:"Envoyer via WhatsApp", hint:"Envoyez via WhatsApp ou par email à contact@shuroq.com", successH:"Ouverture de WhatsApp !", successP:"Votre message est prêt. Nous répondrons sous 24h." },
     footer:{ tagline:"Entreprise d'ingénierie IA-first construisant des logiciels intelligents pour la prochaine génération d'entreprises.", company:"Entreprise", services:"Services", connect:"Nous Rejoindre", copyright:"© 2025 Shuroq. Tous droits réservés.", tag:"La Tech Redéfinie ✦" },
   },
   de: {
@@ -531,7 +531,7 @@ const T = {
     tech:{ label:"UNSER STACK", h2a:"Technologien die wir", h2b:"beherrschen" },
     portfolio:{ label:"UNSERE ARBEIT", h2a:"Ausgewählte", h2b:"Projekte" },
     testimonials:{ label:"REFERENZEN", h2a:"Was unsere", h2b:"Kunden", h2c:"sagen" },
-    contact:{ label:"KONTAKT", h2a:"Starten Sie Ihr", h2b:"Projekt", sub:"Bereit, etwas Außergewöhnliches zu bauen? Ihre Nachricht geht direkt an unseren WhatsApp.", email:"E-Mail", whatsapp:"WhatsApp", response:"Reaktionszeit", within:"Innerhalb 24 Stunden", dashboard:"Live-Dashboard", name:"NAME", emailL:"E-MAIL", service:"LEISTUNG", servicePH:"Leistung auswählen...", message:"NACHRICHT", msgPH:"Erzählen Sie uns von Ihrem Projekt...", send:"Via WhatsApp senden", hint:"Öffnet WhatsApp mit vorausgefüllter Nachricht", successH:"WhatsApp wird geöffnet!", successP:"Ihre Nachricht ist bereit. Wir antworten innerhalb von 24h." },
+    contact:{ label:"KONTAKT", h2a:"Starten Sie Ihr", h2b:"Projekt", sub:"Bereit, etwas Außergewöhnliches zu bauen? Ihre Nachricht geht direkt an unseren WhatsApp.", email:"E-Mail", whatsapp:"WhatsApp", response:"Reaktionszeit", within:"Innerhalb 24 Stunden", dashboard:"Live-Dashboard", name:"NAME", emailL:"E-MAIL", service:"LEISTUNG", servicePH:"Leistung auswählen...", message:"NACHRICHT", msgPH:"Erzählen Sie uns von Ihrem Projekt...", send:"Via WhatsApp senden", hint:"Via WhatsApp senden oder per E-Mail an contact@shuroq.com", successH:"WhatsApp wird geöffnet!", successP:"Ihre Nachricht ist bereit. Wir antworten innerhalb von 24h." },
     footer:{ tagline:"KI-first Engineering-Unternehmen, das intelligente, skalierbare Software für die nächste Generation von Unternehmen entwickelt.", company:"Unternehmen", services:"Leistungen", connect:"Kontakt aufnehmen", copyright:"© 2025 Shuroq. Alle Rechte vorbehalten.", tag:"Tech neu definiert ✦" },
   },
   es: {
@@ -545,7 +545,7 @@ const T = {
     tech:{ label:"NUESTRO STACK", h2a:"Tecnologías que", h2b:"Dominamos" },
     portfolio:{ label:"NUESTRO TRABAJO", h2a:"Proyectos", h2b:"Destacados" },
     testimonials:{ label:"TESTIMONIOS", h2a:"Lo que dicen", h2b:"nuestros Clientes", h2c:"" },
-    contact:{ label:"CONTÁCTANOS", h2a:"Inicia Tu", h2b:"Proyecto", sub:"¿Listo para construir algo extraordinario? Tu mensaje va directamente a nuestro WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Tiempo de Respuesta", within:"Dentro de 24 horas", dashboard:"Panel en Vivo", name:"NOMBRE", emailL:"EMAIL", service:"SERVICIO", servicePH:"Seleccionar servicio...", message:"MENSAJE", msgPH:"Cuéntanos sobre tu proyecto...", send:"Enviar por WhatsApp", hint:"Abre WhatsApp con tu mensaje pre-llenado", successH:"¡Abriendo WhatsApp!", successP:"Tu mensaje está listo. Responderemos en 24 horas." },
+    contact:{ label:"CONTÁCTANOS", h2a:"Inicia Tu", h2b:"Proyecto", sub:"¿Listo para construir algo extraordinario? Tu mensaje va directamente a nuestro WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Tiempo de Respuesta", within:"Dentro de 24 horas", dashboard:"Panel en Vivo", name:"NOMBRE", emailL:"EMAIL", service:"SERVICIO", servicePH:"Seleccionar servicio...", message:"MENSAJE", msgPH:"Cuéntanos sobre tu proyecto...", send:"Enviar por WhatsApp", hint:"Envía por WhatsApp o escríbenos a contact@shuroq.com", successH:"¡Abriendo WhatsApp!", successP:"Tu mensaje está listo. Responderemos en 24 horas." },
     footer:{ tagline:"Empresa de ingeniería IA-first construyendo software inteligente y escalable para la próxima generación de negocios.", company:"Empresa", services:"Servicios", connect:"Conectar", copyright:"© 2025 Shuroq. Todos los derechos reservados.", tag:"Tecnología Redefinida ✦" },
   },
   it:{ 
@@ -562,7 +562,7 @@ const T = {
     contact:{ label:"CONTATTACI", h2a:"Avvia il Tuo", h2b:"Progetto", sub:"Pronto a costruire qualcosa di straordinario? Il tuo messaggio va direttamente al nostro WhatsApp.", 
     email:"Email", whatsapp:"WhatsApp", response:"Tempo di Risposta", within:"Entro 24 ore", 
     dashboard:"Dashboard Live", name:"NOME", emailL:"EMAIL", service:"SERVIZIO", servicePH:"Seleziona un servizio...", 
-    message:"MESSAGGIO", msgPH:"Raccontaci del tuo progetto...", send:"Invia via WhatsApp", hint:"Apre WhatsApp con il messaggio pre-compilato", 
+    message:"MESSAGGIO", msgPH:"Raccontaci del tuo progetto...", send:"Invia via WhatsApp", hint:"Invia via WhatsApp o scrivici a contact@shuroq.com", 
     successH:"Apertura WhatsApp!", successP:"Il tuo messaggio è pronto. Risponderemo entro 24 ore." }, 
     footer:{ tagline:"Azienda di ingegneria AI-first che costruisce software intelligente per la prossima generazione di business.", 
     company:"Azienda", services:"Servizi", connect:"Connettiti", copyright:"© 2025 Shuroq. Tutti i diritti riservati.", 
@@ -579,7 +579,7 @@ const T = {
     tech:{ label:"NOSSA STACK", h2a:"Tecnologias que", h2b:"Dominamos" }, 
     portfolio:{ label:"NOSSO TRABALHO", h2a:"Projetos", h2b:"em Destaque" }, 
     testimonials:{ label:"DEPOIMENTOS", h2a:"O que nossos", h2b:"Clientes", h2c:"dizem" }, 
-    contact:{ label:"ENTRE EM CONTATO", h2a:"Inicie Seu", h2b:"Projeto", sub:"Pronto para construir algo extraordinário? Sua mensagem vai direto para nosso WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Tempo de Resposta", within:"Em até 24 horas", dashboard:"Painel ao Vivo", name:"NOME", emailL:"EMAIL", service:"SERVIÇO", servicePH:"Selecione um serviço...", message:"MENSAGEM", msgPH:"Fale-nos sobre seu projeto...", send:"Enviar via WhatsApp", hint:"Abre o WhatsApp com mensagem pré-preenchida", successH:"Abrindo WhatsApp!", successP:"Sua mensagem está pronta. Responderemos em 24h." }, 
+    contact:{ label:"ENTRE EM CONTATO", h2a:"Inicie Seu", h2b:"Projeto", sub:"Pronto para construir algo extraordinário? Sua mensagem vai direto para nosso WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Tempo de Resposta", within:"Em até 24 horas", dashboard:"Painel ao Vivo", name:"NOME", emailL:"EMAIL", service:"SERVIÇO", servicePH:"Selecione um serviço...", message:"MENSAGEM", msgPH:"Fale-nos sobre seu projeto...", send:"Enviar via WhatsApp", hint:"Envie via WhatsApp ou por email para contact@shuroq.com", successH:"Abrindo WhatsApp!", successP:"Sua mensagem está pronta. Responderemos em 24h." }, 
     footer:{ tagline:"Empresa de engenharia IA-first construindo software inteligente para a próxima geração de negócios.", company:"Empresa", services:"Serviços", connect:"Conectar", copyright:"© 2025 Shuroq. Todos os direitos reservados.", tag:"Tech Redefinida ✦" } 
   },
   hi:{ 
@@ -593,7 +593,7 @@ const T = {
     tech:{ label:"हमारा स्टैक", h2a:"तकनीकें जो हम", h2b:"में माहिर हैं" }, 
     portfolio:{ label:"हमारा काम", h2a:"चुनिंदा", h2b:"परियोजनाएं" }, 
     testimonials:{ label:"प्रशंसापत्र", h2a:"हमारे", h2b:"क्लाइंट", h2c:"क्या कहते हैं" }, 
-    contact:{ label:"संपर्क करें", h2a:"अपना", h2b:"प्रोजेक्ट शुरू करें", sub:"कुछ असाधारण बनाने के लिए तैयार हैं? आपका संदेश सीधे WhatsApp पर जाएगा।", email:"ईमेल", whatsapp:"WhatsApp", response:"प्रतिक्रिया समय", within:"24 घंटे के भीतर", dashboard:"लाइव डैशबोर्ड", name:"नाम", emailL:"ईमेल", service:"सेवा", servicePH:"सेवा चुनें...", message:"संदेश", msgPH:"अपने प्रोजेक्ट के बारे में बताएं...", send:"WhatsApp पर भेजें", hint:"आपका संदेश WhatsApp पर खुलेगा", successH:"WhatsApp खुल रहा है!", successP:"आपका संदेश तैयार है। हम 24 घंटे में जवाब देंगे।" }, 
+    contact:{ label:"संपर्क करें", h2a:"अपना", h2b:"प्रोजेक्ट शुरू करें", sub:"कुछ असाधारण बनाने के लिए तैयार हैं? आपका संदेश सीधे WhatsApp पर जाएगा।", email:"ईमेल", whatsapp:"WhatsApp", response:"प्रतिक्रिया समय", within:"24 घंटे के भीतर", dashboard:"लाइव डैशबोर्ड", name:"नाम", emailL:"ईमेल", service:"सेवा", servicePH:"सेवा चुनें...", message:"संदेश", msgPH:"अपने प्रोजेक्ट के बारे में बताएं...", send:"WhatsApp पर भेजें", hint:"WhatsApp पर भेजें या contact@shuroq.com पर ईमेल करें", successH:"WhatsApp खुल रहा है!", successP:"आपका संदेश तैयार है। हम 24 घंटे में जवाब देंगे।" }, 
     footer:{ tagline:"AI-फर्स्ट इंजीनियरिंग कंपनी जो अगली पीढ़ी के व्यवसायों के लिए बुद्धिमान सॉफ़्टवेयर बना रही है।", company:"कंपनी", services:"सेवाएं", connect:"जुड़ें", copyright:"© 2025 शुरूक. सर्वाधिकार सुरक्षित.", tag:"टेक रिडिफाइंड ✦" } 
   },
   ur:{ 
@@ -607,7 +607,7 @@ const T = {
     tech:{ label:"ہمارا اسٹیک", h2a:"ٹیکنالوجیز جن میں ہم", h2b:"ماہر ہیں" }, 
     portfolio:{ label:"ہمارا کام", h2a:"منتخب", h2b:"پروجیکٹس" }, 
     testimonials:{ label:"تاثرات", h2a:"ہمارے", h2b:"کلائنٹس", h2c:"کیا کہتے ہیں" }, 
-    contact:{ label:"رابطہ کریں", h2a:"اپنا", h2b:"پروجیکٹ شروع کریں", sub:"کچھ غیر معمولی بنانے کے لیے تیار ہیں؟ آپ کا پیغام براہ راست WhatsApp پر جائے گا۔", email:"ای میل", whatsapp:"واٹس ایپ", response:"جواب دینے کا وقت", within:"24 گھنٹوں کے اندر", dashboard:"لائیو ڈیش بورڈ", name:"نام", emailL:"ای میل", service:"خدمت", servicePH:"خدمت منتخب کریں...", message:"پیغام", msgPH:"اپنے پروجیکٹ کے بارے میں بتائیں...", send:"WhatsApp پر بھیجیں", hint:"آپ کا پیغام WhatsApp پر کھلے گا", successH:"!واٹس ایپ کھل رہا ہے", successP:"آپ کا پیغام تیار ہے۔ ہم 24 گھنٹوں میں جواب دیں گے۔" }, 
+    contact:{ label:"رابطہ کریں", h2a:"اپنا", h2b:"پروجیکٹ شروع کریں", sub:"کچھ غیر معمولی بنانے کے لیے تیار ہیں؟ آپ کا پیغام براہ راست WhatsApp پر جائے گا۔", email:"ای میل", whatsapp:"واٹس ایپ", response:"جواب دینے کا وقت", within:"24 گھنٹوں کے اندر", dashboard:"لائیو ڈیش بورڈ", name:"نام", emailL:"ای میل", service:"خدمت", servicePH:"خدمت منتخب کریں...", message:"پیغام", msgPH:"اپنے پروجیکٹ کے بارے میں بتائیں...", send:"WhatsApp پر بھیجیں", hint:"WhatsApp پر بھیجیں یا contact@shuroq.com پر ای میل کریں", successH:"!واٹس ایپ کھل رہا ہے", successP:"آپ کا پیغام تیار ہے۔ ہم 24 گھنٹوں میں جواب دیں گے۔" }, 
     footer:{ tagline:"AI-فرسٹ انجینئرنگ کمپنی جو اگلی نسل کے کاروبار کے لیے ذہین سافٹ ویئر بنا رہی ہے۔", company:"کمپنی", services:"خدمات", connect:"جڑیں", copyright:"© 2025 شروق. جملہ حقوق محفوظ ہیں۔", tag:"ٹیک ری ڈیفائنڈ ✦" } 
   },
   te:{ 
@@ -621,7 +621,7 @@ const T = {
     tech:{ label:"మా స్టాక్", h2a:"మేము నిష్ణాతులైన", h2b:"సాంకేతికతలు" }, 
     portfolio:{ label:"మా పని", h2a:"ప్రముఖ", h2b:"ప్రాజెక్టులు" }, 
     testimonials:{ label:"సాక్ష్యాలు", h2a:"మా క్లయింట్‌లు", h2b:"ఏమి చెప్తున్నారు", h2c:"" }, 
-    contact:{ label:"సంప్రదించండి", h2a:"మీ ప్రాజెక్ట్", h2b:"ప్రారంభించండి", sub:"అసాధారణమైనది నిర్మించడానికి సిద్ధంగా ఉన్నారా?", email:"ఇమెయిల్", whatsapp:"WhatsApp", response:"స్పందన సమయం", within:"24 గంటల లోపు", dashboard:"లైవ్ డాష్‌బోర్డ్", name:"పేరు", emailL:"ఇమెయిల్", service:"సేవ", servicePH:"సేవ ఎంచుకోండి...", message:"సందేశం", msgPH:"మీ ప్రాజెక్ట్ గురించి చెప్పండి...", send:"WhatsApp ద్వారా పంపండి", hint:"మీ సందేశంతో WhatsApp తెరుచుకుంటుంది", successH:"WhatsApp తెరుచుకుంటోంది!", successP:"మీ సందేశం సిద్ధంగా ఉంది. మేము 24 గంటల్లో స్పందిస్తాము." }, 
+    contact:{ label:"సంప్రదించండి", h2a:"మీ ప్రాజెక్ట్", h2b:"ప్రారంభించండి", sub:"అసాధారణమైనది నిర్మించడానికి సిద్ధంగా ఉన్నారా?", email:"ఇమెయిల్", whatsapp:"WhatsApp", response:"స్పందన సమయం", within:"24 గంటల లోపు", dashboard:"లైవ్ డాష్‌బోర్డ్", name:"పేరు", emailL:"ఇమెయిల్", service:"సేవ", servicePH:"సేవ ఎంచుకోండి...", message:"సందేశం", msgPH:"మీ ప్రాజెక్ట్ గురించి చెప్పండి...", send:"WhatsApp ద్వారా పంపండి", hint:"WhatsApp ద్వారా పంపండి లేదా contact@shuroq.com కి ఇమెయిల్ చేయండి", successH:"WhatsApp తెరుచుకుంటోంది!", successP:"మీ సందేశం సిద్ధంగా ఉంది. మేము 24 గంటల్లో స్పందిస్తాము." }, 
     footer:{ tagline:"AI-ఫస్ట్ ఇంజినీరింగ్ కంపెనీ తదుపరి తరం వ్యాపారాల కోసం సాఫ్ట్‌వేర్ నిర్మిస్తోంది.", company:"కంపెనీ", services:"సేవలు", connect:"కనెక్ట్ అవ్వండి", copyright:"© 2025 శురూక్. అన్ని హక్కులు రిజర్వు చేయబడ్డాయి.", tag:"టెక్ రీడిఫైన్డ్ ✦" } 
   },
   ta:{ 
@@ -635,7 +635,7 @@ const T = {
     tech:{ label:"எங்கள் ஸ்டாக்", h2a:"நாங்கள் தேர்ச்சி பெற்ற", h2b:"தொழில்நுட்பங்கள்" }, 
     portfolio:{ label:"எங்கள் வேலை", h2a:"சிறப்பு", h2b:"திட்டங்கள்" }, 
     testimonials:{ label:"சான்றுகள்", h2a:"வாடிக்கையாளர்கள்", h2b:"என்ன சொல்கிறார்கள்", h2c:"" }, 
-    contact:{ label:"தொடர்பு கொள்ளுங்கள்", h2a:"உங்கள் திட்டத்தை", h2b:"தொடங்குங்கள்", sub:"அசாதாரணமான ஒன்றை உருவாக்க தயாரா?", email:"மின்னஞ்சல்", whatsapp:"WhatsApp", response:"பதில் நேரம்", within:"24 மணி நேரத்திற்குள்", dashboard:"நேரடி டாஷ்போர்டு", name:"பெயர்", emailL:"மின்னஞ்சல்", service:"சேவை", servicePH:"சேவையை தேர்ந்தெடுக்கவும்...", message:"செய்தி", msgPH:"உங்கள் திட்டத்தை பற்றி சொல்லுங்கள்...", send:"WhatsApp வழியாக அனுப்பவும்", hint:"உங்கள் செய்தியுடன் WhatsApp திறக்கும்", successH:"WhatsApp திறக்கிறது!", successP:"உங்கள் செய்தி தயாராக உள்ளது. 24 மணி நேரத்தில் பதிலளிப்போம்." }, footer:{ tagline:"AI-ஃபர்ஸ்ட் இன்ஜினியரிங் நிறுவனம் அடுத்த தலைமுறை வணிகங்களுக்கு மென்பொருளை உருவாக்குகிறது.", company:"நிறுவனம்", services:"சேவைகள்", connect:"இணைக்கவும்", copyright:"© 2025 ஷுரூக். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.", tag:"டெக் ரீடிஃபைண்ட் ✦" } 
+    contact:{ label:"தொடர்பு கொள்ளுங்கள்", h2a:"உங்கள் திட்டத்தை", h2b:"தொடங்குங்கள்", sub:"அசாதாரணமான ஒன்றை உருவாக்க தயாரா?", email:"மின்னஞ்சல்", whatsapp:"WhatsApp", response:"பதில் நேரம்", within:"24 மணி நேரத்திற்குள்", dashboard:"நேரடி டாஷ்போர்டு", name:"பெயர்", emailL:"மின்னஞ்சல்", service:"சேவை", servicePH:"சேவையை தேர்ந்தெடுக்கவும்...", message:"செய்தி", msgPH:"உங்கள் திட்டத்தை பற்றி சொல்லுங்கள்...", send:"WhatsApp வழியாக அனுப்பவும்", hint:"WhatsApp வழியாக அனுப்பவும் அல்லது contact@shuroq.com க்கு மின்னஞ்சல் அனுப்பவும்", successH:"WhatsApp திறக்கிறது!", successP:"உங்கள் செய்தி தயாராக உள்ளது. 24 மணி நேரத்தில் பதிலளிப்போம்." }, footer:{ tagline:"AI-ஃபர்ஸ்ட் இன்ஜினியரிங் நிறுவனம் அடுத்த தலைமுறை வணிகங்களுக்கு மென்பொருளை உருவாக்குகிறது.", company:"நிறுவனம்", services:"சேவைகள்", connect:"இணைக்கவும்", copyright:"© 2025 ஷுரூக். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.", tag:"டெக் ரீடிஃபைண்ட் ✦" } 
   },
   kn:{ 
     nav:{ home:"ಮುಖ್ಯಪುಟ", about:"ನಮ್ಮ ಬಗ್ಗೆ", services:"ಸೇವೆಗಳು", technologies:"ತಂತ್ರಜ್ಞಾನಗಳು", portfolio:"ಪೋರ್ಟ್‌ಫೋಲಿಯೊ", contact:"ಸಂಪರ್ಕ", cta:"ಸಂಪರ್ಕಿಸಿ" }, 
@@ -648,7 +648,7 @@ const T = {
     tech:{ label:"ನಮ್ಮ ಸ್ಟಾಕ್", h2a:"ನಾವು ಪರಿಣತರಾಗಿರುವ", h2b:"ತಂತ್ರಜ್ಞಾನಗಳು" }, 
     portfolio:{ label:"ನಮ್ಮ ಕೆಲಸ", h2a:"ವೈಶಿಷ್ಟ್ಯದ", h2b:"ಯೋಜನೆಗಳು" }, 
     testimonials:{ label:"ಪ್ರಶಂಸಾಪತ್ರಗಳು", h2a:"ನಮ್ಮ ಕ್ಲೈಂಟ್‌ಗಳು", h2b:"ಏನು ಹೇಳುತ್ತಾರೆ", h2c:"" }, 
-    contact:{ label:"ಸಂಪರ್ಕಿಸಿ", h2a:"ನಿಮ್ಮ ಯೋಜನೆ", h2b:"ಪ್ರಾರಂಭಿಸಿ", sub:"ಅಸಾಧಾರಣವಾದದ್ದನ್ನು ನಿರ್ಮಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?", email:"ಇಮೇಲ್", whatsapp:"WhatsApp", response:"ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯ", within:"24 ಗಂಟೆಗಳ ಒಳಗೆ", dashboard:"ಲೈವ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್", name:"ಹೆಸರು", emailL:"ಇಮೇಲ್", service:"ಸೇವೆ", servicePH:"ಸೇವೆ ಆಯ್ಕೆಮಾಡಿ...", message:"ಸಂದೇಶ", msgPH:"ನಿಮ್ಮ ಯೋಜನೆಯ ಬಗ್ಗೆ ಹೇಳಿ...", send:"WhatsApp ಮೂಲಕ ಕಳಿಸಿ", hint:"ನಿಮ್ಮ ಸಂದೇಶದೊಂದಿಗೆ WhatsApp ತೆರೆಯುತ್ತದೆ", successH:"WhatsApp ತೆರೆಯುತ್ತಿದೆ!", successP:"ನಿಮ್ಮ ಸಂದೇಶ ಸಿದ್ಧವಾಗಿದೆ. ನಾವು 24 ಗಂಟೆಗಳಲ್ಲಿ ಉತ್ತರಿಸುತ್ತೇವೆ." }, 
+    contact:{ label:"ಸಂಪರ್ಕಿಸಿ", h2a:"ನಿಮ್ಮ ಯೋಜನೆ", h2b:"ಪ್ರಾರಂಭಿಸಿ", sub:"ಅಸಾಧಾರಣವಾದದ್ದನ್ನು ನಿರ್ಮಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?", email:"ಇಮೇಲ್", whatsapp:"WhatsApp", response:"ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯ", within:"24 ಗಂಟೆಗಳ ಒಳಗೆ", dashboard:"ಲೈವ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್", name:"ಹೆಸರು", emailL:"ಇಮೇಲ್", service:"ಸೇವೆ", servicePH:"ಸೇವೆ ಆಯ್ಕೆಮಾಡಿ...", message:"ಸಂದೇಶ", msgPH:"ನಿಮ್ಮ ಯೋಜನೆಯ ಬಗ್ಗೆ ಹೇಳಿ...", send:"WhatsApp ಮೂಲಕ ಕಳಿಸಿ", hint:"WhatsApp ಮೂಲಕ ಕಳಿಸಿ ಅಥವಾ contact@shuroq.com ಗೆ ಇಮೇಲ್ ಮಾಡಿ", successH:"WhatsApp ತೆರೆಯುತ್ತಿದೆ!", successP:"ನಿಮ್ಮ ಸಂದೇಶ ಸಿದ್ಧವಾಗಿದೆ. ನಾವು 24 ಗಂಟೆಗಳಲ್ಲಿ ಉತ್ತರಿಸುತ್ತೇವೆ." }, 
     footer:{ tagline:"AI-ಫರ್ಸ್ಟ್ ಎಂಜಿನಿಯರಿಂಗ್ ಕಂಪನಿ ಮುಂದಿನ ತಲೆಮಾರಿನ ವ್ಯಾಪಾರಗಳಿಗೆ ಸಾಫ್ಟ್‌ವೇರ್ ನಿರ್ಮಿಸುತ್ತಿದೆ.", company:"ಕಂಪನಿ", services:"ಸೇವೆಗಳು", connect:"ಸಂಪರ್ಕಿಸಿ", copyright:"© 2025 ಶುರೂಕ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.", tag:"ಟೆಕ್ ರೀಡಿಫೈನ್ಡ್ ✦" } 
   },
   ml:{ 
@@ -661,7 +661,7 @@ const T = {
    tech:{ label:"ഞങ്ങളുടെ സ്റ്റാക്ക്", h2a:"ഞങ്ങൾ വൈദഗ്ദ്ധ്യം നേടിയ", h2b:"സാങ്കേതികതകൾ" }, 
    portfolio:{ label:"ഞങ്ങളുടെ ജോലി", h2a:"ഫീച്ചർ ചെയ്ത", h2b:"പ്രോജക്ടുകൾ" }, 
    testimonials:{ label:"സാക്ഷ്യങ്ങൾ", h2a:"ഞങ്ങളുടെ ക്ലൈന്റുകൾ", h2b:"എന്ത് പറയുന്നു", h2c:"" }, 
-   contact:{ label:"ബന്ധപ്പെടുക", h2a:"നിങ്ങളുടെ പ്രോജക്ട്", h2b:"ആരംഭിക്കൂ", sub:"അസാധാരണമായ എന്തെങ്കിലും നിർമ്മിക്കാൻ തയ്യാറാണോ?", email:"ഇമെയിൽ", whatsapp:"WhatsApp", response:"പ്രതികരണ സമയം", within:"24 മണിക്കൂറിനുള്ളിൽ", dashboard:"ലൈവ് ഡാഷ്‌ബോർഡ്", name:"പേര്", emailL:"ഇമെയിൽ", service:"സേവനം", servicePH:"ഒരു സേവനം തിരഞ്ഞെടുക്കൂ...", message:"സന്ദേശം", msgPH:"നിങ്ങളുടെ പ്രോജക്ടിനെക്കുറിച്ച് പറയൂ...", send:"WhatsApp വഴി അയയ്‌ക്കൂ", hint:"നിങ്ങളുടെ സന്ദേശത്തോടൊപ്പം WhatsApp തുറക്കും", successH:"WhatsApp തുറക്കുന്നു!", successP:"നിങ്ങളുടെ സന്ദേശം തയ്യാറാണ്. 24 മണിക്കൂറിൽ മറുപടി നൽകും." }, 
+   contact:{ label:"ബന്ധപ്പെടുക", h2a:"നിങ്ങളുടെ പ്രോജക്ട്", h2b:"ആരംഭിക്കൂ", sub:"അസാധാരണമായ എന്തെങ്കിലും നിർമ്മിക്കാൻ തയ്യാറാണോ?", email:"ഇമെയിൽ", whatsapp:"WhatsApp", response:"പ്രതികരണ സമയം", within:"24 മണിക്കൂറിനുള്ളിൽ", dashboard:"ലൈവ് ഡാഷ്‌ബോർഡ്", name:"പേര്", emailL:"ഇമെയിൽ", service:"സേവനം", servicePH:"ഒരു സേവനം തിരഞ്ഞെടുക്കൂ...", message:"സന്ദേശം", msgPH:"നിങ്ങളുടെ പ്രോജക്ടിനെക്കുറിച്ച് പറയൂ...", send:"WhatsApp വഴി അയയ്‌ക്കൂ", hint:"WhatsApp വഴി അയയ്‌ക്കൂ അല്ലെങ്കിൽ contact@shuroq.com ൽ ഇമെയിൽ ചെയ്യൂ", successH:"WhatsApp തുറക്കുന്നു!", successP:"നിങ്ങളുടെ സന്ദേശം തയ്യാറാണ്. 24 മണിക്കൂറിൽ മറുപടി നൽകും." }, 
    footer:{ tagline:"AI-ഫസ്റ്റ് എഞ്ചിനീയറിംഗ് കമ്പനി അടുത്ത തലമുറ ബിസിനസ്സുകൾക്ക് സോഫ്‌റ്റ്‌വെയർ നിർമ്മിക്കുന്നു.", company:"കമ്പനി", services:"സേവനങ്ങൾ", connect:"ബന്ധപ്പെടൂ", copyright:"© 2025 ഷുരൂക്. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.", tag:"ടെക് റീഡിഫൈൻഡ് ✦" } 
   },
   bn:{ 
@@ -675,7 +675,7 @@ const T = {
     tech:{ label:"আমাদের স্ট্যাক", h2a:"আমরা যে প্রযুক্তিতে", h2b:"দক্ষ" }, 
     portfolio:{ label:"আমাদের কাজ", h2a:"বিশেষ", h2b:"প্রকল্পসমূহ" }, 
     testimonials:{ label:"প্রশংসাপত্র", h2a:"আমাদের ক্লায়েন্টরা", h2b:"কী বলছেন", h2c:"" }, 
-    contact:{ label:"যোগাযোগ করুন", h2a:"আপনার প্রকল্প", h2b:"শুরু করুন", sub:"অসাধারণ কিছু তৈরি করতে প্রস্তুত?", email:"ইমেইল", whatsapp:"WhatsApp", response:"প্রতিক্রিয়া সময়", within:"২৪ ঘন্টার মধ্যে", dashboard:"লাইভ ড্যাশবোর্ড", name:"নাম", emailL:"ইমেইল", service:"সেবা", servicePH:"একটি সেবা নির্বাচন করুন...", message:"বার্তা", msgPH:"আপনার প্রকল্প সম্পর্কে বলুন...", send:"WhatsApp এ পাঠান", hint:"আপনার বার্তাসহ WhatsApp খুলবে", successH:"WhatsApp খুলছে!", successP:"আপনার বার্তা প্রস্তুত। ২৪ ঘন্টার মধ্যে উত্তর দেব।" }, 
+    contact:{ label:"যোগাযোগ করুন", h2a:"আপনার প্রকল্প", h2b:"শুরু করুন", sub:"অসাধারণ কিছু তৈরি করতে প্রস্তুত?", email:"ইমেইল", whatsapp:"WhatsApp", response:"প্রতিক্রিয়া সময়", within:"২৪ ঘন্টার মধ্যে", dashboard:"লাইভ ড্যাশবোর্ড", name:"নাম", emailL:"ইমেইল", service:"সেবা", servicePH:"একটি সেবা নির্বাচন করুন...", message:"বার্তা", msgPH:"আপনার প্রকল্প সম্পর্কে বলুন...", send:"WhatsApp এ পাঠান", hint:"WhatsApp-এ পাঠান অথবা contact@shuroq.com এ ইমেইল করুন", successH:"WhatsApp খুলছে!", successP:"আপনার বার্তা প্রস্তুত। ২৪ ঘন্টার মধ্যে উত্তর দেব।" }, 
     footer:{ tagline:"AI-ফার্স্ট ইঞ্জিনিয়ারিং কোম্পানি পরবর্তী প্রজন্মের ব্যবসার জন্য সফটওয্যার তৈরি করছে।", company:"কোম্পানি", services:"সেবাসমূহ", connect:"সংযুক্ত হন", copyright:"© ২০২৫ শুরূক. সর্বস্বত্ব সংরক্ষিত।", tag:"টেক রিডিফাইন্ড ✦" } 
   },
   zh:{ 
@@ -688,7 +688,7 @@ const T = {
       whyUs:{ label:"为何选择Shuroq", h2a:"为何", h2b:"选择我们" }, 
       tech:{ label:"我们的技术栈", h2a:"我们精通的", h2b:"技术" }, 
       portfolio:{ label:"我们的工作", h2a:"精选", h2b:"项目" }, 
-      testimonials:{ label:"客户评价", h2a:"客户们", h2b:"怎么说", h2c:"" }, contact:{ label:"联系我们", h2a:"启动您的", h2b:"项目", sub:"准备好构建非凡之作了吗？您的消息将直接发送到我们的WhatsApp。", email:"邮箱", whatsapp:"WhatsApp", response:"响应时间", within:"24小时内", dashboard:"实时仪表板", name:"姓名", emailL:"邮箱", service:"服务", servicePH:"选择服务...", message:"消息", msgPH:"请告诉我们您的项目...", send:"通过WhatsApp发送", hint:"将以预填消息打开WhatsApp", successH:"正在打开WhatsApp！", successP:"您的消息已就绪。我们将在24小时内回复。" }, 
+      testimonials:{ label:"客户评价", h2a:"客户们", h2b:"怎么说", h2c:"" }, contact:{ label:"联系我们", h2a:"启动您的", h2b:"项目", sub:"准备好构建非凡之作了吗？您的消息将直接发送到我们的WhatsApp。", email:"邮箱", whatsapp:"WhatsApp", response:"响应时间", within:"24小时内", dashboard:"实时仪表板", name:"姓名", emailL:"邮箱", service:"服务", servicePH:"选择服务...", message:"消息", msgPH:"请告诉我们您的项目...", send:"通过WhatsApp发送", hint:"通过WhatsApp发送或发送邮件至 contact@shuroq.com", successH:"正在打开WhatsApp！", successP:"您的消息已就绪。我们将在24小时内回复。" }, 
       footer:{ tagline:"AI优先工程公司，为下一代企业构建智能、可扩展的精美软件。", company:"公司", services:"服务", connect:"联系我们", copyright:"© 2025 Shuroq. 保留所有权利。", tag:"科技重新定义 ✦" } 
     },
   ja:{ 
@@ -702,7 +702,7 @@ const T = {
     tech:{ label:"私たちのスタック", h2a:"私たちが精通する", h2b:"テクノロジー" }, 
     portfolio:{ label:"私たちの実績", h2a:"注目の", h2b:"プロジェクト" }, 
     testimonials:{ label:"お客様の声", h2a:"クライアントの", h2b:"声", h2c:"" }, 
-    contact:{ label:"お問い合わせ", h2a:"プロジェクトを", h2b:"始めましょう", sub:"素晴らしいものを作る準備はできていますか？メッセージは直接WhatsAppに届きます。", email:"メール", whatsapp:"WhatsApp", response:"応答時間", within:"24時間以内", dashboard:"ライブダッシュボード", name:"お名前", emailL:"メール", service:"サービス", servicePH:"サービスを選択...", message:"メッセージ", msgPH:"プロジェクトについて教えてください...", send:"WhatsAppで送る", hint:"メッセージが入力済みのWhatsAppが開きます", successH:"WhatsAppを開いています！", successP:"メッセージの準備ができました。24時間以内に返信します。" }, 
+    contact:{ label:"お問い合わせ", h2a:"プロジェクトを", h2b:"始めましょう", sub:"素晴らしいものを作る準備はできていますか？メッセージは直接WhatsAppに届きます。", email:"メール", whatsapp:"WhatsApp", response:"応答時間", within:"24時間以内", dashboard:"ライブダッシュボード", name:"お名前", emailL:"メール", service:"サービス", servicePH:"サービスを選択...", message:"メッセージ", msgPH:"プロジェクトについて教えてください...", send:"WhatsAppで送る", hint:"WhatsAppで送るか contact@shuroq.com にメールでご連絡ください", successH:"WhatsAppを開いています！", successP:"メッセージの準備ができました。24時間以内に返信します。" }, 
     footer:{ tagline:"AIファーストのエンジニアリング企業として、次世代ビジネスのためのインテリジェントなソフトウェアを構築しています。", company:"会社", services:"サービス", connect:"つながる", copyright:"© 2025 Shuroq. 全著作権所有。", tag:"テックを再定義 ✦" } 
   },
   ru:{ 
@@ -716,7 +716,7 @@ const T = {
     tech:{ label:"НАШ СТЕК", h2a:"Технологии которыми", h2b:"мы владеем" }, 
     portfolio:{ label:"НАШИ РАБОТЫ", h2a:"Избранные", h2b:"Проекты" }, 
     testimonials:{ label:"ОТЗЫВЫ", h2a:"Что говорят", h2b:"наши клиенты", h2c:"" }, 
-    contact:{ label:"СВЯЗАТЬСЯ С НАМИ", h2a:"Начните свой", h2b:"Проект", sub:"Готовы создать что-то выдающееся? Ваше сообщение придёт прямо в WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Время ответа", within:"В течение 24 часов", dashboard:"Панель в реальном времени", name:"ИМЯ", emailL:"EMAIL", service:"УСЛУГА", servicePH:"Выбрать услугу...", message:"СООБЩЕНИЕ", msgPH:"Расскажите о вашем проекте...", send:"Отправить через WhatsApp", hint:"Откроет WhatsApp с заполненным сообщением", successH:"Открывается WhatsApp!", successP:"Ваше сообщение готово. Мы ответим в течение 24 часов." }, 
+    contact:{ label:"СВЯЗАТЬСЯ С НАМИ", h2a:"Начните свой", h2b:"Проект", sub:"Готовы создать что-то выдающееся? Ваше сообщение придёт прямо в WhatsApp.", email:"Email", whatsapp:"WhatsApp", response:"Время ответа", within:"В течение 24 часов", dashboard:"Панель в реальном времени", name:"ИМЯ", emailL:"EMAIL", service:"УСЛУГА", servicePH:"Выбрать услугу...", message:"СООБЩЕНИЕ", msgPH:"Расскажите о вашем проекте...", send:"Отправить через WhatsApp", hint:"Отправьте через WhatsApp или напишите на contact@shuroq.com", successH:"Открывается WhatsApp!", successP:"Ваше сообщение готово. Мы ответим в течение 24 часов." }, 
     footer:{ tagline:"Инжиниринговая компания AI-first, создающая интеллектуальное масштабируемое ПО для бизнеса следующего поколения.", company:"Компания", services:"Услуги", connect:"Связаться", copyright:"© 2025 Shuroq. Все права защищены.", tag:"Технологии переосмыслены ✦" } },
 };
 
