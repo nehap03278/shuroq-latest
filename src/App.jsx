@@ -1687,7 +1687,7 @@ export default function App(){
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap');
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
         html{scroll-behavior:smooth;}
-        body{background:#F4F7FC;color:#1B2D4F;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+        body{background:#F4F7FC;color:#1B2D4F;overflow-x:hidden;-webkit-font-smoothing:antialiased;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Crect width='240' height='240' fill='%23F4F7FC'/%3E%3Ccircle cx='60' cy='60' r='52' fill='%23F5A623' fill-opacity='0.12'/%3E%3Ccircle cx='180' cy='140' r='68' fill='%233B82C4' fill-opacity='0.08'/%3E%3Ccircle cx='120' cy='100' r='24' fill='%230EA5C9' fill-opacity='0.14'/%3E%3C/svg%3E");background-size:240px 240px;}
         ::-webkit-scrollbar{width:5px;}
         ::-webkit-scrollbar-track{background:#F4F7FC;}
         ::-webkit-scrollbar-thumb{background:linear-gradient(#F5A623,#3B82C4);border-radius:3px;}
