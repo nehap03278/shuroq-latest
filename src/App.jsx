@@ -972,9 +972,10 @@ function Hero() {
   useEffect(() => { const id = setInterval(() => { setFade(false); setTimeout(() => { setWi(i => (i+1)%words.length); setFade(true); }, 350); }, 2800); return () => clearInterval(id); }, [words.length]);
 
   return (
-    <section id="home" style={{ position:"relative", minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", background:"#F4F7FC" }}>
+    <section id="home" className="homeHero" style={{ position:"relative", minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", background:"#F4F7FC" }}>
       {/* Futuristic background image */}
   <img
+    className="homeHeroImage"
     src={heroBg}
     alt=""
     aria-hidden="true"
@@ -984,12 +985,13 @@ function Hero() {
       width: "100%",
       height: "100%",
       objectFit: "cover",
-      objectPosition: "center center",
+      objectPosition: "right center",
+      transform: "scaleX(-1)",
       pointerEvents: "none",
       zIndex: 0,
     }}
   />
-      <div style={{ position:"absolute", inset:0, background:"radial-gradient(circle at center,rgba(244,247,252,0.86) 0%,rgba(244,247,252,0.72) 34%,rgba(244,247,252,0.46) 68%,rgba(244,247,252,0.26) 100%)", zIndex:0, pointerEvents:"none" }}/>
+      <div className="homeHeroOverlay" style={{ position:"absolute", inset:0, background:"radial-gradient(circle at center,rgba(244,247,252,0.78) 0%,rgba(244,247,252,0.62) 38%,rgba(244,247,252,0.34) 72%,rgba(244,247,252,0.16) 100%)", zIndex:0, pointerEvents:"none" }}/>
       <div style={{ position:"absolute", left:0, right:0, bottom:0, height:180, background:"linear-gradient(180deg,rgba(244,247,252,0),#F4F7FC 88%)", zIndex:0, pointerEvents:"none" }}/>
       <ParticleField/>
       <AIBackground/>
@@ -1004,7 +1006,7 @@ function Hero() {
           </div>
         ))}
       </div>
-      <div style={{ position:"relative", zIndex:1, textAlign:"center", padding:"150px 5vw 80px", maxWidth:1160, width:"100%", margin:"0 auto" }}>
+      <div className="homeHeroContent" style={{ position:"relative", zIndex:1, textAlign:"center", padding:"150px 5vw 80px", maxWidth:1160, width:"100%", margin:"0 auto" }}>
         <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:"rgba(255,255,255,0.72)", backdropFilter:"blur(14px)", border:"1px solid rgba(59,130,196,0.24)", borderRadius:40, padding:"7px 20px", marginBottom:24, boxShadow:"0 8px 30px rgba(59,130,196,0.08)" }}>
           <span style={{ width:7, height:7, borderRadius:"50%", background:"#0EA5C9", display:"inline-block", animation:"pulse 2s infinite" }}/>
           <span style={{ fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:11.5, color:"#3B82C4", letterSpacing:2.2 }}>{t(lang,"hero","badge")}</span>
@@ -1018,7 +1020,7 @@ function Hero() {
           {t(lang,"hero","sub").split('\n')[0]}<br/>
           {t(lang,"hero","sub").split('\n')[1]}
         </p>
-        <div style={{ display:"flex", gap:14, justifyContent:"center", flexWrap:"wrap" }}>
+        <div className="homeHeroActions" style={{ display:"flex", gap:14, justifyContent:"center", flexWrap:"wrap" }}>
           <button onClick={() => document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})}
             style={{ background:"linear-gradient(135deg,#3B82C4,#0EA5C9)", border:"none", borderRadius:11, color:"#fff", fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:15, padding:"14px 38px", cursor:"pointer", boxShadow:"0 6px 24px rgba(59,130,196,0.34)", transition:"transform .2s,box-shadow .2s" }}
             onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-2px)";e.currentTarget.style.boxShadow="0 10px 30px rgba(59,130,196,0.45)";}}
@@ -1032,7 +1034,7 @@ function Hero() {
             {t(lang,"hero","cta2")}
           </button>
         </div>
-        <div style={{ display:"flex", gap:14, justifyContent:"center", marginTop:50, flexWrap:"wrap" }}>
+        <div className="homeHeroStats" style={{ display:"flex", gap:14, justifyContent:"center", marginTop:50, flexWrap:"wrap" }}>
           {[["50+",t(lang,"hero","stat1")],["98%",t(lang,"hero","stat2")],["24/7",t(lang,"hero","stat3")],["4.9★",t(lang,"hero","stat4")]].map(([v,l]) => (
             <div key={l} style={{ background:"rgba(255,255,255,0.72)", backdropFilter:"blur(16px)", border:"1px solid rgba(214,228,247,0.9)", borderRadius:14, padding:"14px 20px", boxShadow:"0 8px 26px rgba(59,130,196,0.11)" }}>
               <div style={{ fontFamily:"'Playfair Display',serif", fontSize:22, fontWeight:900, color:"#3B82C4" }}>{v}</div>
@@ -1751,12 +1753,24 @@ export default function App(){
         .tech-icon-wrap{width:28px;height:28px;flex:0 0 28px;display:flex;align-items:center;justify-content:center;}
         .tech-icon{width:26px;height:26px;display:block;object-fit:contain;}
         .tech-name{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;line-height:1;color:#1B2D4F;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;min-width:0;}
+        .homeHeroImage{object-position:right center;}
+        @media(max-width:1100px){
+          .homeHeroImage{width:100%!important;height:100%!important;object-fit:cover!important;object-position:right center!important;opacity:.9!important;}
+          .homeHeroOverlay{background:radial-gradient(circle at center,rgba(244,247,252,0.82) 0%,rgba(244,247,252,0.66) 42%,rgba(244,247,252,0.38) 72%,rgba(244,247,252,0.18) 100%)!important;}
+        }
         @media(max-width:768px){
           .nd{display:none!important}
           .nh{display:flex!important}
           .ag,.wg,.cg,.fg,.trustPillars{grid-template-columns:1fr!important}
           .sg{grid-template-columns:1fr 1fr!important}
           .heroFloat{display:none!important}
+          .homeHero{min-height:760px!important;align-items:center!important;}
+          .homeHeroImage{inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:right center!important;opacity:.82!important;transform:scaleX(-1)!important;}
+          .homeHeroOverlay{background:radial-gradient(circle at center,rgba(244,247,252,0.9) 0%,rgba(244,247,252,0.72) 42%,rgba(244,247,252,0.42) 74%,rgba(244,247,252,0.2) 100%)!important;}
+          .homeHeroContent{padding:150px 5vw 70px!important;text-align:center!important;}
+          .homeHeroContent h1{font-size:clamp(2.05rem,10vw,3.1rem)!important;max-width:100%!important;}
+          .homeHeroContent p{max-width:100%!important;margin:18px 0 30px!important;}
+          .homeHeroActions,.homeHeroStats{justify-content:center!important;}
           .tech-section{padding:64px 0;}
           .tech-track{gap:14px;padding-right:14px;animation-duration:30s;}
           .tech-card{width:174px;height:56px;padding:0 16px;}
@@ -1764,6 +1778,14 @@ export default function App(){
           .tech-icon{width:24px;height:24px;}
           .tech-name{font-size:13.5px;}
           .contactActions{grid-template-columns:1fr!important;}
+        }
+        @media(max-width:430px){
+          .homeHero{min-height:740px!important;}
+          .homeHeroImage{object-position:right center!important;opacity:.78!important;}
+          .homeHeroContent{padding-top:138px!important;}
+          .homeHeroActions button{width:100%;justify-content:center;}
+          .homeHeroStats{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px!important;}
+          .homeHeroStats > div{padding:12px 10px!important;text-align:center;}
         }
         .contactActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
         [dir="rtl"] .nd,[dir="rtl"] .nh,[dir="rtl"] nav > div{flex-direction:row-reverse}
