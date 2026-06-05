@@ -1131,37 +1131,39 @@ function Slideshow() {
             What We <span style={{ background:"linear-gradient(135deg,#F5A623,#3B82C4)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>Deliver</span>
           </h2>
         </div>
-        <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => { setPaused(false); setDragging(false); }}
+        <div className="deliverSlideCard" onMouseEnter={() => setPaused(true)} onMouseLeave={() => { setPaused(false); setDragging(false); }}
           onMouseDown={onMouseDown} onMouseUp={onMouseUp} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}
           style={{ position:"relative", borderRadius:24, overflow:"hidden", boxShadow:"0 8px 40px rgba(59,130,196,0.12)", cursor:dragging?"grabbing":"grab", userSelect:"none" }}>
-          <div style={{ background:s.grad, minHeight:320, display:"flex", alignItems:"center", justifyContent:"space-between", padding:"48px 56px", flexWrap:"wrap", gap:32, transition:"background .5s ease" }}>
-            <div style={{ flex:1, minWidth:260 }}>
+          <div className="deliverSlidePanel" style={{ background:s.grad, minHeight:320, display:"flex", alignItems:"center", justifyContent:"space-between", padding:"48px 56px", flexWrap:"wrap", gap:32, transition:"background .5s ease" }}>
+            <div className="deliverSlideCopy" style={{ flex:1, minWidth:260 }}>
               <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:"rgba(255,255,255,0.75)", border:`1px solid ${s.accent}33`, borderRadius:40, padding:"6px 16px", marginBottom:20 }}>
                 <span style={{ width:7, height:7, borderRadius:"50%", background:s.accent, display:"inline-block" }}/>
                 <span style={{ fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:11, color:s.accent, letterSpacing:2 }}>SHUROQ SERVICES</span>
               </div>
               <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.5rem,3vw,2.2rem)", fontWeight:900, color:"#1B2D4F", marginBottom:16, lineHeight:1.2 }}>{s.title}</h3>
               <p style={{ fontFamily:"'Nunito',sans-serif", color:"#6B84A3", fontSize:15.5, fontWeight:600, lineHeight:1.75, maxWidth:460, marginBottom:28 }}>{s.sub}</p>
-              <button onClick={() => document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})}
-                style={{ background:`linear-gradient(135deg,${s.accent},#0EA5C9)`, border:"none", borderRadius:10, color:"#fff", fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:14, padding:"12px 28px", cursor:"pointer", boxShadow:`0 4px 16px ${s.accent}44`, transition:"transform .2s" }}
-                onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"} onMouseLeave={e=>e.currentTarget.style.transform="none"}>
-                Get a Quote →
-              </button>
+              <div className="deliverSlideActions" style={{ display:"inline-flex", alignItems:"center", gap:12 }}>
+                {["prev","next"].map(dir => (
+                  <button className={`deliverSlideNav deliverSlideNav-${dir}`} key={dir} onClick={dir==="prev"?prev:next}
+                    style={{ position:"absolute", top:"50%", [dir==="prev"?"left":"right"]:16, transform:"translateY(-50%)", background:"rgba(255,255,255,0.88)", border:"1px solid #D6E4F7", borderRadius:"50%", width:42, height:42, cursor:"pointer", fontSize:18, boxShadow:"0 2px 12px rgba(59,130,196,0.15)", display:"flex", alignItems:"center", justifyContent:"center", transition:"all .2s", backdropFilter:"blur(8px)", color:"#1B2D4F" }}
+                    onMouseEnter={e=>{e.currentTarget.style.background="#3B82C4";e.currentTarget.style.color="#fff";}}
+                    onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.88)";e.currentTarget.style.color="#1B2D4F";}}>
+                    {dir==="prev"?"‹":"›"}
+                  </button>
+                ))}
+                <button className="deliverSlideCta" onClick={() => document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})}
+                  style={{ background:`linear-gradient(135deg,${s.accent},#0EA5C9)`, border:"none", borderRadius:10, color:"#fff", fontFamily:"'Nunito',sans-serif", fontWeight:900, fontSize:14, padding:"12px 28px", cursor:"pointer", boxShadow:`0 4px 16px ${s.accent}44`, transition:"transform .2s" }}
+                  onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"} onMouseLeave={e=>e.currentTarget.style.transform="none"}>
+                  Get a Quote →
+                </button>
+              </div>
             </div>
-            <div style={{ display:"flex", alignItems:"center", justifyContent:"center", flex:"0 0 200px" }}>
+            <div className="deliverSlideArt" style={{ display:"flex", alignItems:"center", justifyContent:"center", flex:"0 0 200px" }}>
               <div style={{ width:150, height:150, borderRadius:"50%", background:`radial-gradient(circle,${s.accent}22 0%,${s.accent}08 100%)`, border:`2px solid ${s.accent}33`, display:"flex", alignItems:"center", justifyContent:"center", animation:"floatIcon 4s ease-in-out infinite", boxShadow:`0 12px 40px ${s.accent}22` }}>
                 <SvgIcon name={s.icon} size={66} color={s.accent} sw={1.2}/>
               </div>
             </div>
           </div>
-          {["prev","next"].map(dir => (
-            <button key={dir} onClick={dir==="prev"?prev:next}
-              style={{ position:"absolute", top:"50%", [dir==="prev"?"left":"right"]:16, transform:"translateY(-50%)", background:"rgba(255,255,255,0.88)", border:"1px solid #D6E4F7", borderRadius:"50%", width:42, height:42, cursor:"pointer", fontSize:18, boxShadow:"0 2px 12px rgba(59,130,196,0.15)", display:"flex", alignItems:"center", justifyContent:"center", transition:"all .2s", backdropFilter:"blur(8px)", color:"#1B2D4F" }}
-              onMouseEnter={e=>{e.currentTarget.style.background="#3B82C4";e.currentTarget.style.color="#fff";}}
-              onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.88)";e.currentTarget.style.color="#1B2D4F";}}>
-              {dir==="prev"?"‹":"›"}
-            </button>
-          ))}
           <div style={{ position:"absolute", bottom:0, left:0, right:0, height:3, background:"rgba(59,130,196,0.1)" }}>
             <div style={{ height:"100%", background:`linear-gradient(90deg,${s.accent},#0EA5C9)`, width:`${((cur+1)/total)*100}%`, transition:"width .4s ease" }}/>
           </div>
@@ -1777,6 +1779,19 @@ export default function App(){
           .tech-icon-wrap{width:26px;height:26px;flex-basis:26px;}
           .tech-icon{width:24px;height:24px;}
           .tech-name{font-size:13.5px;}
+          .deliverSlidePanel{display:grid!important;grid-template-columns:1fr!important;padding:34px 24px 42px!important;gap:0!important;align-items:flex-start!important;}
+          .deliverSlideCopy{display:contents!important;min-width:0!important;flex:1 1 100%!important;text-align:left!important;padding:0 8px!important;}
+          .deliverSlideCopy > div:first-child{order:1!important;justify-self:start!important;margin-bottom:20px!important;}
+          .deliverSlideCopy h3{order:2!important;}
+          .deliverSlideCopy p{order:3!important;max-width:100%!important;margin-bottom:20px!important;}
+          .deliverSlideActions{display:grid!important;grid-template-columns:40px minmax(0,1fr) 40px!important;align-items:center!important;gap:10px!important;width:100%!important;}
+          .deliverSlideCta{grid-column:2!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;margin-top:0!important;max-width:100%!important;min-width:0!important;width:100%!important;white-space:nowrap!important;}
+          .deliverSlideArt{flex:1 1 100%!important;order:4!important;margin:0 0 24px!important;}
+          .deliverSlideArt > div{width:112px!important;height:112px!important;}
+          .deliverSlideActions{order:5!important;}
+          .deliverSlideNav{position:static!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;transform:none!important;width:40px!important;height:40px!important;z-index:2!important;flex:0 0 40px!important;}
+          .deliverSlideNav-prev{grid-column:1!important;}
+          .deliverSlideNav-next{grid-column:3!important;}
           .contactActions{grid-template-columns:1fr!important;}
         }
         @media(max-width:430px){
@@ -1786,6 +1801,11 @@ export default function App(){
           .homeHeroActions button{width:100%;justify-content:center;}
           .homeHeroStats{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px!important;}
           .homeHeroStats > div{padding:12px 10px!important;text-align:center;}
+          .deliverSlidePanel{padding:30px 18px 38px!important;}
+          .deliverSlideCopy{padding:0!important;}
+          .deliverSlideActions{grid-template-columns:38px minmax(0,1fr) 38px!important;gap:8px!important;}
+          .deliverSlideNav{width:38px!important;height:38px!important;flex-basis:38px!important;}
+          .deliverSlideCta{width:100%!important;padding:12px 12px!important;font-size:13.5px!important;}
         }
         .contactActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
         [dir="rtl"] .nd,[dir="rtl"] .nh,[dir="rtl"] nav > div{flex-direction:row-reverse}
