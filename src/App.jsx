@@ -286,12 +286,12 @@ const WHY_POINTS = [
 ];
 
 const SUPPORT_OPTIONS = [
-  {label:"💼 Sales Support",route:"sales@shuroq.com",tag:"Sales"},
-  {label:"👥 HR Enquiries",route:"hr-team@shuroq.com",tag:"HR"},
-  {label:"🚀 Project Consultation",route:"contact@shuroq.com",tag:"Project"},
-  {label:"🌐 Website Development",route:"contact@shuroq.com",tag:"Web Dev"},
-  {label:"📱 Mobile App Development",route:"contact@shuroq.com",tag:"Mobile"},
-  {label:"🎧 Client Support",route:"contact@shuroq.com",tag:"Support"},
+  {label:"Sales Support",       icon:"briefcase", accent:"#3B82C4", route:"sales@shuroq.com",    tag:"Sales"},
+  {label:"HR Enquiries",        icon:"users",     accent:"#10B981", route:"hr-team@shuroq.com",  tag:"HR"},
+  {label:"Project Consultation",icon:"rocket",    accent:"#F5A623", route:"contact@shuroq.com",  tag:"Project"},
+  {label:"Website Development", icon:"globe",     accent:"#0EA5C9", route:"contact@shuroq.com",  tag:"Web Dev"},
+  {label:"Mobile App Dev",      icon:"mobile",    accent:"#EC4899", route:"contact@shuroq.com",  tag:"Mobile"},
+  {label:"Client Support",      icon:"headset",   accent:"#7C3AED", route:"contact@shuroq.com",  tag:"Support"},
 ];
 
 // ── Utilities ─────────────────────────────────────────────────────────────────
@@ -733,119 +733,119 @@ const TX = {
     whyUs:{p0t:"AI-Driven Development",p0d:"Intelligence baked into every layer",p1t:"Fast Delivery",p1d:"From concept to production in weeks",p2t:"Scalable Architecture",p2d:"Built to grow without friction",p3t:"Innovation Focus",p3d:"Ahead of the technology curve",p4t:"Startup-Friendly Pricing",p4d:"Enterprise quality, accessible rates",p5t:"Enterprise Security",p5d:"SOC-grade standards as a baseline"},
     stats:{s0:"Projects Delivered",s1:"Happy Clients",s2:"Technologies",s3:"Avg Rating"},
     pfol:{p0c:"AI Platform",p0d:"Enterprise analytics with natural-language querying and live data pipelines.",p1c:"Mobile App",p1d:"Cross-platform health & fitness app with AI coaching and biometric sync.",p2c:"E-Commerce",p2d:"Premium fashion storefront with AR try-on and smart personalisation engine.",p3c:"SaaS Platform",p3d:"No-code workflow automation SaaS deployed by 500+ teams worldwide.",p4c:"DevOps",p4d:"Kubernetes cost-optimisation and observability platform for cloud-native teams.",p5c:"Web App",p5d:"Enterprise HR portal handling 10,000 daily active users across 5 countries."},
-    sup:{greet:"How can Shuroq help you today?",o0:"💼 Sales Support",o1:"👥 HR Enquiries",o2:"🚀 Project Consultation",o3:"🌐 Website Development",o4:"📱 Mobile App Development",o5:"🎧 Client Support"},
+    sup:{greet:"How can Shuroq help you today?",o0:"Sales Support",o1:"HR Enquiries",o2:"Project Consultation",o3:"Website Development",o4:"Mobile App Development",o5:"Client Support"},
   },
   ar:{
     services:{s0t:"تطوير تطبيقات الذكاء الاصطناعي",s0d:"تطبيقات مخصصة مدعومة بنماذج اللغة الكبيرة ورؤية الحاسوب والأنظمة التنبؤية.",s1t:"تطوير تطبيقات أندرويد",s1d:"تطبيقات أندرويد أصيلة ومتعددة المنصات مصممة للأداء العالي وتجربة مستخدم سلسة.",s2t:"تطوير تطبيقات iOS",s2d:"تطبيقات iOS متميزة مصممة وفق معايير أبل الصارمة.",s3t:"تطوير تطبيقات الويب",s3d:"منصات full-stack قابلة للتوسع باستخدام React وNode.js والبنية السحابية.",s4t:"تطوير المواقع الثابتة",s4d:"مواقع سريعة ومحسّنة لمحركات البحث مع تصميم يركز على التحويل.",s5t:"تطوير روبوتات المحادثة",s5d:"ذكاء اصطناعي للمحادثة يشارك المستخدمين ويحولهم على نطاق واسع.",s6t:"تطوير التجارة الإلكترونية",s6d:"متاجر عالية التحويل مع اكتشاف المنتجات الذكي وإتمام الشراء بسلاسة.",s7t:"حلول الأتمتة",s7d:"محركات سير العمل وRPA التي تزيل العمل المتكرر على مستوى المؤسسة.",s8t:"اختبار البرمجيات والتكامل",s8d:"اختبارات الوحدة والتكامل والأداء لبرمجيات محكمة.",s9t:"تطوير تطبيقات المؤسسات",s9d:"منصات مؤسسية حيوية مبنية للأمان والتوسع والامتثال.",s10t:"خدمات DevOps",s10d:"خطوط CI/CD وDocker وKubernetes وأتمتة السحابة والمراقبة.",mPrj:"مشاريع تجريبية",mBen:"فوائد العمل",mApp:"نهج التطوير",mQuote:"احصل على عرض لـ"},
     whyUs:{p0t:"تطوير مدفوع بالذكاء الاصطناعي",p0d:"الذكاء مدمج في كل طبقة",p1t:"تسليم سريع",p1d:"من الفكرة إلى الإنتاج في أسابيع",p2t:"بنية قابلة للتوسع",p2d:"مبنية للنمو دون احتكاك",p3t:"التركيز على الابتكار",p3d:"في طليعة منحنى التكنولوجيا",p4t:"أسعار مناسبة للشركات الناشئة",p4d:"جودة المؤسسات بأسعار متاحة",p5t:"أمان على مستوى المؤسسة",p5d:"معايير SOC كخط أساس"},
     stats:{s0:"مشروع منجز",s1:"عملاء سعداء",s2:"تقنيات",s3:"متوسط التقييم"},
     pfol:{p0c:"منصة ذكاء اصطناعي",p0d:"تحليلات مؤسسية مع استعلام باللغة الطبيعية وخطوط بيانات مباشرة.",p1c:"تطبيق جوال",p1d:"تطبيق صحة ولياقة متعدد المنصات مع تدريب ذكاء اصطناعي.",p2c:"تجارة إلكترونية",p2d:"متجر أزياء متميز مع تجربة AR وتخصيص ذكي.",p3c:"منصة SaaS",p3d:"أتمتة سير العمل بدون كود مستخدمة من قبل 500+ فريق.",p4c:"DevOps",p4d:"منصة تحسين تكاليف Kubernetes للفرق السحابية.",p5c:"تطبيق ويب",p5d:"بوابة موارد بشرية للمؤسسات تخدم 10,000 مستخدم يومياً."},
-    sup:{greet:"كيف يمكن لشروق مساعدتك اليوم؟",o0:"💼 دعم المبيعات",o1:"👥 استفسارات الموارد البشرية",o2:"🚀 استشارة المشروع",o3:"🌐 تطوير المواقع",o4:"📱 تطوير تطبيقات الجوال",o5:"🎧 دعم العملاء"},
+    sup:{greet:"كيف يمكن لشروق مساعدتك اليوم؟",o0:"دعم المبيعات",o1:"استفسارات الموارد البشرية",o2:"استشارة المشروع",o3:"تطوير المواقع",o4:"تطوير تطبيقات الجوال",o5:"دعم العملاء"},
   },
   fr:{
     services:{s0t:"Développement d'Applications IA",s0d:"Applications LLM sur mesure, vision par ordinateur et systèmes prédictifs pour un impact business réel.",s1t:"Développement Apps Android",s1d:"Applications Android natives et cross-platform pour performance et UX fluide.",s2t:"Développement Apps iOS",s2d:"Applications iOS premium selon les standards exigeants d'Apple.",s3t:"Développement Applications Web",s3d:"Plateformes full-stack scalables avec React, Node.js et architecture cloud-native.",s4t:"Développement Sites Statiques",s4d:"Sites ultra-rapides et SEO-optimisés avec design orienté conversion.",s5t:"Développement de Chatbots",s5d:"IA conversationnelle qui engage, qualifie et convertit à grande échelle.",s6t:"Développement E-Commerce",s6d:"Boutiques à fort taux de conversion avec découverte intelligente et paiement fluide.",s7t:"Solutions d'Automatisation",s7d:"Moteurs de workflow et RPA éliminant le travail répétitif.",s8t:"Tests Logiciels & Intégration",s8d:"Tests unitaires, d'intégration, E2E et performance pour un logiciel sans failles.",s9t:"Développement Applications Enterprise",s9d:"Plateformes enterprise critiques pour la sécurité, l'échelle et la conformité.",s10t:"Services DevOps",s10d:"Pipelines CI/CD, Docker, Kubernetes, automatisation cloud et monitoring.",mPrj:"PROJETS DÉMO",mBen:"AVANTAGES MÉTIER",mApp:"APPROCHE DE DÉVELOPPEMENT",mQuote:"Obtenir un Devis pour"},
     whyUs:{p0t:"Développement Piloté par l'IA",p0d:"Intelligence intégrée à chaque couche",p1t:"Livraison Rapide",p1d:"Du concept à la production en semaines",p2t:"Architecture Scalable",p2d:"Conçue pour croître sans friction",p3t:"Focus Innovation",p3d:"En avance sur la courbe technologique",p4t:"Tarifs Startup-Friendly",p4d:"Qualité enterprise, tarifs accessibles",p5t:"Sécurité Enterprise",p5d:"Standards SOC comme base de référence"},
     stats:{s0:"Projets Livrés",s1:"Clients Satisfaits",s2:"Technologies",s3:"Note Moy."},
     pfol:{p0c:"Plateforme IA",p0d:"Analytique enterprise avec requêtes en langage naturel et pipelines de données en direct.",p1c:"App Mobile",p1d:"App santé & fitness cross-platform avec coaching IA et synchronisation biométrique.",p2c:"E-Commerce",p2d:"Boutique de mode premium avec essayage AR et moteur de personnalisation intelligent.",p3c:"SaaS Platform",p3d:"SaaS d'automatisation no-code déployé par 500+ équipes dans le monde.",p4c:"DevOps",p4d:"Plateforme d'optimisation des coûts Kubernetes pour équipes cloud-native.",p5c:"App Web",p5d:"Portail RH enterprise gérant 10 000 utilisateurs actifs dans 5 pays."},
-    sup:{greet:"Comment Shuroq peut-il vous aider aujourd'hui ?",o0:"💼 Support Commercial",o1:"👥 Ressources Humaines",o2:"🚀 Consultation Projet",o3:"🌐 Développement Web",o4:"📱 Apps Mobiles",o5:"🎧 Support Client"},
+    sup:{greet:"Comment Shuroq peut-il vous aider aujourd'hui ?",o0:"Support Commercial",o1:"Ressources Humaines",o2:"Consultation Projet",o3:"Développement Web",o4:"Apps Mobiles",o5:"Support Client"},
   },
   de:{
     services:{s0t:"KI-Anwendungsentwicklung",s0d:"Maßgeschneiderte LLM-Apps, Computer Vision und Vorhersagesysteme für echten Geschäftsnutzen.",s1t:"Android-App-Entwicklung",s1d:"Native und Cross-Platform-Android-Apps für Performance und nahtlose UX.",s2t:"iOS-App-Entwicklung",s2d:"Premium-iOS-Anwendungen nach Apples hohen Design- und Engineering-Standards.",s3t:"Web-Anwendungsentwicklung",s3d:"Skalierbare Full-Stack-Plattformen mit React, Node.js und Cloud-nativer Architektur.",s4t:"Statische Website-Entwicklung",s4d:"Blitzschnelle, SEO-optimierte Websites mit konversionsorientierten Designs.",s5t:"Chatbot-Entwicklung",s5d:"Konversationelle KI, die Nutzer einbindet, qualifiziert und konvertiert.",s6t:"E-Commerce-Entwicklung",s6d:"Hochkonvertierende Shops mit intelligenter Produktsuche und reibungslosem Checkout.",s7t:"Automatisierungslösungen",s7d:"Workflow-Engines und RPA, die repetitive Arbeit im Enterprise-Maßstab eliminieren.",s8t:"Software-Tests & Integration",s8d:"Unit-, Integrations-, E2E- und Performance-Tests für ausfallsichere Software.",s9t:"Enterprise-Anwendungsentwicklung",s9d:"Geschäftskritische Enterprise-Plattformen für Sicherheit, Skalierung und Compliance.",s10t:"DevOps-Dienste",s10d:"CI/CD-Pipelines, Docker, Kubernetes, Cloud-Automatisierung und Monitoring.",mPrj:"DEMO-PROJEKTE",mBen:"GESCHÄFTLICHE VORTEILE",mApp:"ENTWICKLUNGSANSATZ",mQuote:"Angebot für"},
     whyUs:{p0t:"KI-gesteuertes Engineering",p0d:"Intelligenz in jeder Schicht verankert",p1t:"Schnelle Lieferung",p1d:"Vom Konzept zur Produktion in Wochen",p2t:"Skalierbare Architektur",p2d:"Gebaut für reibungsloses Wachstum",p3t:"Innovationsfokus",p3d:"Immer einen Schritt voraus",p4t:"Startup-freundliche Preise",p4d:"Enterprise-Qualität, zugängliche Preise",p5t:"Enterprise-Sicherheit",p5d:"SOC-Standards als Grundlage"},
     stats:{s0:"Gelieferte Projekte",s1:"Zufriedene Kunden",s2:"Technologien",s3:"Ø Bewertung"},
     pfol:{p0c:"KI-Plattform",p0d:"Enterprise-Analyse mit natürlichsprachigen Abfragen und Live-Datenpipelines.",p1c:"Mobile App",p1d:"Cross-Platform Gesundheits-App mit KI-Coaching und biometrischer Synchronisation.",p2c:"E-Commerce",p2d:"Premium-Modeshop mit AR-Anprobe und intelligentem Personalisierungs-Engine.",p3c:"SaaS-Plattform",p3d:"No-Code-Workflow-Automatisierung, eingesetzt von 500+ Teams weltweit.",p4c:"DevOps",p4d:"Kubernetes-Kostenoptimierung und Observability-Plattform für Cloud-native Teams.",p5c:"Web-App",p5d:"Enterprise-HR-Portal mit 10.000 täglichen Nutzern in 5 Ländern."},
-    sup:{greet:"Wie kann Shuroq Ihnen heute helfen?",o0:"💼 Vertriebssupport",o1:"👥 HR-Anfragen",o2:"🚀 Projektberatung",o3:"🌐 Website-Entwicklung",o4:"📱 Mobile App-Entwicklung",o5:"🎧 Kundensupport"},
+    sup:{greet:"Wie kann Shuroq Ihnen heute helfen?",o0:"Vertriebssupport",o1:"HR-Anfragen",o2:"Projektberatung",o3:"Website-Entwicklung",o4:"Mobile App-Entwicklung",o5:"Kundensupport"},
   },
   es:{
     services:{s0t:"Desarrollo de Aplicaciones IA",s0d:"Apps con LLM, visión por computadora y sistemas predictivos para impacto empresarial real.",s1t:"Desarrollo de Apps Android",s1d:"Apps Android nativas y multiplataforma para rendimiento y UX fluida.",s2t:"Desarrollo de Apps iOS",s2d:"Aplicaciones iOS premium según los exigentes estándares de Apple.",s3t:"Desarrollo de Aplicaciones Web",s3d:"Plataformas full-stack escalables con React, Node.js y arquitectura cloud-native.",s4t:"Desarrollo de Sitios Estáticos",s4d:"Sitios ultrarrápidos y optimizados para SEO con diseño orientado a conversión.",s5t:"Desarrollo de Chatbots",s5d:"IA conversacional que capta, califica y convierte usuarios a escala.",s6t:"Desarrollo E-Commerce",s6d:"Tiendas de alta conversión con descubrimiento inteligente y checkout fluido.",s7t:"Soluciones de Automatización",s7d:"Motores de flujo de trabajo y RPA que eliminan el trabajo repetitivo.",s8t:"Testing de Software e Integración",s8d:"Pruebas unitarias, integración, E2E y rendimiento para software robusto.",s9t:"Desarrollo de Aplicaciones Enterprise",s9d:"Plataformas empresariales críticas para seguridad, escala y cumplimiento.",s10t:"Servicios DevOps",s10d:"Pipelines CI/CD, Docker, Kubernetes, automatización cloud y monitoreo.",mPrj:"PROYECTOS DEMO",mBen:"BENEFICIOS EMPRESARIALES",mApp:"ENFOQUE DE DESARROLLO",mQuote:"Solicitar Cotización para"},
     whyUs:{p0t:"Desarrollo Impulsado por IA",p0d:"Inteligencia integrada en cada capa",p1t:"Entrega Rápida",p1d:"Del concepto a producción en semanas",p2t:"Arquitectura Escalable",p2d:"Construida para crecer sin fricción",p3t:"Enfoque en Innovación",p3d:"Por delante de la curva tecnológica",p4t:"Precios para Startups",p4d:"Calidad enterprise, precios accesibles",p5t:"Seguridad Enterprise",p5d:"Estándares SOC como base"},
     stats:{s0:"Proyectos Entregados",s1:"Clientes Satisfechos",s2:"Tecnologías",s3:"Calif. Prom."},
     pfol:{p0c:"Plataforma IA",p0d:"Analítica empresarial con consultas en lenguaje natural y pipelines de datos en vivo.",p1c:"App Móvil",p1d:"App de salud y fitness multiplataforma con coaching IA y sincronización biométrica.",p2c:"E-Commerce",p2d:"Tienda de moda premium con prueba AR y motor de personalización inteligente.",p3c:"Plataforma SaaS",p3d:"SaaS de automatización no-code usado por 500+ equipos en el mundo.",p4c:"DevOps",p4d:"Plataforma de optimización de costos Kubernetes para equipos cloud-native.",p5c:"App Web",p5d:"Portal de RRHH empresarial con 10,000 usuarios activos diarios en 5 países."},
-    sup:{greet:"¿Cómo puede Shuroq ayudarte hoy?",o0:"💼 Soporte de Ventas",o1:"👥 Consultas de RRHH",o2:"🚀 Consulta de Proyecto",o3:"🌐 Desarrollo Web",o4:"📱 Desarrollo de Apps Móviles",o5:"🎧 Soporte al Cliente"},
+    sup:{greet:"¿Cómo puede Shuroq ayudarte hoy?",o0:"Soporte de Ventas",o1:"Consultas de RRHH",o2:"Consulta de Proyecto",o3:"Desarrollo Web",o4:"Desarrollo de Apps Móviles",o5:"Soporte al Cliente"},
   },
   it:{
     services:{s0t:"Sviluppo Applicazioni IA",s0d:"App personalizzate con LLM, visione artificiale e sistemi predittivi per impatto aziendale reale.",s1t:"Sviluppo App Android",s1d:"App Android native e cross-platform per performance e UX fluida.",s2t:"Sviluppo App iOS",s2d:"Applicazioni iOS premium secondo gli esigenti standard Apple.",s3t:"Sviluppo Applicazioni Web",s3d:"Piattaforme full-stack scalabili con React, Node.js e architettura cloud-native.",s4t:"Sviluppo Siti Statici",s4d:"Siti velocissimi e ottimizzati SEO con design orientato alla conversione.",s5t:"Sviluppo Chatbot",s5d:"IA conversazionale che coinvolge, qualifica e converte su larga scala.",s6t:"Sviluppo E-Commerce",s6d:"Negozi ad alta conversione con scoperta prodotti intelligente e checkout fluido.",s7t:"Soluzioni di Automazione",s7d:"Motori di workflow e RPA che eliminano il lavoro ripetitivo.",s8t:"Test Software e Integrazione",s8d:"Test unitari, integrazione, E2E e performance per software a prova di errore.",s9t:"Sviluppo Applicazioni Enterprise",s9d:"Piattaforme enterprise mission-critical per sicurezza, scala e conformità.",s10t:"Servizi DevOps",s10d:"Pipeline CI/CD, Docker, Kubernetes, automazione cloud e monitoraggio.",mPrj:"PROGETTI DEMO",mBen:"VANTAGGI AZIENDALI",mApp:"APPROCCIO DI SVILUPPO",mQuote:"Richiedi Preventivo per"},
     whyUs:{p0t:"Sviluppo Guidato dall'IA",p0d:"Intelligenza integrata in ogni strato",p1t:"Consegna Rapida",p1d:"Dal concetto alla produzione in settimane",p2t:"Architettura Scalabile",p2d:"Costruita per crescere senza attrito",p3t:"Focus sull'Innovazione",p3d:"Avanti rispetto alla curva tecnologica",p4t:"Prezzi per Startup",p4d:"Qualità enterprise, prezzi accessibili",p5t:"Sicurezza Enterprise",p5d:"Standard SOC come linea di base"},
     stats:{s0:"Progetti Consegnati",s1:"Clienti Soddisfatti",s2:"Tecnologie",s3:"Val. Media"},
     pfol:{p0c:"Piattaforma IA",p0d:"Analytics enterprise con query in linguaggio naturale e pipeline di dati live.",p1c:"App Mobile",p1d:"App salute & fitness cross-platform con coaching IA e sincronizzazione biometrica.",p2c:"E-Commerce",p2d:"Negozio di moda premium con prova AR e motore di personalizzazione intelligente.",p3c:"Piattaforma SaaS",p3d:"SaaS di automazione no-code usato da 500+ team nel mondo.",p4c:"DevOps",p4d:"Piattaforma di ottimizzazione costi Kubernetes per team cloud-native.",p5c:"App Web",p5d:"Portale HR enterprise con 10.000 utenti attivi in 5 paesi."},
-    sup:{greet:"Come possiamo aiutarti oggi?",o0:"💼 Supporto Vendite",o1:"👥 Risorse Umane",o2:"🚀 Consulenza Progetto",o3:"🌐 Sviluppo Web",o4:"📱 Sviluppo App Mobile",o5:"🎧 Supporto Clienti"},
+    sup:{greet:"Come possiamo aiutarti oggi?",o0:"Supporto Vendite",o1:"Risorse Umane",o2:"Consulenza Progetto",o3:"Sviluppo Web",o4:"Sviluppo App Mobile",o5:"Supporto Clienti"},
   },
   pt:{
     services:{s0t:"Desenvolvimento de Apps IA",s0d:"Apps com LLM, visão computacional e sistemas preditivos para impacto empresarial real.",s1t:"Desenvolvimento Apps Android",s1d:"Apps Android nativas e multiplataforma para performance e UX fluida.",s2t:"Desenvolvimento Apps iOS",s2d:"Apps iOS premium segundo os rigorosos padrões da Apple.",s3t:"Desenvolvimento Apps Web",s3d:"Plataformas full-stack escaláveis com React, Node.js e cloud-native.",s4t:"Desenvolvimento Sites Estáticos",s4d:"Sites ultra-rápidos e otimizados para SEO com design orientado à conversão.",s5t:"Desenvolvimento de Chatbots",s5d:"IA conversacional que engaja, qualifica e converte usuários em escala.",s6t:"Desenvolvimento E-Commerce",s6d:"Lojas de alta conversão com descoberta de produtos e checkout fluido.",s7t:"Soluções de Automação",s7d:"Motores de workflow e RPA que eliminam trabalho repetitivo.",s8t:"Testes de Software e Integração",s8d:"Testes unitários, integração, E2E e performance para software robusto.",s9t:"Desenvolvimento Apps Enterprise",s9d:"Plataformas enterprise críticas para segurança, escala e conformidade.",s10t:"Serviços DevOps",s10d:"Pipelines CI/CD, Docker, Kubernetes, automação cloud e monitoramento.",mPrj:"PROJETOS DEMO",mBen:"BENEFÍCIOS EMPRESARIAIS",mApp:"ABORDAGEM DE DESENVOLVIMENTO",mQuote:"Solicitar Orçamento para"},
     whyUs:{p0t:"Desenvolvimento com IA",p0d:"Inteligência integrada em cada camada",p1t:"Entrega Rápida",p1d:"Do conceito à produção em semanas",p2t:"Arquitetura Escalável",p2d:"Construída para crescer sem fricção",p3t:"Foco em Inovação",p3d:"À frente da curva tecnológica",p4t:"Preços para Startups",p4d:"Qualidade enterprise, preços acessíveis",p5t:"Segurança Enterprise",p5d:"Padrões SOC como linha de base"},
     stats:{s0:"Projetos Entregues",s1:"Clientes Felizes",s2:"Tecnologias",s3:"Avaliação Méd."},
     pfol:{p0c:"Plataforma IA",p0d:"Analytics enterprise com consultas em linguagem natural e pipelines ao vivo.",p1c:"App Mobile",p1d:"App de saúde e fitness multiplataforma com coaching IA.",p2c:"E-Commerce",p2d:"Loja de moda premium com prova AR e personalização inteligente.",p3c:"Plataforma SaaS",p3d:"SaaS de automação no-code usado por 500+ equipes.",p4c:"DevOps",p4d:"Plataforma de otimização Kubernetes para equipes cloud-native.",p5c:"App Web",p5d:"Portal de RH enterprise com 10.000 usuários em 5 países."},
-    sup:{greet:"Como a Shuroq pode ajudá-lo hoje?",o0:"💼 Suporte de Vendas",o1:"👥 Consultas de RH",o2:"🚀 Consultoria de Projeto",o3:"🌐 Desenvolvimento Web",o4:"📱 Apps Móveis",o5:"🎧 Suporte ao Cliente"},
+    sup:{greet:"Como a Shuroq pode ajudá-lo hoje?",o0:"Suporte de Vendas",o1:"Consultas de RH",o2:"Consultoria de Projeto",o3:"Desenvolvimento Web",o4:"Apps Móveis",o5:"Suporte ao Cliente"},
   },
   hi:{
     services:{s0t:"AI एप्लिकेशन डेवलपमेंट",s0d:"कस्टम LLM-पावर्ड ऐप्स, कंप्यूटर विज़न और प्रेडिक्टिव सिस्टम।",s1t:"Android ऐप डेवलपमेंट",s1d:"परफॉर्मेंस और बेहतरीन UX के लिए नेटिव और क्रॉस-प्लेटफ़ॉर्म Android ऐप्स।",s2t:"iOS ऐप डेवलपमेंट",s2d:"Apple के उच्च मानकों पर बने प्रीमियम iOS एप्लिकेशन।",s3t:"वेब एप्लिकेशन डेवलपमेंट",s3d:"React, Node.js और क्लाउड-नेटिव आर्किटेक्चर के साथ स्केलेबल प्लेटफ़ॉर्म।",s4t:"स्टैटिक वेबसाइट डेवलपमेंट",s4d:"तेज़, SEO-अनुकूलित साइट्स।",s5t:"चैटबॉट डेवलपमेंट",s5d:"कन्वर्सेशनल AI जो उपयोगकर्ताओं को एंगेज और कन्वर्ट करता है।",s6t:"ई-कॉमर्स डेवलपमेंट",s6d:"हाई-कन्वर्टिंग स्टोर्स जिनमें स्मार्ट प्रोडक्ट डिस्कवरी है।",s7t:"ऑटोमेशन सॉल्यूशन्स",s7d:"वर्कफ़्लो इंजन और RPA जो बार-बार के काम को समाप्त करते हैं।",s8t:"सॉफ़्टवेयर टेस्टिंग और इंटीग्रेशन",s8d:"यूनिट, इंटीग्रेशन, E2E और परफॉर्मेंस टेस्टिंग।",s9t:"एंटरप्राइज़ एप्लिकेशन डेवलपमेंट",s9d:"सुरक्षा, स्केल और अनुपालन के लिए मिशन-क्रिटिकल प्लेटफ़ॉर्म।",s10t:"DevOps सेवाएं",s10d:"CI/CD पाइपलाइन, Docker, Kubernetes, क्लाउड ऑटोमेशन।",mPrj:"डेमो प्रोजेक्ट्स",mBen:"बिज़नेस लाभ",mApp:"डेवलपमेंट अप्रोच",mQuote:"कोटेशन पाएं"},
     whyUs:{p0t:"AI-चालित डेवलपमेंट",p0d:"हर परत में इंटेलिजेंस",p1t:"तेज़ डिलीवरी",p1d:"कुछ हफ़्तों में कॉन्सेप्ट से प्रोडक्शन",p2t:"स्केलेबल आर्किटेक्चर",p2d:"बिना रुकावट के बढ़ने के लिए",p3t:"इनोवेशन फ़ोकस",p3d:"टेक्नोलॉजी के अग्रदूत",p4t:"स्टार्टअप-फ़्रेंडली मूल्य",p4d:"एंटरप्राइज़ क्वालिटी, किफ़ायती दाम",p5t:"एंटरप्राइज़ सुरक्षा",p5d:"SOC-ग्रेड मानक आधार के रूप में"},
     stats:{s0:"पूर्ण परियोजनाएं",s1:"खुश क्लाइंट",s2:"तकनीकें",s3:"औसत रेटिंग"},
     pfol:{p0c:"AI प्लेटफ़ॉर्म",p0d:"प्राकृतिक भाषा क्वेरी के साथ एंटरप्राइज़ एनालिटिक्स।",p1c:"मोबाइल ऐप",p1d:"AI कोचिंग के साथ हेल्थ & फिटनेस ऐप।",p2c:"ई-कॉमर्स",p2d:"AR ट्राई-ऑन के साथ प्रीमियम फैशन स्टोर।",p3c:"SaaS प्लेटफ़ॉर्म",p3d:"500+ टीमों द्वारा इस्तेमाल नो-कोड ऑटोमेशन।",p4c:"DevOps",p4d:"क्लाउड-नेटिव टीमों के लिए Kubernetes कॉस्ट-ऑप्टिमाइज़ेशन।",p5c:"वेब ऐप",p5d:"5 देशों में 10,000 दैनिक सक्रिय उपयोगकर्ताओं वाला HR पोर्टल।"},
-    sup:{greet:"शुरूक आज आपकी कैसे मदद कर सकता है?",o0:"💼 सेल्स सपोर्ट",o1:"👥 HR पूछताछ",o2:"🚀 प्रोजेक्ट कंसल्टेशन",o3:"🌐 वेबसाइट डेवलपमेंट",o4:"📱 मोबाइल ऐप डेवलपमेंट",o5:"🎧 क्लाइंट सपोर्ट"},
+    sup:{greet:"शुरूक आज आपकी कैसे मदद कर सकता है?",o0:"सेल्स सपोर्ट",o1:"HR पूछताछ",o2:"प्रोजेक्ट कंसल्टेशन",o3:"वेबसाइट डेवलपमेंट",o4:"मोबाइल ऐप डेवलपमेंट",o5:"क्लाइंट सपोर्ट"},
   },
   ur:{
     services:{s0t:"AI ایپلیکیشن ڈویلپمنٹ",s0d:"کسٹم LLM-پاورڈ ایپس، کمپیوٹر ویژن اور پیشن گوئی کے نظام۔",s1t:"Android ایپ ڈویلپمنٹ",s1d:"بہترین کارکردگی اور UX کے لیے Android ایپس۔",s2t:"iOS ایپ ڈویلپمنٹ",s2d:"ایپل کے اعلیٰ معیار کے مطابق iOS ایپلیکیشنز۔",s3t:"ویب ایپلیکیشن ڈویلپمنٹ",s3d:"React اور Node.js کے ساتھ اسکیل ایبل پلیٹ فارمز۔",s4t:"اسٹیٹک ویب سائٹ ڈویلپمنٹ",s4d:"تیز، SEO-آپٹیمائزڈ سائٹس۔",s5t:"چیٹ بوٹ ڈویلپمنٹ",s5d:"صارفین کو مشغول اور تبدیل کرنے والا AI۔",s6t:"ای-کامرس ڈویلپمنٹ",s6d:"ہائی-کنورٹنگ اسٹورز جن میں سمارٹ ڈسکوری ہے۔",s7t:"آٹومیشن سولیوشنز",s7d:"ورک فلو انجن اور RPA جو دہرائے جانے والے کام ختم کرتے ہیں۔",s8t:"سافٹ ویئر ٹیسٹنگ اور انٹیگریشن",s8d:"یونٹ، انٹیگریشن، E2E اور پرفارمنس ٹیسٹنگ۔",s9t:"انٹرپرائز ایپلیکیشن ڈویلپمنٹ",s9d:"سیکیورٹی اور تعمیل کے لیے مشن-کریٹیکل پلیٹ فارمز۔",s10t:"DevOps سروسز",s10d:"CI/CD پائپ لائنز، Docker، Kubernetes، کلاؤڈ آٹومیشن۔",mPrj:"ڈیمو پروجیکٹس",mBen:"کاروباری فوائد",mApp:"ڈویلپمنٹ اپروچ",mQuote:"کوٹیشن حاصل کریں"},
     whyUs:{p0t:"AI سے چلنے والی ڈویلپمنٹ",p0d:"ہر تہہ میں ذہانت",p1t:"تیز ڈیلیوری",p1d:"تصور سے پروڈکشن تک ہفتوں میں",p2t:"قابل توسیع آرکیٹیکچر",p2d:"بغیر رکاوٹ کے بڑھنے کے لیے",p3t:"جدت پر توجہ",p3d:"ٹیکنالوجی میں پیش قدم",p4t:"اسٹارٹ اپ کے لیے قیمتیں",p4d:"انٹرپرائز معیار، سستی قیمتیں",p5t:"انٹرپرائز سیکیورٹی",p5d:"SOC-گریڈ معیار بطور بنیاد"},
     stats:{s0:"مکمل پروجیکٹس",s1:"خوش کلائنٹس",s2:"ٹیکنالوجیز",s3:"اوسط ریٹنگ"},
     pfol:{p0c:"AI پلیٹ فارم",p0d:"قدرتی زبان کے استفسار کے ساتھ enterprise تجزیات۔",p1c:"موبائل ایپ",p1d:"AI کوچنگ کے ساتھ health & fitness ایپ۔",p2c:"ای-کامرس",p2d:"AR ٹرائی-آن کے ساتھ fashion اسٹور۔",p3c:"SaaS پلیٹ فارم",p3d:"500+ ٹیموں کے استعمال شدہ no-code آٹومیشن۔",p4c:"DevOps",p4d:"کلاؤڈ ٹیموں کے لیے Kubernetes کاسٹ آپٹمائزیشن۔",p5c:"ویب ایپ",p5d:"5 ممالک میں 10,000 روزانہ صارفین والا HR پورٹل۔"},
-    sup:{greet:"شروق آج آپ کی کیسے مدد کر سکتا ہے؟",o0:"💼 سیلز سپورٹ",o1:"👥 HR انکوائری",o2:"🚀 پروجیکٹ مشاورت",o3:"🌐 ویب سائٹ ڈویلپمنٹ",o4:"📱 موبائل ایپ ڈویلپمنٹ",o5:"🎧 کلائنٹ سپورٹ"},
+    sup:{greet:"شروق آج آپ کی کیسے مدد کر سکتا ہے؟",o0:"سیلز سپورٹ",o1:"HR انکوائری",o2:"پروجیکٹ مشاورت",o3:"ویب سائٹ ڈویلپمنٹ",o4:"موبائل ایپ ڈویلپمنٹ",o5:"کلائنٹ سپورٹ"},
   },
   te:{
     services:{s0t:"AI అప్లికేషన్ డెవలప్‌మెంట్",s0d:"కస్టమ్ LLM-పవర్డ్ యాప్‌లు, కంప్యూటర్ విజన్ మరియు ప్రెడిక్టివ్ సిస్టమ్‌లు.",s1t:"Android యాప్ డెవలప్‌మెంట్",s1d:"పెర్ఫార్మెన్స్ మరియు అద్భుతమైన UX కోసం Android యాప్‌లు.",s2t:"iOS యాప్ డెవలప్‌మెంట్",s2d:"Apple ప్రమాణాల ప్రకారం ప్రీమియమ్ iOS అప్లికేషన్‌లు.",s3t:"వెబ్ అప్లికేషన్ డెవలప్‌మెంట్",s3d:"React మరియు Node.js తో స్కేలబుల్ ప్లాట్‌ఫారమ్‌లు.",s4t:"స్టాటిక్ వెబ్‌సైట్ డెవలప్‌మెంట్",s4d:"వేగంగా, SEO-ఆప్టిమైజ్డ్ సైట్‌లు.",s5t:"చాట్‌బాట్ డెవలప్‌మెంట్",s5d:"వినియోగదారులను ఎంగేజ్ మరియు కన్వర్ట్ చేసే AI.",s6t:"ఇ-కామర్స్ డెవలప్‌మెంట్",s6d:"స్మార్ట్ ప్రొడక్ట్ డిస్కవరీతో హై-కన్వర్టింగ్ స్టోర్‌లు.",s7t:"ఆటోమేషన్ సొల్యూషన్‌లు",s7d:"ఎంటర్‌ప్రైజ్ స్కేల్‌లో రిపిటేటివ్ వర్క్ తొలగించే ఇంజిన్‌లు.",s8t:"సాఫ్ట్‌వేర్ టెస్టింగ్ & ఇంటిగ్రేషన్",s8d:"యూనిట్, ఇంటిగ్రేషన్, E2E టెస్టింగ్.",s9t:"ఎంటర్‌ప్రైజ్ అప్లికేషన్ డెవలప్‌మెంట్",s9d:"సెక్యూరిటీ మరియు కంప్లయన్స్ కోసం మిషన్-క్రిటికల్ ప్లాట్‌ఫారమ్‌లు.",s10t:"DevOps సేవలు",s10d:"CI/CD పైప్‌లైన్‌లు, Docker, Kubernetes, క్లౌడ్ ఆటోమేషన్.",mPrj:"డెమో ప్రాజెక్ట్‌లు",mBen:"వ్యాపార ప్రయోజనాలు",mApp:"డెవలప్‌మెంట్ అప్రోచ్",mQuote:"కోటేషన్ పొందండి"},
     whyUs:{p0t:"AI-చోదిత డెవలప్‌మెంట్",p0d:"ప్రతి పొరలో ఇంటెలిజెన్స్",p1t:"వేగవంతమైన డెలివరీ",p1d:"వారాల్లో కాన్సెప్ట్ నుండి ప్రొడక్షన్",p2t:"స్కేలబుల్ ఆర్కిటెక్చర్",p2d:"ఘర్షణ లేకుండా పెరగడానికి",p3t:"ఇన్నోవేషన్ ఫోకస్",p3d:"టెక్నాలజీ కర్వ్‌కు ముందు",p4t:"స్టార్టప్-ఫ్రెండ్లీ ధర",p4d:"ఎంటర్‌ప్రైజ్ నాణ్యత, అందుబాటు ధరలు",p5t:"ఎంటర్‌ప్రైజ్ సెక్యూరిటీ",p5d:"SOC-గ్రేడ్ ప్రమాణాలు"},
     stats:{s0:"డెలివర్ అయిన ప్రాజెక్ట్‌లు",s1:"సంతోషంగా ఉన్న క్లయింట్‌లు",s2:"టెక్నాలజీలు",s3:"సగటు రేటింగ్"},
     pfol:{p0c:"AI ప్లాట్‌ఫారమ్",p0d:"నేచురల్-లాంగ్వేజ్ క్వెరీతో ఎంటర్‌ప్రైజ్ అనలిటిక్స్.",p1c:"మొబైల్ యాప్",p1d:"AI కోచింగ్‌తో హెల్త్ & ఫిట్‌నెస్ యాప్.",p2c:"ఇ-కామర్స్",p2d:"AR ట్రై-ఆన్‌తో ప్రీమియమ్ ఫ్యాషన్ స్టోర్.",p3c:"SaaS ప్లాట్‌ఫారమ్",p3d:"500+ టీమ్‌లు వాడే నో-కోడ్ ఆటోమేషన్.",p4c:"DevOps",p4d:"Kubernetes కాస్ట్-ఆప్టిమైజేషన్ ప్లాట్‌ఫారమ్.",p5c:"వెబ్ యాప్",p5d:"5 దేశాల్లో 10,000 రోజువారీ యూజర్‌లతో HR పోర్టల్."},
-    sup:{greet:"శురూక్ ఈరోజు మీకు ఎలా సహాయపడగలదు?",o0:"💼 సేల్స్ సపోర్ట్",o1:"👥 HR విచారణలు",o2:"🚀 ప్రాజెక్ట్ కన్సల్టేషన్",o3:"🌐 వెబ్‌సైట్ డెవలప్‌మెంట్",o4:"📱 మొబైల్ యాప్ డెవలప్‌మెంట్",o5:"🎧 క్లయింట్ సపోర్ట్"},
+    sup:{greet:"శురూక్ ఈరోజు మీకు ఎలా సహాయపడగలదు?",o0:"సేల్స్ సపోర్ట్",o1:"HR విచారణలు",o2:"ప్రాజెక్ట్ కన్సల్టేషన్",o3:"వెబ్‌సైట్ డెవలప్‌మెంట్",o4:"మొబైల్ యాప్ డెవలప్‌మెంట్",o5:"క్లయింట్ సపోర్ట్"},
   },
   ta:{
     services:{s0t:"AI பயன்பாட்டு மேம்பாடு",s0d:"தனிப்பயன் LLM ஆப்கள், கணினி பார்வை மற்றும் முன்கணிப்பு அமைப்புகள்.",s1t:"Android ஆப் மேம்பாடு",s1d:"செயல்திறன் மற்றும் UX க்காக Android ஆப்கள்.",s2t:"iOS ஆப் மேம்பாடு",s2d:"Apple தரத்திற்கு ஏற்ப iOS பயன்பாடுகள்.",s3t:"வலை பயன்பாட்டு மேம்பாடு",s3d:"React மற்றும் Node.js உடன் scalable தளங்கள்.",s4t:"நிலையான வலைத்தளம்",s4d:"வேகமான, SEO-மேம்படுத்தப்பட்ட தளங்கள்.",s5t:"சாட்போட் மேம்பாடு",s5d:"பயனர்களை ஈர்க்கும் மற்றும் மாற்றும் உரையாடல் AI.",s6t:"மின்வணிக மேம்பாடு",s6d:"திறமையான பொருள் கண்டுபிடிப்புடன் store.",s7t:"ஆட்டோமேஷன் தீர்வுகள்",s7d:"மீண்டும் மீண்டும் செய்யும் பணியை நீக்கும் engines.",s8t:"மென்பொருள் சோதனை & ஒருங்கிணைப்பு",s8d:"Unit, integration, E2E மற்றும் performance சோதனை.",s9t:"நிறுவன பயன்பாட்டு மேம்பாடு",s9d:"பாதுகாப்பு மற்றும் இணக்கத்திற்காக தளங்கள்.",s10t:"DevOps சேவைகள்",s10d:"CI/CD pipelines, Docker, Kubernetes, cloud automation.",mPrj:"டெமோ திட்டங்கள்",mBen:"வணிக நலன்கள்",mApp:"மேம்பாட்டு அணுகுமுறை",mQuote:"மேற்கோள் பெறுங்கள்"},
     whyUs:{p0t:"AI-இயக்கப்பட்ட மேம்பாடு",p0d:"ஒவ்வொரு அடுக்கிலும் நுண்ணறிவு",p1t:"விரைவான டெலிவரி",p1d:"வாரங்களில் concept முதல் production வரை",p2t:"அளவிடக்கூடிய கட்டமைப்பு",p2d:"உராய்வின்றி வளர கட்டப்பட்டது",p3t:"புதுமை கவனம்",p3d:"தொழில்நுட்ப வளைவுக்கு முன்",p4t:"Startup-நட்பு விலை",p4d:"Enterprise தரம், எளிய விலைகள்",p5t:"Enterprise பாதுகாப்பு",p5d:"SOC-தரமான தரநிலைகள்"},
     stats:{s0:"திட்டங்கள் முடிந்தன",s1:"மகிழ்ச்சியான வாடிக்கையாளர்கள்",s2:"தொழில்நுட்பங்கள்",s3:"சராசரி மதிப்பீடு"},
     pfol:{p0c:"AI தளம்",p0d:"இயற்கை மொழி query உடன் enterprise analytics.",p1c:"மொபைல் ஆப்",p1d:"AI coaching உடன் health & fitness app.",p2c:"மின்வணிகம்",p2d:"AR try-on உடன் fashion store.",p3c:"SaaS தளம்",p3d:"500+ குழுக்களால் பயன்படுத்தப்படும் no-code automation.",p4c:"DevOps",p4d:"Cloud-native குழுக்களுக்கான Kubernetes optimization.",p5c:"வலை ஆப்",p5d:"5 நாடுகளில் 10,000 தினசரி பயனர்களுடன் HR portal."},
-    sup:{greet:"Shuroq இன்று உங்களுக்கு எப்படி உதவலாம்?",o0:"💼 விற்பனை ஆதரவு",o1:"👥 HR விசாரணைகள்",o2:"🚀 திட்ட ஆலோசனை",o3:"🌐 வலைத்தளம் மேம்பாடு",o4:"📱 மொபைல் ஆப் மேம்பாடு",o5:"🎧 வாடிக்கையாளர் ஆதரவு"},
+    sup:{greet:"Shuroq இன்று உங்களுக்கு எப்படி உதவலாம்?",o0:"விற்பனை ஆதரவு",o1:"HR விசாரணைகள்",o2:"திட்ட ஆலோசனை",o3:"வலைத்தளம் மேம்பாடு",o4:"மொபைல் ஆப் மேம்பாடு",o5:"வாடிக்கையாளர் ஆதரவு"},
   },
   kn:{
     services:{s0t:"AI ಅಪ್ಲಿಕೇಶನ್ ಡೆವಲಪ್‌ಮೆಂಟ್",s0d:"ಕಸ್ಟಮ್ LLM ಅಪ್ಲಿಕೇಶನ್‌ಗಳು, ಕಂಪ್ಯೂಟರ್ ವಿಷನ್ ಮತ್ತು ಊಹಾ ವ್ಯವಸ್ಥೆಗಳು.",s1t:"Android ಅಪ್ ಡೆವಲಪ್‌ಮೆಂಟ್",s1d:"ಕಾರ್ಯಕ್ಷಮತೆ ಮತ್ತು UX ಗಾಗಿ Android ಅಪ್‌ಗಳು.",s2t:"iOS ಅಪ್ ಡೆವಲಪ್‌ಮೆಂಟ್",s2d:"Apple ಮಾನದಂಡಗಳ ಪ್ರಕಾರ iOS ಅಪ್ಲಿಕೇಶನ್‌ಗಳು.",s3t:"ವೆಬ್ ಅಪ್ಲಿಕೇಶನ್ ಡೆವಲಪ್‌ಮೆಂಟ್",s3d:"React ಮತ್ತು Node.js ನೊಂದಿಗೆ ಸ್ಕೇಲೆಬಲ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು.",s4t:"ಸ್ಟ್ಯಾಟಿಕ್ ವೆಬ್‌ಸೈಟ್",s4d:"ವೇಗದ, SEO-ಆಪ್ಟಿಮೈಸ್ಡ್ ಸೈಟ್‌ಗಳು.",s5t:"ಚಾಟ್‌ಬಾಟ್ ಡೆವಲಪ್‌ಮೆಂಟ್",s5d:"ಬಳಕೆದಾರರನ್ನು ತೊಡಗಿಸುವ ಸಂಭಾಷಣಾ AI.",s6t:"ಇ-ಕಾಮರ್ಸ್ ಡೆವಲಪ್‌ಮೆಂಟ್",s6d:"ಸ್ಮಾರ್ಟ್ ಡಿಸ್ಕವರಿ ಮತ್ತು ಸರಾಗ ಚೆಕ್‌ಔಟ್‌ನೊಂದಿಗೆ ಸ್ಟೋರ್‌ಗಳು.",s7t:"ಆಟೊಮೇಷನ್ ಸೊಲ್ಯೂಷನ್‌ಗಳು",s7d:"ಪುನರಾವರ್ತಿತ ಕೆಲಸ ತೆಗೆದುಹಾಕುವ engines.",s8t:"ಸಾಫ್ಟ್‌ವೇರ್ ಟೆಸ್ಟಿಂಗ್ & ಇಂಟಿಗ್ರೇಶನ್",s8d:"Unit, integration, E2E ಮತ್ತು performance ಟೆಸ್ಟಿಂಗ್.",s9t:"ಎಂಟರ್‌ಪ್ರೈಸ್ ಅಪ್ಲಿಕೇಶನ್ ಡೆವಲಪ್‌ಮೆಂಟ್",s9d:"ಭದ್ರತೆ ಮತ್ತು ಅನುಪಾಲನೆಗಾಗಿ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು.",s10t:"DevOps ಸೇವೆಗಳು",s10d:"CI/CD, Docker, Kubernetes, ಕ್ಲೌಡ್ ಆಟೊಮೇಷನ್.",mPrj:"ಡೆಮೊ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳು",mBen:"ವ್ಯಾಪಾರ ಲಾಭಗಳು",mApp:"ಡೆವಲಪ್‌ಮೆಂಟ್ ಅಪ್ರೋಚ್",mQuote:"ಕೋಟೇಶನ್ ಪಡೆಯಿರಿ"},
     whyUs:{p0t:"AI-ಚಾಲಿತ ಅಭಿವೃದ್ಧಿ",p0d:"ಪ್ರತಿ ಪದರದಲ್ಲೂ ಬುದ್ಧಿವಂತಿಕೆ",p1t:"ವೇಗದ ಡೆಲಿವರಿ",p1d:"ವಾರಗಳಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ನಿಂದ ಉತ್ಪಾದನೆಗೆ",p2t:"ಸ್ಕೇಲೆಬಲ್ ಆರ್ಕಿಟೆಕ್ಚರ್",p2d:"ಘರ್ಷಣೆ ಇಲ್ಲದೆ ಬೆಳೆಯಲು",p3t:"ನಾವೀನ್ಯತೆ ಗಮನ",p3d:"ತಂತ್ರಜ್ಞಾನ ವಕ್ರರೇಖೆಗೆ ಮುಂದೆ",p4t:"Startup-ಸ್ನೇಹಿ ಬೆಲೆ",p4d:"Enterprise ಗುಣಮಟ್ಟ, ಅಗ್ಗದ ದರ",p5t:"Enterprise ಭದ್ರತೆ",p5d:"SOC-ಗ್ರೇಡ್ ಮಾನದಂಡಗಳು"},
     stats:{s0:"ಡೆಲಿವರ್ ಆದ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳು",s1:"ಸಂತೋಷ ಕ್ಲೈಂಟ್‌ಗಳು",s2:"ತಂತ್ರಜ್ಞಾನಗಳು",s3:"ಸರಾಸರಿ ರೇಟಿಂಗ್"},
     pfol:{p0c:"AI ಪ್ಲಾಟ್‌ಫಾರ್ಮ್",p0d:"ನೈಸರ್ಗಿಕ ಭಾಷೆಯ query ನೊಂದಿಗೆ enterprise ವಿಶ್ಲೇಷಣೆ.",p1c:"ಮೊಬೈಲ್ ಅಪ್",p1d:"AI ಕೋಚಿಂಗ್‌ನೊಂದಿಗೆ health & fitness ಅಪ್.",p2c:"ಇ-ಕಾಮರ್ಸ್",p2d:"AR ಟ್ರೈ-ಆನ್‌ನೊಂದಿಗೆ fashion store.",p3c:"SaaS ಪ್ಲಾಟ್‌ಫಾರ್ಮ್",p3d:"500+ ಟೀಮ್‌ಗಳು ಬಳಸುವ no-code automation.",p4c:"DevOps",p4d:"Kubernetes cost-optimization ಪ್ಲಾಟ್‌ಫಾರ್ಮ್.",p5c:"ವೆಬ್ ಅಪ್",p5d:"5 ದೇಶಗಳಲ್ಲಿ 10,000 ಬಳಕೆದಾರರ HR portal."},
-    sup:{greet:"ಶುರೂಕ್ ಇಂದು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?",o0:"💼 ಸೇಲ್ಸ್ ಸಪೋರ್ಟ್",o1:"👥 HR ವಿಚಾರಣೆಗಳು",o2:"🚀 ಪ್ರಾಜೆಕ್ಟ್ ಕನ್ಸಲ್ಟೇಶನ್",o3:"🌐 ವೆಬ್‌ಸೈಟ್ ಡೆವಲಪ್‌ಮೆಂಟ್",o4:"📱 ಮೊಬೈಲ್ ಅಪ್ ಡೆವಲಪ್‌ಮೆಂಟ್",o5:"🎧 ಕ್ಲೈಂಟ್ ಸಪೋರ್ಟ್"},
+    sup:{greet:"ಶುರೂಕ್ ಇಂದು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?",o0:"ಸೇಲ್ಸ್ ಸಪೋರ್ಟ್",o1:"HR ವಿಚಾರಣೆಗಳು",o2:"ಪ್ರಾಜೆಕ್ಟ್ ಕನ್ಸಲ್ಟೇಶನ್",o3:"ವೆಬ್‌ಸೈಟ್ ಡೆವಲಪ್‌ಮೆಂಟ್",o4:"ಮೊಬೈಲ್ ಅಪ್ ಡೆವಲಪ್‌ಮೆಂಟ್",o5:"ಕ್ಲೈಂಟ್ ಸಪೋರ್ಟ್"},
   },
   ml:{
     services:{s0t:"AI ആപ്ലിക്കേഷൻ ഡെവലപ്‌മെൻ്റ്",s0d:"കസ്റ്റം LLM ആപ്പുകൾ, കംപ്യൂട്ടർ വിഷൻ, പ്രവചന സംവിധാനങ്ങൾ.",s1t:"Android ആപ്പ് ഡെവലപ്‌മെൻ്റ്",s1d:"ഉയർന്ന പ്രകടനത്തിനും UX-നുമായി Android ആപ്പുകൾ.",s2t:"iOS ആപ്പ് ഡെവലപ്‌മെൻ്റ്",s2d:"Apple മാനദണ്ഡങ്ങൾക്കനുസൃതം iOS ആപ്ലിക്കേഷനുകൾ.",s3t:"വെബ് ആപ്ലിക്കേഷൻ ഡെവലപ്‌മെൻ്റ്",s3d:"React, Node.js ഉള്ള scalable പ്ലാറ്റ്ഫോമുകൾ.",s4t:"സ്റ്റാറ്റിക് വെബ്സൈറ്റ്",s4d:"വേഗമേറിയ, SEO-ഒപ്റ്റിമൈസ്ഡ് സൈറ്റുകൾ.",s5t:"ചാറ്റ്ബോട്ട് ഡെവലപ്‌മെൻ്റ്",s5d:"ഉപഭോക്താക്കളെ ഇടപഴകുകയും പരിവർത്തനം ചെയ്യുകയും ചെയ്യുന്ന AI.",s6t:"ഇ-കൊമേഴ്‌സ് ഡെവലപ്‌മെൻ്റ്",s6d:"സ്മാർട്ട് ഡിസ്‌കവറിയും സീംലെസ് ചെക്ക്ഔട്ടുമുള്ള സ്‌റ്റോറുകൾ.",s7t:"ഓട്ടോമേഷൻ സൊലൂഷൻസ്",s7d:"ആവർത്തിക്കുന്ന ജോലി ഇല്ലാതാക്കുന്ന workflow engines.",s8t:"സോഫ്‌റ്റ്‌വേർ ടെസ്റ്റിംഗ്",s8d:"Unit, integration, E2E, performance ടെസ്റ്റിംഗ്.",s9t:"എൻ്റർപ്രൈസ് ആപ്ലിക്കേഷൻ ഡെവലപ്‌മെൻ്റ്",s9d:"സുരക്ഷ, കംപ്ലയൻസ് ലക്ഷ്യത്തോടെ mission-critical platforms.",s10t:"DevOps സേവനങ്ങൾ",s10d:"CI/CD pipelines, Docker, Kubernetes, cloud automation.",mPrj:"ഡെമോ പ്രോജക്ടുകൾ",mBen:"ബിസിനസ് നേട്ടങ്ങൾ",mApp:"ഡെവലപ്‌മെൻ്റ് രീതി",mQuote:"ഉദ്ധരണി നേടൂ"},
     whyUs:{p0t:"AI-നിർദ്ദേശ വികസനം",p0d:"ഓരോ പാളിയിലും ബുദ്ധി",p1t:"വേഗമേറിയ ഡെലിവറി",p1d:"ആഴ്ചകളിൽ ആശയം മുതൽ ഉൽപ്പാദനം",p2t:"സ്‌കേലബിൾ ആർക്കിടെക്ചർ",p2d:"ഘർഷണം കൂടാതെ വളരാൻ",p3t:"ഇന്നൊവേഷൻ ഫോക്കസ്",p3d:"ടെക്‌നോളജി കർവ്വിന് മുൻപ്",p4t:"Startup-ഫ്രണ്ട്‌ലി വില",p4d:"Enterprise ഗുണനിലവാരം, ലളിതമായ വിലകൾ",p5t:"Enterprise സുരക്ഷ",p5d:"SOC-ഗ്രേഡ് മാനദണ്ഡങ്ങൾ"},
     stats:{s0:"പൂർത്തിയായ പ്രോജക്ടുകൾ",s1:"സന്തുഷ്ട ക്ലൈൻ്റുകൾ",s2:"ടെക്‌നോളജികൾ",s3:"ശരാശരി റേറ്റിംഗ്"},
     pfol:{p0c:"AI പ്ലാറ്റ്‌ഫോം",p0d:"Natural language query ഉള്ള enterprise analytics.",p1c:"മൊബൈൽ ആപ്പ്",p1d:"AI coaching ഉള്ള health & fitness ആപ്പ്.",p2c:"ഇ-കൊമേഴ്‌സ്",p2d:"AR try-on ഉള്ള fashion store.",p3c:"SaaS പ്ലാറ്റ്‌ഫോം",p3d:"500+ ടീമുകൾ ഉപയോഗിക്കുന്ന no-code automation.",p4c:"DevOps",p4d:"Kubernetes cost-optimization platform.",p5c:"വെബ് ആപ്പ്",p5d:"5 രാജ്യങ്ങളിൽ 10,000 ഉപഭോക്താക്കളുള്ള HR portal."},
-    sup:{greet:"Shuroq ഇന്ന് നിങ്ങളെ എങ്ങനെ സഹായിക്കാം?",o0:"💼 സേൽസ് സപ്പോർട്ട്",o1:"👥 HR അന്വേഷണങ്ങൾ",o2:"🚀 പ്രോജക്ട് കൺസൾട്ടേഷൻ",o3:"🌐 വെബ്‌സൈറ്റ് ഡെവലപ്‌മെൻ്റ്",o4:"📱 മൊബൈൽ ആപ്പ് ഡെവലപ്‌മെൻ്റ്",o5:"🎧 ക്ലൈൻ്റ് സപ്പോർട്ട്"},
+    sup:{greet:"Shuroq ഇന്ന് നിങ്ങളെ എങ്ങനെ സഹായിക്കാം?",o0:"സേൽസ് സപ്പോർട്ട്",o1:"HR അന്വേഷണങ്ങൾ",o2:"പ്രോജക്ട് കൺസൾട്ടേഷൻ",o3:"വെബ്‌സൈറ്റ് ഡെവലപ്‌മെൻ്റ്",o4:"മൊബൈൽ ആപ്പ് ഡെവലപ്‌മെൻ്റ്",o5:"ക്ലൈൻ്റ് സപ്പോർട്ട്"},
   },
   bn:{
     services:{s0t:"AI অ্যাপ্লিকেশন ডেভেলপমেন্ট",s0d:"কাস্টম LLM অ্যাপ, কম্পিউটার ভিশন এবং প্রেডিক্টিভ সিস্টেম।",s1t:"Android অ্যাপ ডেভেলপমেন্ট",s1d:"পারফরম্যান্স এবং UX-এর জন্য Android অ্যাপ।",s2t:"iOS অ্যাপ ডেভেলপমেন্ট",s2d:"Apple মানদণ্ড অনুসারে iOS অ্যাপ্লিকেশন।",s3t:"ওয়েব অ্যাপ্লিকেশন ডেভেলপমেন্ট",s3d:"React ও Node.js সহ স্কেলেবল প্ল্যাটফর্ম।",s4t:"স্ট্যাটিক ওয়েবসাইট",s4d:"দ্রুত, SEO-অপ্টিমাইজড সাইট।",s5t:"চ্যাটবট ডেভেলপমেন্ট",s5d:"ব্যবহারকারীদের এনগেজ ও কনভার্ট করা AI।",s6t:"ই-কমার্স ডেভেলপমেন্ট",s6d:"স্মার্ট পণ্য আবিষ্কার ও সহজ চেকআউট।",s7t:"অটোমেশন সলিউশন",s7d:"পুনরাবৃত্তিমূলক কাজ দূর করে এমন workflow engines.",s8t:"সফটওয়্যার টেস্টিং ও ইন্টিগ্রেশন",s8d:"Unit, integration, E2E ও performance টেস্টিং।",s9t:"এন্টারপ্রাইজ অ্যাপ্লিকেশন",s9d:"নিরাপত্তা ও কমপ্লায়েন্সের জন্য প্ল্যাটফর্ম।",s10t:"DevOps সেবাসমূহ",s10d:"CI/CD পাইপলাইন, Docker, Kubernetes, ক্লাউড অটোমেশন।",mPrj:"ডেমো প্রকল্প",mBen:"ব্যবসায়িক সুবিধা",mApp:"ডেভেলপমেন্ট পদ্ধতি",mQuote:"কোটেশন নিন"},
     whyUs:{p0t:"AI-চালিত উন্নয়ন",p0d:"প্রতিটি স্তরে বুদ্ধিমত্তা",p1t:"দ্রুত ডেলিভারি",p1d:"সপ্তাহের মধ্যে ধারণা থেকে উৎপাদনে",p2t:"স্কেলেবল আর্কিটেকচার",p2d:"ঘর্ষণ ছাড়াই বৃদ্ধির জন্য",p3t:"উদ্ভাবন ফোকাস",p3d:"প্রযুক্তির অগ্রভাগে",p4t:"স্টার্টআপ-বান্ধব মূল্য",p4d:"এন্টারপ্রাইজ মান, সাশ্রয়ী মূল্য",p5t:"এন্টারপ্রাইজ নিরাপত্তা",p5d:"SOC-গ্রেড মানদণ্ড"},
     stats:{s0:"সম্পন্ন প্রকল্প",s1:"সুখী ক্লায়েন্ট",s2:"প্রযুক্তি",s3:"গড় রেটিং"},
     pfol:{p0c:"AI প্ল্যাটফর্ম",p0d:"প্রাকৃতিক ভাষা query সহ enterprise analytics।",p1c:"মোবাইল অ্যাপ",p1d:"AI coaching সহ health & fitness অ্যাপ।",p2c:"ই-কমার্স",p2d:"AR try-on সহ fashion store।",p3c:"SaaS প্ল্যাটফর্ম",p3d:"500+ দলের ব্যবহৃত no-code automation।",p4c:"DevOps",p4d:"Kubernetes cost-optimization platform।",p5c:"ওয়েব অ্যাপ",p5d:"5 দেশে 10,000 দৈনিক সক্রিয় ব্যবহারকারীর HR portal।"},
-    sup:{greet:"Shuroq আজ আপনাকে কীভাবে সাহায্য করতে পারে?",o0:"💼 বিক্রয় সহায়তা",o1:"👥 HR অনুসন্ধান",o2:"🚀 প্রকল্প পরামর্শ",o3:"🌐 ওয়েবসাইট ডেভেলপমেন্ট",o4:"📱 মোবাইল অ্যাপ ডেভেলপমেন্ট",o5:"🎧 ক্লায়েন্ট সহায়তা"},
+    sup:{greet:"Shuroq আজ আপনাকে কীভাবে সাহায্য করতে পারে?",o0:"বিক্রয় সহায়তা",o1:"HR অনুসন্ধান",o2:"প্রকল্প পরামর্শ",o3:"ওয়েবসাইট ডেভেলপমেন্ট",o4:"মোবাইল অ্যাপ ডেভেলপমেন্ট",o5:"ক্লায়েন্ট সহায়তা"},
   },
   zh:{
     services:{s0t:"AI应用开发",s0d:"定制化LLM应用、计算机视觉和预测系统，为企业创造实际价值。",s1t:"Android应用开发",s1d:"为性能和流畅UX设计的原生与跨平台Android应用。",s2t:"iOS应用开发",s2d:"符合Apple严格标准的iOS应用。",s3t:"Web应用开发",s3d:"基于React、Node.js和云原生架构的可扩展平台。",s4t:"静态网站开发",s4d:"极速、SEO优化的网站，专注转化率。",s5t:"聊天机器人开发",s5d:"大规模吸引、鉴定和转化用户的对话式AI。",s6t:"电商开发",s6d:"高转化率店铺，智能产品发现和流畅结账。",s7t:"自动化解决方案",s7d:"消除重复工作的工作流引擎和RPA。",s8t:"软件测试与集成",s8d:"单元、集成、E2E和性能测试。",s9t:"企业应用开发",s9d:"为安全、规模和合规构建的企业平台。",s10t:"DevOps服务",s10d:"CI/CD流水线、Docker、Kubernetes、云自动化和监控。",mPrj:"演示项目",mBen:"业务效益",mApp:"开发方法",mQuote:"获取报价："},
     whyUs:{p0t:"AI驱动开发",p0d:"每一层都融入智能",p1t:"快速交付",p1d:"从概念到生产仅需数周",p2t:"可扩展架构",p2d:"无摩擦地持续增长",p3t:"创新聚焦",p3d:"始终走在技术前沿",p4t:"初创友好定价",p4d:"企业级质量，亲民价格",p5t:"企业级安全",p5d:"以SOC标准为基线"},
     stats:{s0:"交付项目",s1:"满意客户",s2:"技术栈",s3:"平均评分"},
     pfol:{p0c:"AI平台",p0d:"支持自然语言查询的企业分析平台。",p1c:"移动应用",p1d:"集AI训练的跨平台健康健身应用。",p2c:"电商",p2d:"带AR试穿和智能个性化的时尚旗舰店。",p3c:"SaaS平台",p3d:"全球500+团队使用的无代码工作流自动化。",p4c:"DevOps",p4d:"云原生团队的Kubernetes成本优化平台。",p5c:"Web应用",p5d:"覆盖5国、日活10,000用户的企业HR门户。"},
-    sup:{greet:"Shuroq今天能帮您做什么？",o0:"💼 销售支持",o1:"👥 人力资源",o2:"🚀 项目咨询",o3:"🌐 网站开发",o4:"📱 移动应用开发",o5:"🎧 客户支持"},
+    sup:{greet:"Shuroq今天能帮您做什么？",o0:"销售支持",o1:"人力资源",o2:"项目咨询",o3:"网站开发",o4:"移动应用开发",o5:"客户支持"},
   },
   ja:{
     services:{s0t:"AIアプリケーション開発",s0d:"カスタムLLMアプリ、コンピュータビジョン、予測システムでビジネス価値を創出。",s1t:"Androidアプリ開発",s1d:"パフォーマンスと快適UXのためのAndroidアプリ。",s2t:"iOSアプリ開発",s2d:"Appleの高いデザイン標準に沿ったiOSアプリ。",s3t:"Webアプリケーション開発",s3d:"React、Node.js、クラウドネイティブ設計によるスケーラブルなプラットフォーム。",s4t:"静的ウェブサイト開発",s4d:"超高速でSEO最適化されたコンバージョン重視のサイト。",s5t:"チャットボット開発",s5d:"ユーザーを引き付け、絞り込み、コンバートする会話型AI。",s6t:"ECサイト開発",s6d:"スマート商品発見とシームレス決済を備えた高コンバージョンのストア。",s7t:"自動化ソリューション",s7d:"企業規模で繰り返し業務をなくすワークフローエンジン。",s8t:"ソフトウェアテスト＆統合",s8d:"ユニット、統合、E2E、パフォーマンステスト。",s9t:"エンタープライズアプリ開発",s9d:"セキュリティ、スケール、コンプライアンスのための基幹プラットフォーム。",s10t:"DevOpsサービス",s10d:"CI/CDパイプライン、Docker、Kubernetes、クラウド自動化と監視。",mPrj:"デモプロジェクト",mBen:"ビジネスメリット",mApp:"開発アプローチ",mQuote:"お見積り："},
     whyUs:{p0t:"AI駆動の開発",p0d:"あらゆる層にインテリジェンスを",p1t:"スピーディな納品",p1d:"コンセプトから本番まで数週間",p2t:"スケーラブルな設計",p2d:"摩擦なく成長できる",p3t:"イノベーション重視",p3d:"テクノロジーの最前線に",p4t:"スタートアップ向け価格",p4d:"エンタープライズ品質を手頃な価格で",p5t:"エンタープライズセキュリティ",p5d:"SOCグレードの基準をベースラインとして"},
     stats:{s0:"納品プロジェクト",s1:"満足のクライアント",s2:"テクノロジー",s3:"平均評価"},
     pfol:{p0c:"AIプラットフォーム",p0d:"自然言語クエリを持つエンタープライズ分析基盤。",p1c:"モバイルアプリ",p1d:"AIコーチングを備えたヘルス＆フィットネスアプリ。",p2c:"EC",p2d:"AR試着とスマートなパーソナライゼーションを持つファッションストア。",p3c:"SaaSプラットフォーム",p3d:"世界500以上のチームが導入するノーコードSaaS。",p4c:"DevOps",p4d:"クラウドネイティブ向けKubernetesコスト最適化。",p5c:"Webアプリ",p5d:"5カ国1万ユーザーのエンタープライズHRポータル。"},
-    sup:{greet:"Shuroqは今日あなたをどのようにサポートできますか？",o0:"💼 営業サポート",o1:"👥 人事担当",o2:"🚀 プロジェクト相談",o3:"🌐 ウェブ開発",o4:"📱 モバイルアプリ開発",o5:"🎧 カスタマーサポート"},
+    sup:{greet:"Shuroqは今日あなたをどのようにサポートできますか？",o0:"営業サポート",o1:"人事担当",o2:"プロジェクト相談",o3:"ウェブ開発",o4:"モバイルアプリ開発",o5:"カスタマーサポート"},
   },
   ru:{
     services:{s0t:"Разработка ИИ-приложений",s0d:"Приложения на базе LLM, компьютерное зрение и прогностические системы.",s1t:"Разработка Android-приложений",s1d:"Нативные и кроссплатформенные Android-приложения для высокой производительности.",s2t:"Разработка iOS-приложений",s2d:"Премиальные iOS-приложения по строгим стандартам Apple.",s3t:"Разработка веб-приложений",s3d:"Масштабируемые full-stack платформы с React, Node.js и cloud-native архитектурой.",s4t:"Разработка статических сайтов",s4d:"Молниеносные, SEO-оптимизированные сайты, ориентированные на конверсию.",s5t:"Разработка чат-ботов",s5d:"Разговорный ИИ, который вовлекает, квалифицирует и конвертирует пользователей.",s6t:"Разработка интернет-магазинов",s6d:"Высококонверсионные магазины с умным поиском товаров и удобной оплатой.",s7t:"Решения по автоматизации",s7d:"Движки workflow и RPA, устраняющие рутинный труд.",s8t:"Тестирование ПО и интеграция",s8d:"Unit, integration, E2E и performance-тестирование.",s9t:"Разработка корпоративных приложений",s9d:"Критически важные корпоративные платформы для безопасности и соответствия.",s10t:"Услуги DevOps",s10d:"Пайплайны CI/CD, Docker, Kubernetes, облачная автоматизация и мониторинг.",mPrj:"ДЕМО-ПРОЕКТЫ",mBen:"ПРЕИМУЩЕСТВА ДЛЯ БИЗНЕСА",mApp:"ПОДХОД К РАЗРАБОТКЕ",mQuote:"Получить предложение для"},
     whyUs:{p0t:"Разработка на основе ИИ",p0d:"Интеллект встроен в каждый слой",p1t:"Быстрая доставка",p1d:"От концепции до продакшна за недели",p2t:"Масштабируемая архитектура",p2d:"Создана для роста без трений",p3t:"Фокус на инновациях",p3d:"Впереди технологической кривой",p4t:"Цены для стартапов",p4d:"Корпоративное качество, доступные цены",p5t:"Корпоративная безопасность",p5d:"Стандарты SOC как базовый уровень"},
     stats:{s0:"Проектов выполнено",s1:"Довольных клиентов",s2:"Технологии",s3:"Ср. рейтинг"},
     pfol:{p0c:"ИИ-платформа",p0d:"Корпоративная аналитика с запросами на естественном языке.",p1c:"Мобильное приложение",p1d:"Кроссплатформенное приложение здоровья с ИИ-коучингом.",p2c:"Интернет-магазин",p2d:"Премиальный магазин fashion с AR-примеркой.",p3c:"SaaS-платформа",p3d:"No-code автоматизация workflow для 500+ команд.",p4c:"DevOps",p4d:"Платформа оптимизации затрат Kubernetes.",p5c:"Веб-приложение",p5d:"Корпоративный HR-портал с 10 000 пользователями в 5 странах."},
-    sup:{greet:"Как Shuroq может помочь вам сегодня?",o0:"💼 Поддержка продаж",o1:"👥 HR-запросы",o2:"🚀 Консультация по проекту",o3:"🌐 Разработка веб-сайтов",o4:"📱 Разработка мобильных приложений",o5:"🎧 Поддержка клиентов"},
+    sup:{greet:"Как Shuroq может помочь вам сегодня?",o0:"Поддержка продаж",o1:"HR-запросы",o2:"Консультация по проекту",o3:"Разработка веб-сайтов",o4:"Разработка мобильных приложений",o5:"Поддержка клиентов"},
   },
 };
 function tx(lang, sec, key) {
@@ -1603,6 +1603,42 @@ function FloatingActions(){
   );
 }
 
+// ── Chatbot professional logo components ─────────────────────────────────────
+function ChatSparkLogo({ size = 24 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Chat bubble */}
+      <path d="M20.5 3H3.5C2.67 3 2 3.67 2 4.5V15.5C2 16.33 2.67 17 3.5 17H8L12 21.5L16 17H20.5C21.33 17 22 16.33 22 15.5V4.5C22 3.67 21.33 3 20.5 3Z" fill="white" opacity="0.96"/>
+      {/* 4-point spark / star — AI motif */}
+      <path d="M12 6L13.1 9.3L16.5 10L13.1 10.7L12 14L10.9 10.7L7.5 10L10.9 9.3L12 6Z" fill="#F5A623" stroke="#F5A623" strokeWidth="0.3" strokeLinejoin="round"/>
+      {/* Tiny accent dots */}
+      <circle cx="7.5" cy="13.5" r="0.85" fill="white" opacity="0.45"/>
+      <circle cx="16.5" cy="13.5" r="0.85" fill="white" opacity="0.45"/>
+    </svg>
+  );
+}
+
+function ChatNeuralAvatar({ size = 20 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Outer ring */}
+      <circle cx="14" cy="14" r="13" stroke="rgba(255,255,255,0.35)" strokeWidth="1.2"/>
+      {/* Central node */}
+      <circle cx="14" cy="14" r="3.2" fill="white"/>
+      {/* Satellite nodes */}
+      <circle cx="7"  cy="9"  r="2" fill="white" opacity="0.82"/>
+      <circle cx="21" cy="9"  r="2" fill="white" opacity="0.82"/>
+      <circle cx="7"  cy="19" r="2" fill="white" opacity="0.82"/>
+      <circle cx="21" cy="19" r="2" fill="white" opacity="0.82"/>
+      {/* Connection lines */}
+      <line x1="8.8"  y1="10.4" x2="11.5" y2="12.5" stroke="white" strokeWidth="1.1" strokeLinecap="round" opacity="0.55"/>
+      <line x1="19.2" y1="10.4" x2="16.5" y2="12.5" stroke="white" strokeWidth="1.1" strokeLinecap="round" opacity="0.55"/>
+      <line x1="8.8"  y1="17.6" x2="11.5" y2="15.5" stroke="white" strokeWidth="1.1" strokeLinecap="round" opacity="0.55"/>
+      <line x1="19.2" y1="17.6" x2="16.5" y2="15.5" stroke="white" strokeWidth="1.1" strokeLinecap="round" opacity="0.55"/>
+    </svg>
+  );
+}
+
 // ── Smart Support Assistant ───────────────────────────────────────────────────
 function SupportAssistant(){
   const [lang] = useLang();
@@ -1633,14 +1669,17 @@ function SupportAssistant(){
       <button onClick={()=>{ setOpen(!open); setMinimized(false); }}
         style={{ position:"fixed", right:20, bottom:36, zIndex:300, width:50, height:50, borderRadius:"50%", background:"linear-gradient(135deg,#F5A623,#E8873A)", border:"none", cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", fontSize:22, boxShadow:"0 4px 20px rgba(245,166,35,0.45)", transition:"transform .3s,box-shadow .3s" }}
         onMouseEnter={e=>e.currentTarget.style.transform="scale(1.1)"} onMouseLeave={e=>e.currentTarget.style.transform="none"}>
-        <SvgIcon name={open?"close":"bot"} size={22} color="#fff" sw={1.8}/>
+        {open
+          ? <svg width={22} height={22} viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18" stroke="#fff" strokeWidth="2.2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="#fff" strokeWidth="2.2" strokeLinecap="round"/></svg>
+          : <ChatSparkLogo size={22}/>
+        }
       </button>
 
       {open&&!minimized&&(
         <div style={{ position:"fixed", right:20, bottom:100, zIndex:299, width:340, background:"#fff", borderRadius:20, boxShadow:"0 12px 48px rgba(59,130,196,0.18)", border:"1px solid #D6E4F7", overflow:"hidden", animation:"slideUp .3s ease" }}>
           <div style={{ background:"linear-gradient(135deg,#3B82C4,#0EA5C9)", padding:"16px 18px", display:"flex", alignItems:"center", justifyContent:"space-between" }}>
             <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-              <div style={{ width:36,height:36,borderRadius:"50%",background:"rgba(255,255,255,0.2)",display:"flex",alignItems:"center",justifyContent:"center" }}><SvgIcon name="bot" size={18} color="#fff" sw={1.8}/></div>
+              <div style={{ width:36,height:36,borderRadius:"50%",background:"rgba(255,255,255,0.18)",display:"flex",alignItems:"center",justifyContent:"center" }}><ChatNeuralAvatar size={28}/></div>
               <div>
                 <div style={{ fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:14,color:"#fff" }}>Shuroq Assistant</div>
                 <div style={{ fontFamily:"'Nunito',sans-serif",fontSize:11,color:"rgba(255,255,255,0.75)" }}>Smart Support · Not Live Chat</div>
@@ -1653,13 +1692,17 @@ function SupportAssistant(){
             {step === "options" && (
               <>
                 <p style={{ fontFamily:"'Nunito',sans-serif",fontSize:13,fontWeight:700,color:"#1B2D4F",marginBottom:12 }}>👋 {tx(lang,"sup","greet")}</p>
-                <div style={{ display:"flex",flexDirection:"column",gap:8 }}>
+                <div style={{ display:"flex",flexDirection:"column",gap:7 }}>
                   {SUPPORT_OPTIONS.map((opt,oi)=>(
                     <button key={oi} onClick={()=>selectOption(opt)}
-                      style={{ background:"#F4F7FC",border:"1.5px solid #E8F0FB",borderRadius:10,padding:"10px 14px",fontFamily:"'Nunito',sans-serif",fontWeight:700,fontSize:13,color:"#1B2D4F",cursor:"pointer",textAlign:"left",transition:"all .2s" }}
-                      onMouseEnter={e=>{e.currentTarget.style.borderColor="#3B82C4";e.currentTarget.style.background="#EAF2FD";}}
-                      onMouseLeave={e=>{e.currentTarget.style.borderColor="#E8F0FB";e.currentTarget.style.background="#F4F7FC";}}>
-                      {tx(lang,"sup",`o${oi}`)}
+                      style={{ background:"#F8FAFD",border:"1.5px solid #E8F0FB",borderRadius:11,padding:"9px 12px",fontFamily:"'Nunito',sans-serif",fontWeight:700,fontSize:13,color:"#1B2D4F",cursor:"pointer",textAlign:"left",transition:"all .22s",display:"flex",alignItems:"center",gap:10 }}
+                      onMouseEnter={e=>{e.currentTarget.style.borderColor=opt.accent;e.currentTarget.style.background=`${opt.accent}0f`;e.currentTarget.style.transform="translateX(2px)";}}
+                      onMouseLeave={e=>{e.currentTarget.style.borderColor="#E8F0FB";e.currentTarget.style.background="#F8FAFD";e.currentTarget.style.transform="none";}}>
+                      <span style={{ width:32,height:32,borderRadius:9,background:`${opt.accent}18`,border:`1.5px solid ${opt.accent}30`,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0 }}>
+                        <SvgIcon name={opt.icon} size={15} color={opt.accent} sw={1.9}/>
+                      </span>
+                      <span style={{ flex:1,lineHeight:1.3 }}>{tx(lang,"sup",`o${oi}`)}</span>
+                      <span style={{ color:"#B0C4DB",fontSize:13,fontWeight:700 }}>›</span>
                     </button>
                   ))}
                 </div>
@@ -1668,8 +1711,11 @@ function SupportAssistant(){
 
             {step === "form" && selected && (
               <>
-                <div style={{ display:"flex",alignItems:"center",gap:8,marginBottom:14 }}>
-                  <button onClick={()=>setStep("options")} style={{ background:"none",border:"none",color:"#3B82C4",cursor:"pointer",fontSize:18,lineHeight:1 }}>←</button>
+                <div style={{ display:"flex",alignItems:"center",gap:9,marginBottom:14 }}>
+                  <button onClick={()=>setStep("options")} style={{ background:"#F4F7FC",border:"1px solid #E8F0FB",borderRadius:7,color:"#3B82C4",cursor:"pointer",fontSize:15,lineHeight:1,padding:"4px 8px",display:"flex",alignItems:"center" }}>←</button>
+                  <span style={{ width:28,height:28,borderRadius:8,background:`${selected.accent}18`,border:`1.5px solid ${selected.accent}30`,display:"flex",alignItems:"center",justifyContent:"center" }}>
+                    <SvgIcon name={selected.icon} size={13} color={selected.accent} sw={1.9}/>
+                  </span>
                   <span style={{ fontFamily:"'Nunito',sans-serif",fontWeight:800,fontSize:13,color:"#1B2D4F" }}>{selected.label}</span>
                 </div>
                 <div style={{ display:"flex",flexDirection:"column",gap:10 }}>
@@ -1686,8 +1732,9 @@ function SupportAssistant(){
                     <textarea value={form.requirement} onChange={e=>setForm({...form,requirement:e.target.value})} onFocus={()=>setFocused({...focused,requirement:true})} onBlur={()=>setFocused({...focused,requirement:false})} rows={3} placeholder="Briefly describe your need..." style={{...inp("requirement"),marginTop:5,resize:"none"}}/>
                   </div>
                 </div>
-                <button onClick={sendEnquiry} style={{ width:"100%",marginTop:12,background:"linear-gradient(135deg,#3B82C4,#0EA5C9)",border:"none",borderRadius:10,color:"#fff",fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:14,padding:"12px",cursor:"pointer",boxShadow:"0 4px 14px rgba(59,130,196,0.28)",display:"flex",alignItems:"center",justifyContent:"center",gap:6 }}>
-                  {t(lang,"contact","send")} 💬
+                <button onClick={sendEnquiry} style={{ width:"100%",marginTop:12,background:"linear-gradient(135deg,#3B82C4,#0EA5C9)",border:"none",borderRadius:10,color:"#fff",fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:14,padding:"12px",cursor:"pointer",boxShadow:"0 4px 14px rgba(59,130,196,0.28)",display:"flex",alignItems:"center",justifyContent:"center",gap:8 }}>
+                  <SvgIcon name="whatsapp" size={16} color="#fff"/>
+                  {t(lang,"contact","send")}
                 </button>
                 <p style={{ fontFamily:"'Nunito',sans-serif",color:"#6B84A3",fontSize:11,fontWeight:600,textAlign:"center",marginTop:8 }}>Routes to: {selected.route}</p>
               </>
